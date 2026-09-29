@@ -1,0 +1,88 @@
+---
+title: "Control What Maya Remembers About You"
+sidebarTitle: "Memory"
+description: "Manage Kolmena's long-term memory for Maya and your agents. Configure memory settings, view what is remembered, and edit or delete individual memories."
+---
+
+Kolmena builds a long-term memory from your conversations so Maya and your agents can stay context-aware across chats. You control whether memory is on, who it applies to, and how it is shared. You can also view, edit, or delete anything that has been remembered.
+
+## Memory Settings
+
+Open **Settings** and select the **Memory** tab to configure how Kolmena remembers.
+
+<Steps>
+  <Step title="Toggle memory on or off">
+    Choose whether Kolmena builds a long-term memory at all. When memory is off, agents rely only on the current conversation context.
+  </Step>
+  <Step title="Choose who remembers">
+    Select **Maya only** if you want memory to help your personal assistant but not other agents. Select **All agents** to let every agent in your hive draw on shared context.
+  </Step>
+  <Step title="Pick a processing model">
+    Choose which AI model reads your conversations to decide what is worth remembering. A stronger model extracts more nuanced detail and costs more per message. Changing the model only affects new memories; existing ones stay as they are.
+  </Step>
+  <Step title="Set visibility">
+    Choose **Shared brain** so every agent can draw on the same memory pool. Choose **Private per agent** so each agent's new memories stay separate. Note: switching to private does not pull back memories already shared across agents.
+  </Step>
+</Steps>
+
+## View Your Memories
+
+In the Memory settings page, scroll to the **Memories** section. You will see a searchable table of everything Kolmena has learned about you.
+
+| Column | What it shows |
+| --- | --- |
+| **Memory** | A short summary of the fact or experience. |
+| **Type** | Whether it is a **Fact** or an **Experience**. |
+| **Source** | Where it came from: chat, Telegram, jobs, swarm, API, or saved by an agent. |
+| **Agent** | Which agent learned it, or **Shared** if it lives in the shared brain. |
+| **Date learned** | When the memory was created. |
+| **Provenance** | Whether it is shared across agents, private to one agent, or limited to a single conversation. |
+
+Use the search box to find specific memories by keyword.
+
+## Edit a Memory
+
+If Kolmena remembered something incorrectly, you can correct it.
+
+<Steps>
+  <Step title="Find the memory">
+    Search or scroll to the memory you want to change.
+  </Step>
+  <Step title="Click Edit memory">
+    Click the edit action on the row.
+  </Step>
+  <Step title="Correct it">
+    Type what Kolmena should remember instead, then save.
+  </Step>
+</Steps>
+
+## Delete a Memory
+
+You can remove individual memories or clear everything at once.
+
+- **Delete one memory**: Click the delete action on a single row.
+- **Clear all memory**: Look for the option to forget all memories. This removes everything from Hindsight and cannot be undone.
+
+<Warning>
+  Deleting memories is permanent. If you clear all memory, agents will start fresh and may need you to re-explain preferences or context.
+</Warning>
+
+## Ask Your Brain
+
+In the Memory settings, use the **What Kolmena understands about me** panel to ask natural-language questions about what is stored. For example, ask "What projects am I working on?" or "What tools do I prefer?" Kolmena searches your memory and answers based on what it knows.
+
+<Note>
+  If the profile panel is empty, it means Kolmena has not learned enough yet. Keep chatting and it will fill in over time.
+</Note>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Chat with Maya" icon="message-square" href="/maya/chat-with-maya">
+    Conversations are the main source of memories.
+  </Card>
+
+  <Card title="Outputs" icon="file-output" href="/maya/outputs-and-deliverables">
+    See what your agents produce from that context.
+  </Card>
+</CardGroup>

@@ -1,0 +1,85 @@
+---
+title: "Connect Apps to Kolmena Agents"
+sidebarTitle: "Connect Apps"
+description: "Browse the integration catalog, connect an app via OAuth or API key, enable it for your agents, and disconnect when you no longer need it."
+---
+
+Connecting apps gives your agents access to real services such as Gmail, Slack, Notion, GitHub, and many more. You browse the catalog, connect your account, and choose which agents may use each integration.
+
+## Browse the catalog
+
+Open **Integrations** from the sidebar. The page shows two tabs:
+
+- **All** — every integration in the catalog, grouped by category.
+- **Enabled** — only the integrations you have turned on for your workspace.
+
+Use the search bar to find an app by name or describe what you want to do. You can also filter by category.
+
+## Connect an app
+
+Connecting depends on the app's authentication type:
+
+<Steps>
+  <Step title="Find the app">
+    Browse or search the catalog, then click the integration card to open its details.
+  </Step>
+  <Step title="Turn it on">
+    Flip the switch to enable the integration for your workspace. If the app requires a credential, the modal opens the **Accounts** tab automatically.
+  </Step>
+  <Step title="Authenticate">
+    <Accordion title="OAuth (provider sign-in)">
+      Click **Connect** and sign in with the provider (for example, Google for Gmail) in the popup window. The token is stored securely and never shown again.
+    </Accordion>
+
+    <Accordion title="API key or token">
+      Paste the key or token into the credential form. The value is sent securely and never stored in chat.
+    </Accordion>
+
+    <Accordion title="No auth needed">
+      Some apps need no sign-in. The gateway credential is handled automatically when you turn the integration on.
+    </Accordion>
+  </Step>
+  <Step title="Choose which agents can use it">
+    On the **Agents** tab inside the modal, check the agents you want to grant access to. By default, enabling an integration for the workspace makes it available to all agents except Maya. Maya must be granted explicitly if you want her to use it.
+  </Step>
+  <Step title="Narrow the actions">
+    On the **Actions** tab, pick which tools the agent may call. You can reset to the default set at any time.
+  </Step>
+</Steps>
+
+## Enable for Maya or a single agent
+
+Instead of enabling an app for the whole workspace, you can attach it to one agent only:
+
+1. Open the agent and go to **Configure > Integrations**.
+2. Find the app in the catalog and turn it on.
+3. Connect your account if required.
+4. Adjust the allowed actions on the **Actions** tab.
+
+An agent-level attachment overrides the workspace default for that agent.
+
+## Disconnect an app
+
+To remove an integration:
+
+1. Open the integration card from the **Enabled** tab, or from the agent's **Integrations** page.
+2. Flip the switch off.
+3. If you also want to revoke the stored credential, open the **Accounts** tab and click **Disconnect** or **Remove account**.
+
+<Warning>
+  Disconnecting removes the stored credential. You can reconnect at any time, but you will need to sign in or paste the key again.
+</Warning>
+
+## Connection states
+
+| State | What it means |
+| --- | --- |
+| Connected | The app is ready to use. |
+| Needs reconnecting | The credential exists but was revoked upstream. Disconnect and reconnect to fix it. |
+| Not connected | No credential is stored. Connect to enable the app. |
+
+## Next steps
+
+- [Manage skills your agents can use](/integrations/skills)
+- [Add and grant credentials](/integrations/credentials)
+- [Pair a browser for live web access](/integrations/browsers)

@@ -1,0 +1,41 @@
+---
+title: "Core concepts and terms in Kolmena"
+sidebarTitle: "Core Concepts"
+description: "Learn the key terms used across Kolmena, including Maya, agents, swarms, jobs, knowledge, skills, credentials, and marketplace listings."
+---
+
+Kolmena uses a specific vocabulary to describe conversations, agents, and how work gets done. Understanding these terms will help you navigate the platform and get the most out of your agents.
+
+## Key terms
+
+| Term | What it means |
+| --- | --- |
+| **Maya** | Your personal AI assistant and the queen of your hive. Maya guides you through Kolmena, helps you create and configure agents, and routes messages to the right agent or swarm member. |
+| **Agent** | An autonomous AI operator that understands context, makes decisions, and executes actions through skills and knowledge. You define its identity, behavior, and logic. |
+| **Swarm** | A team of agents that collaborate, specialize, and execute complex workflows together. One agent acts as the leader and delegates tasks to the other members. |
+| **Job** | A scheduled, recurring task assigned to an agent. Jobs persist across all published versions of that agent, run one at a time, and stop automatically after five consecutive failures until you resume them. You can have up to 25 open jobs per user, with the shortest interval set to 15 minutes. |
+| **Knowledge** | Documents and files you attach to an agent so it operates with context and precision. Knowledge can include spreadsheets, PDFs, text files, and other reference material. |
+| **Skill** | A capability you add to an agent, either by uploading a skill file, importing from the web, or writing custom instructions. Skills tell the agent how to perform a specific task. |
+| **App** | A third-party service you connect to Kolmena so your agents can interact with it, such as Telegram, Discord, or WhatsApp. |
+| **Deliverable** | A file or output created by an agent or swarm, such as a document, image, spreadsheet, or web app. Deliverables appear in your Outputs panel. |
+| **Marketplace listing** | A published agent or swarm that others can discover, install, and use. You can sell listings as one-time purchases or monthly subscriptions, and earn payouts through Stripe Connect. |
+| **Channel** | The identity a conversation has. Every chat (with Maya, an agent, or a swarm) lives in its own channel, and messages belong to exactly one channel. |
+| **Transcript** | The messages of a channel as they appear on screen, whether in the Maya chat, an agent chat, or a swarm feed. |
+| **Chat History** | The list of your channels shown in the sidebar. It displays names and activity only, never the full message content. |
+| **Turn** | One exchange: your message and the reply it produces. A turn can end while the work it started keeps running in the background. |
+| **Delegation** | Work Maya hands to swarm members. Delegation outlives Maya's own turn, so members may continue running for minutes after she replies. |
+| **Interaction Request** | A durable question an agent asks you. The agent's turn ends when it asks; once you answer, the agent resumes from where it left off. |
+| **Resume** | The turn an agent receives after you settle its interaction request. The agent picks up the paused work with your answer in hand. |
+| **Decline** | Settling an interaction request without giving what it asked for. The agent still resumes, but knows it was declined. |
+| **Withdraw** | An agent closing its own open interaction request without waiting for your answer, typically because you moved on in the conversation. |
+| **Credential** | A named value you bring from a third-party service, such as an API key or token, that agents can use once granted. Nobody can read a credential back after it is saved. |
+| **Grant** | Permission you give an agent to use one of your credentials. Nothing is granted by default, and Maya needs her own grant too. |
+| **Credential Request** | An interaction request specifically for the credentials an agent needs to continue its work. |
+| **Fulfillment** | Settling a credential request: the credentials are stored (or reused), then granted to the requesting agent, all in one step. |
+
+## Related guides
+
+- [Chat with Maya](/maya/chat-with-maya)
+- [Create an agent](/agents/create-an-agent)
+- [Create a swarm](/swarms/create-a-swarm)
+- [Create a job](/jobs/create-a-job)

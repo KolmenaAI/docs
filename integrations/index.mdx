@@ -1,0 +1,51 @@
+---
+title: "Integrations Overview: Apps, Skills, Credentials & Browsers"
+sidebarTitle: "Integrations Overview"
+description: "Learn how Kolmena connects your agents to apps, skills, credentials, and browsers so they can act on your behalf using real data."
+---
+
+Kolmena gives your agents the ability to work with real-world services through integrations. You control what each agent can reach, what accounts it signs into, and what actions it may take.
+
+The platform groups these capabilities into four areas:
+
+- **Apps (MCP servers)** — external services such as Gmail, Slack, Notion, GitHub, and many more. Agents call these through a catalog of integrations you enable per workspace or per agent.
+- **Skills** — reusable capabilities you can install, write, or upload. Skills extend what an agent knows how to do, from web scraping to custom business logic.
+- **Credentials** — API keys and tokens your agents use to sign into services. Stored encrypted, they are never shown again after you save them.
+- **Browsers** — a paired browser extension that lets agents work inside live web pages you are already signed into.
+
+<CardGroup cols={2}>
+  <Card title="Connect Apps" icon="plug" href="/integrations/connect-apps">
+    Browse the catalog, connect an app with OAuth or an API key, and enable it for Maya or any agent.
+  </Card>
+
+  <Card title="Skills" icon="wrench" href="/integrations/skills">
+    Browse, install, and manage skills that extend what your agents can do.
+  </Card>
+
+  <Card title="Credentials" icon="key" href="/integrations/credentials">
+    Add credentials, grant them to agents, and handle credential requests from chat.
+  </Card>
+
+  <Card title="Browsers" icon="globe" href="/integrations/browsers">
+    Pair a browser so agents can use live tabs and sites you are already signed into.
+  </Card>
+</CardGroup>
+
+## How agents use integrations
+
+Agents do not have blanket access to everything. You decide:
+
+1. **Which integrations are available** — enable an app or skill for all agents, or attach it to one agent only.
+2. **Which credentials are granted** — nothing is granted by default. You explicitly choose which agents may use each credential.
+3. **Which actions are allowed** — for every app, you can narrow the list of tools the agent may call.
+
+Changes apply immediately. A running agent picks them up on its next reply, so there is no publish step for integrations.
+
+## Quick comparison
+
+| Area | What it is | Where you manage it |
+| --- | --- | --- |
+| Apps | External services (Gmail, Slack, etc.) | **Integrations** page, or per agent under **Configure** |
+| Skills | Reusable capabilities and custom logic | **Skills** page, or per agent under **Configure** |
+| Credentials | Encrypted API keys and tokens | **Settings > Credentials** |
+| Browsers | Live browser tabs for agent use | **Settings > Your browsers** |

@@ -1,0 +1,85 @@
+---
+title: "Create and Manage Scheduled Jobs for Agents"
+sidebarTitle: "Create a Job"
+description: "Learn how to create, schedule, edit, pause, and resume recurring jobs for your agents in Kolmena, including run history and auto-stop recovery."
+---
+
+In Kolmena, a job tells an agent to run a task on a schedule and deliver the result to a chat or channel. You can set up one-time or repeating jobs, change them later, and review every run. This page shows you how to create a job, pick a schedule, manage its state, and resume it after an automatic stop.
+
+## Before you begin
+
+Make sure the agent you want to schedule is [created and published](/agents/create-an-agent). Jobs persist across all published versions of that agent, so updates to the agent do not break existing schedules.
+
+<Note>
+  You can have up to 25 active or paused jobs at a time. If you reach the limit, delete an old job before adding a new one.
+</Note>
+
+## Create a new job
+
+<Steps>
+  <Step title="Open the Jobs panel">
+    Go to the agent you want to schedule, then select **Configure** and open the **Jobs** tab.
+  </Step>
+  <Step title="Start a new job">
+    Click **New Job**. Enter a **Name** and describe the **Task** in plain language so the agent knows what to do each run.
+  </Step>
+  <Step title="Pick a trigger">
+    Choose **Schedule** as the trigger type. You can also trigger jobs from connected apps when events occur.
+  </Step>
+  <Step title="Set the schedule">
+    Select a frequency: **One Time**, **Hourly**, **Daily**, **Weekly**, **Monthly**, or **Custom**.
+
+    - For hourly jobs, you can set a time window and specific minutes past the hour.
+    - For daily jobs, you can exclude specific days.
+    - The shortest interval allowed is **15 minutes**.
+  </Step>
+  <Step title="Choose the destination">
+    Decide where results go:
+
+    - **New chat for this job** — creates a dedicated chat thread.
+    - **An existing chat** — sends results into a chat you already have with the agent.
+    - **Job runs only** — stores results without sending them to a chat.
+  </Step>
+  <Step title="Set the result type">
+    Pick whether the agent should produce **a reply in the chat** or **a file, dashboard, or app artifact**. If you choose an artifact, each run must create it; a run without it counts as failed.
+  </Step>
+  <Step title="Save the job">
+    Click **Add Job**. You will see a confirmation that the job was added, and the agent starts if needed.
+  </Step>
+</Steps>
+
+## Edit, pause, or resume a job
+
+You can change a job after it is created. Open the **Jobs** panel, find the job, and click it to edit the name, task, schedule, or destination. Click the toggle to pause or resume a job. Paused jobs keep their history but do not run until you turn them back on.
+
+<Warning>
+  If a job fails five runs in a row, it automatically stops and shows **Needs attention**. Fix the cause (for example, reconnect an app or choose a valid destination), then click **Resume** to start it again.
+</Warning>
+
+## Run a job on demand
+
+To test a schedule or rerun a task immediately, click **Run now** on an active job whose agent is started. The run appears in the job's history right away.
+
+## View run history
+
+Click **View runs** on any job to open its history. You can see:
+
+| Field | What it shows |
+| --- | --- |
+| Status | Completed, Failed, Running, Cancelled, or Skipped |
+| Trigger | Scheduled or started by an agent |
+| Duration | How long the run took |
+| Usage | Model calls and tokens consumed |
+| Delivered | Whether the result reached its destination |
+
+Select a run to read the agent's transcript and the messages it produced. If the run failed, the error explains why (for example, destination unavailable, agent stopped, or budget exhausted).
+
+## Delete a job
+
+Open the job menu and choose **Delete**. The job and its run history are removed. Any chat created for the job stays in your conversation list.
+
+## Next steps
+
+- [Jobs overview](/jobs/index)
+- [Connect apps for event triggers](/integrations/connect-apps)
+- [Agent versions and publishing](/agents/versions-and-publishing)

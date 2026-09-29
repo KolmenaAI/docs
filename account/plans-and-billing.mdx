@@ -1,0 +1,94 @@
+---
+title: "Kolmena Plans, Billing, and Credit Top-Ups"
+sidebarTitle: "Plans & Billing"
+description: "Compare Kolmena subscription tiers, top up LLM credits, set up auto top-up, and manage or cancel your plan."
+---
+
+Kolmena separates your platform subscription from your LLM usage balance. Your subscription controls how many agents you can run at once, while your usage balance pays for the LLM calls your agents make. You manage both from **Settings > Billing**.
+
+## Subscription tiers
+
+Kolmena offers four plans. Each paid plan renewes monthly and includes a set number of concurrent agent seats.
+
+| Plan | Monthly price | Agent seats | Best for |
+| --- | --- | --- | --- |
+| **Free** | \$0 | 1 | Exploring Kolmena with a single agent |
+| **Builder** | \$30 | 5 | Solo developers and early adopters |
+| **Partnership** | \$60 | 10 | Growing teams and SMEs |
+| **Enterprise** | \$200 | Unlimited | Large organizations |
+
+<Note>
+  All plans let you create unlimited agents. Seats only limit how many agents can be **running at the same time**.
+</Note>
+
+## Manage your subscription
+
+From the Billing settings page you can upgrade, downgrade, or cancel your plan.
+
+<Steps>
+  <Step title="Change your plan">
+    Click **Change plan** to open the plan picker. Select a new tier and complete checkout. If you downgrade, the change takes effect at the end of your current billing period.
+  </Step>
+  <Step title="Cancel your subscription">
+    Click **Cancel plan**. You keep full access until the end of your current period. No refund is issued for partial months. Your agents and data are not deleted, and you can re-subscribe at any time.
+  </Step>
+  <Step title="Manage payment method or view invoices">
+    Click **Manage in Stripe** to open the Stripe Customer Portal in a new tab. There you can update your card, view invoices, and manage billing details.
+  </Step>
+</Steps>
+
+## LLM credits and top-ups
+
+Your usage balance is a prepaid wallet that pays for LLM calls. Credits roll over month to month and remain valid for 12 months.
+
+### Manual top-up
+
+<Steps>
+  <Step title="Open the top-up modal">
+    In Billing settings, click **Top Up** next to your current balance.
+  </Step>
+  <Step title="Choose an amount">
+    Select a preset ($$10, $$25, $$50, $$100, or $$200) or enter a custom amount. The minimum top-up is $$10.
+  </Step>
+  <Step title="Confirm the charge">
+    Click **Top up** to charge your saved payment method immediately. Your balance updates right away.
+  </Step>
+</Steps>
+
+### Auto top-up
+
+Auto top-up refills your balance automatically so your agents do not stop mid-task.
+
+<Steps>
+  <Step title="Enable auto top-up">
+    Toggle **Auto top-up** on. If this is your first time, you will set the threshold, top-up amount, and monthly cap.
+  </Step>
+  <Step title="Configure the rules">
+    - **Trigger if below**: the balance that triggers a refill (for example, \$5).
+    - **Top up by**: the amount charged each time (minimum \$10).
+    - **Monthly cap**: the most you will be charged in auto top-ups per billing window.
+  </Step>
+  <Step title="Save">
+    Click **Save**. The cap resets on your subscription anchor date each month.
+  </Step>
+</Steps>
+
+<Warning>
+  If a top-up charge is declined, auto top-up pauses automatically. Update your payment method and re-enable it to resume.
+</Warning>
+
+## Marketplace subscriptions
+
+If you rent agents from the Kolmena Marketplace, those recurring charges appear in a separate **Marketplace Subscriptions** table on the Billing page. They are billed independently from your platform subscription.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Usage and Logs" icon="chart-bar" href="/account/usage-and-logs">
+    See exactly how your balance is being spent.
+  </Card>
+
+  <Card title="Settings" icon="user" href="/account/settings">
+    Update your profile and linked accounts.
+  </Card>
+</CardGroup>

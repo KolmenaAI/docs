@@ -1,0 +1,80 @@
+---
+title: "Install and Manage Skills for Your Agents"
+sidebarTitle: "Skills"
+description: "Browse, install, and manage skills that extend what your agents can do. Add skills from the web, upload your own, or write one directly."
+---
+
+Skills are reusable capabilities that extend what your agents know how to do. They range from built-in utilities to custom logic you write yourself. You manage skills from the **Skills** page in the sidebar, and you can also control them per agent under **Configure > Skills**.
+
+## What skills are
+
+A skill is a bundle of code and configuration that gives an agent new abilities. Some examples include:
+
+- Fetching and parsing web pages
+- Interacting with external APIs
+- Running custom business logic
+
+Skills are versioned. When an update is available, you can accept the latest revision so your agents use the newest version.
+
+## Browse and install skills
+
+Open **Skills** from the sidebar. The page shows two tabs:
+
+- **All** — every skill available to you, including built-in defaults and ones you have added.
+- **Enabled** — only the skills currently turned on for your agents.
+
+### Add a skill
+
+Click **Add Skill** in the header to choose how to bring a skill into your library:
+
+<Steps>
+  <Step title="Add from the web">
+    Paste a URL to a public skill repository (for example, from GitHub). Kolmena downloads and reviews the skill, then adds it to your library. If the skill needs additional setup, you will see a notice and can complete it before enabling it.
+  </Step>
+  <Step title="Upload a skill file">
+    Select a skill file from your computer and upload it directly. This is useful for skills you have built locally or received from a teammate.
+  </Step>
+  <Step title="Write your own">
+    Create a skill directly in the editor. Give it a name, description, and the code that defines what it does. Once saved, it appears in your library like any other skill.
+  </Step>
+</Steps>
+
+## Enable and disable skills
+
+Each skill row shows whether it is on for your agents:
+
+- **Default** — built-in skills that are enabled automatically for all agents. You cannot turn these off globally, but you can disable them per agent from the agent's **Skills** tab.
+- **Enabled for all agents** — skills you have turned on for every agent.
+- **Enabled for some agents** — skills you have granted to specific agents only.
+
+Use the switch on each row to toggle a skill on or off for all agents. To grant it to specific agents instead, click the access pill and choose the agents you want.
+
+<Note>
+  Changes to skills may require a restart to take effect. When there are pending changes, a banner appears at the top of the page with an **Apply changes** button. Click it to restart the affected agents and sync the new skills.
+</Note>
+
+## Update a skill
+
+When a skill you installed has a newer version, an **Update to vN** link appears on the row. Click it to accept the latest revision. The skill is updated in your library, and you can apply the change to your running agents from the banner.
+
+## Remove a skill
+
+To remove a skill you added yourself, open its detail modal and click **Delete**. The skill is removed from your account and from every agent that uses it. Built-in and default skills cannot be deleted.
+
+<Warning>
+  Deleting a skill is permanent. If you delete a skill that agents are actively using, they will lose that capability immediately after the next restart.
+</Warning>
+
+## Manage per-agent skills
+
+You can also manage skills for one agent at a time:
+
+1. Open the agent and go to **Configure > Skills**.
+2. Toggle skills on or off for that agent only.
+3. Per-agent choices override the workspace default, so you can give one agent a unique set of capabilities.
+
+## Next steps
+
+- [Connect apps so agents can use external services](/integrations/connect-apps)
+- [Add credentials your agents need to sign in](/integrations/credentials)
+- [Pair a browser for live web access](/integrations/browsers)

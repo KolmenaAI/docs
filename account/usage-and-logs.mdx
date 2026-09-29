@@ -1,0 +1,87 @@
+---
+title: "Track Kolmena Usage and Inspect Agent Logs"
+sidebarTitle: "Usage & Logs"
+description: "Monitor LLM spend, token usage, and agent activity across agents, swarms, and models. Search and filter live agent logs."
+---
+
+Kolmena gives you two dedicated surfaces for understanding what your agents are doing and how much it costs: the **Usage** page for spend and activity breakdowns, and the **Logs** tab in Settings for detailed agent log streams.
+
+## Usage page
+
+Open **Usage** from the main navigation to see a live dashboard of your LLM consumption. The data refreshes automatically in the background.
+
+### Scope tabs
+
+At the top of the page, choose what you want to analyze:
+
+| Tab | What it shows |
+| --- | --- |
+| **Agents** | Spend and tokens per individual agent |
+| **Swarms** | Usage grouped by swarm |
+| **Models** | Consumption broken down by LLM model |
+| **Knowledge** | Activity related to knowledge base queries |
+| **Others** | System activity such as memory, chat naming, and enrichment |
+
+### Time ranges and metrics
+
+Use the range picker to switch between **24 hours**, **7 days**, **1 month**, **3 months**, or **all time**. Toggle the metric between **Spend** (USD) and **Tokens**.
+
+### Summary cards
+
+The top of the page shows four live cards:
+
+- **Total Spent**
+- **Total Tokens**
+- **Total Requests**
+- **Average Daily Spend**
+
+### Chart and table
+
+A stacked chart visualizes usage over the selected window. Below it, a table lists every entity in the current scope. Click any row to open a **details drawer** with a per-model breakdown and recent runs.
+
+<Tip>
+  The date range shown above the chart reflects the exact window the data covers. If you switch tabs while data is loading, the table dims until the new scope loads.
+</Tip>
+
+## Logs
+
+Agent logs are available under **Settings > Logs**. This is a live, filterable stream of everything your agents output.
+
+### Filter the stream
+
+Use the toolbar to narrow down what you see:
+
+| Filter | Options |
+| --- | --- |
+| **Level** | All, Trace, Debug, Info, Warning, Error, Fatal |
+| **Agent** | All Agents, or a specific owned agent |
+| **Container** | Filter by runtime container |
+| **Time range** | 1 hour, 24 hours, 7 days, or 30 days |
+| **Search** | Free-text search across messages |
+| **Attribute filters** | Add `key=value` filters (up to 5) |
+
+### Chart and table
+
+A stacked bar chart at the top shows log volume by severity over the selected time window. The table below lists up to the latest 1,000 entries with a timestamp, severity indicator, and message. Click any inline context field (for example, `key=value`) to add it as a filter.
+
+### Live updates and actions
+
+- Toggle **Live updates** to stream new log entries in real time.
+- Click **Refresh** to force a manual reload.
+- Click **Copy** to copy all visible log lines to your clipboard.
+
+<Warning>
+  The log list is capped at 1,000 rows per fetch. If you need older entries, adjust the time range or filters to narrow the window.
+</Warning>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Plans and Billing" icon="credit-card" href="/account/plans-and-billing">
+    Top up your balance or upgrade your plan.
+  </Card>
+
+  <Card title="Settings" icon="user" href="/account/settings">
+    Manage your profile and preferences.
+  </Card>
+</CardGroup>

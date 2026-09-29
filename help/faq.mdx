@@ -1,0 +1,53 @@
+---
+title: "Kolmena FAQ: Jobs, Credentials, Maya, Billing & More"
+description: "Find answers to common questions about jobs, credentials, agent versions, memory, sharing, billing, and the marketplace in Kolmena."
+sidebarTitle: "FAQ"
+---
+
+Kolmena is your AI agent platform where Maya is your personal assistant, you build custom agents and swarms, schedule jobs, add knowledge, and connect apps. This FAQ covers the most common questions about limits, security, billing, and how features work together.
+
+<AccordionGroup>
+  <Accordion title="How many jobs can I have, and what are the scheduling limits?">
+    You can have up to 25 open jobs across all your agents. Jobs are configured under **Configure → Jobs** for each agent and persist across agent versions. Only one run of a job happens at a time, and the shortest interval you can set is 15 minutes. If a job fails 5 times in a row, it automatically stops until you resume it. For details on creating jobs, see [Create a Job](/jobs/create-a-job).
+  </Accordion>
+
+  <Accordion title="Why can't I read my saved credentials back?">
+    Credentials are encrypted the moment you save them and are never shown again. This is by design for security. You can still revoke or replace a credential from [Credentials](/integrations/credentials) at any time. When an agent needs a key, it requests it through an interaction and you can choose to use a saved key or provide a new one.
+  </Accordion>
+
+  <Accordion title="Does granting access to 'All agents' include Maya?">
+    No. The "All agents" grant never includes Maya. If you want Maya to use a connected app or credential, you must grant it to her explicitly. Nothing is granted by default, so you always control exactly which agents can access what.
+  </Accordion>
+
+  <Accordion title="What happens to my jobs when I publish a new agent version?">
+    Jobs persist across all published versions of an agent. When you publish a new version, your scheduled jobs continue running with the updated agent configuration. You do not need to recreate them. Learn more in [Versions and Publishing](/agents/versions-and-publishing).
+  </Accordion>
+
+  <Accordion title="How does agent memory work, and what happens when I delete an agent?">
+    Agents build memories from conversations and tasks. When you delete an agent, you choose what happens to its memory: move it to your shared brain so other agents can use it, keep it in a private archive, or delete it entirely. For more, see [Maya Memory](/maya/memory) and [Core Concepts](/getting-started/core-concepts).
+  </Accordion>
+
+  <Accordion title="How do I share an agent or a marketplace listing?">
+    You can share marketplace listings with a direct link using the **Share** button on any listing page. For agents you have built, sharing controls are managed through your account settings. See [Account Sharing](/account/sharing) for how to invite teammates or manage access.
+  </Accordion>
+
+  <Accordion title="How does billing work, and what are credits?">
+    Kolmena offers a free plan to explore with one agent and limited usage. Paid plans auto-renew monthly and unlock more agent seats and higher usage limits. Your balance is consumed as your agents run queries and tasks. If your balance runs out, you can top up to keep agents running. For plan details, pricing, and how to manage your subscription, visit [Plans and Billing](/account/plans-and-billing). You can also track consumption in [Usage and Logs](/account/usage-and-logs).
+  </Accordion>
+
+  <Accordion title="What is the marketplace, and how do I use it?">
+    The marketplace is where you discover, install, and subscribe to agents and skills built by the community. Listings may offer one-time purchases or monthly subscriptions in USD, EUR, or GBP. You can filter by category, billing type, and free trial availability. Browse the [Marketplace](/marketplace/index) to find tools for your workflow.
+  </Accordion>
+
+  <Accordion title="What is an Interaction Request, and how do I handle it?">
+    Sometimes an agent pauses and asks you a question or needs a decision before it can continue. This is called an Interaction Request. You can answer or decline, and the agent resumes based on your response. Maya and your custom agents can both send these. Read more in [Interaction Requests](/maya/interaction-requests).
+  </Accordion>
+
+  <Accordion title="Can I connect external apps and browsers to my agents?">
+    Yes. You can connect apps, set up browser automations, and add skills to extend what your agents can do. Credentials are managed securely and granted per agent. Start with [Connect Apps](/integrations/connect-apps), [Browsers](/integrations/browsers), and [Skills](/integrations/skills).
+  </Accordion>
+
+  <Accordion title="How do I get started if I am new to Kolmena?">
+    The fastest way is to follow the [Quickstart](/quickstart) guide, which walks you through your first conversation with Maya, creating an agent, and scheduling your first job. You can also review [Core Concepts](/getting-started/core-concepts) to understand agents, swarms, jobs, and knowledge.
+  </Accordion>
+</AccordionGroup>

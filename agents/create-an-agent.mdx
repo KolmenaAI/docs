@@ -1,0 +1,65 @@
+---
+title: "Create a Custom Agent in Kolmena"
+sidebarTitle: "Create an Agent"
+description: "Build a new AI agent with a name, persona, instructions, and model settings. Then chat with it immediately."
+---
+
+Creating a custom agent in Kolmena takes just a few steps. You give it a name and instructions, and Maya helps build the rest.
+
+<Steps>
+  <Step title="Open the agent builder">
+    Go to the **Agents** page and click **New Agent**. A creation modal opens where you describe what you want.
+  </Step>
+  <Step title="Name your agent">
+    Enter a name of at least 3 characters. You can also upload an avatar image (JPEG, PNG, GIF, or WebP).
+  </Step>
+  <Step title="Describe what it should do">
+    In the **What Should It Do?** field, write at least 50 characters describing the agent's role, personality, and tasks. The more detail you provide, the better the agent will perform.
+
+    <Tip>
+      Click **Improve Prompt** to have Maya rewrite and expand your description into a richer system prompt.
+    </Tip>
+  </Step>
+  <Step title="Choose memory isolation (optional)">
+    Toggle **Private Memory** if you want this agent's memory to be isolated. Isolated memory means the agent does not share context with other agents or Maya.
+  </Step>
+  <Step title="Build with Maya">
+    Click **Build With Maya**. Maya processes your description and creates the agent's system prompt and configuration.
+  </Step>
+</Steps>
+
+## What happens next
+
+After the build completes, your agent is ready. You can:
+
+- **Chat with it immediately** from the success screen
+- **Open its workspace** to configure channels, skills, knowledge, and more
+- **Publish it** to make the configuration live
+
+## Fine-tuning after creation
+
+Once your agent exists, open it and go to **Configure** to adjust:
+
+| Section | What to set |
+| --- | --- |
+| Basics | System instructions, temperature, voice model, available models, memory isolation |
+| Channels | Telegram, Discord, X/Twitter connections |
+| Integrations | MCP services and apps |
+| Skills | Custom or imported capabilities |
+| Examples | Sample conversations for training |
+
+<Note>
+  Kolmena uses a core planner that selects the best model for each step automatically. You can manage which models are available and set a voice model, but you do not pick a single static model for the entire agent.
+</Note>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Versions and Publishing" icon="git-branch" href="/agents/versions-and-publishing">
+    Learn how drafts, live versions, and publishing work.
+  </Card>
+
+  <Card title="Messaging Channels" icon="message-circle" href="/agents/messaging-channels">
+    Connect your agent to external platforms.
+  </Card>
+</CardGroup>

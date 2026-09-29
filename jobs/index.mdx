@@ -1,0 +1,95 @@
+---
+title: "Jobs Overview: Automate Recurring and One-Time Tasks"
+sidebarTitle: "Jobs Overview"
+description: "Learn how jobs let agents and Maya run tasks on a schedule, monitor statuses and run history, and send results to chats, Telegram, Discord, or webhooks."
+---
+
+Jobs are scheduled tasks that an agent or Maya runs on your behalf, either once or on a repeating interval. You can use them to generate daily reports, check data sources, send reminders, or trigger actions through connected apps. Jobs keep working even when you are not online, and they persist across every published version of an agent.
+
+You can view all of your jobs on the [Jobs page](https://app.kolmena.ai/jobs). To configure jobs for a specific agent, open the agent, go to **Configure**, then select **Jobs**.
+
+## Job types and triggers
+
+A job starts from either a schedule or an app event.
+
+| Trigger type | What starts the job | Examples |
+| --- | --- | --- |
+| Schedule | A fixed time or interval | One time, hourly, daily, weekly, monthly, or a custom interval |
+| Integration event | An event from a connected app | A new row in a spreadsheet, a form submission, or a webhook |
+
+Scheduled jobs let you set a start date, an optional end time, and excluded days. Integration event jobs begin when the connected app fires its trigger. You describe the task in plain language, just like a chat message, and the agent carries it out.
+
+## Statuses and filters
+
+Each job appears with a status so you can see its health at a glance.
+
+<CardGroup cols={2}>
+  <Card title="Active" icon="play">
+    The job is switched on and will run at its next scheduled time or when its trigger fires.
+  </Card>
+
+  <Card title="Paused" icon="pause">
+    The job is switched off and will not run until you enable it again.
+  </Card>
+
+  <Card title="Needs attention" icon="alert-triangle">
+    The job has failed five runs in a row, or its destination is no longer valid. Fix the cause, then resume it.
+  </Card>
+
+  <Card title="Completed" icon="check-circle">
+    A one-time job that has already run appears here.
+  </Card>
+</CardGroup>
+
+On the Jobs page, use the status filter to show only **Active**, **Paused**, **Needs attention**, **Completed**, or **All** jobs.
+
+## Run history and transcripts
+
+Every job keeps a run history. Select a job to open its detail panel and see recent runs, their timestamps, and outcomes. For any run, you can open the transcript to read the exact messages the agent produced. This is useful for debugging, auditing results, or confirming that a task finished as expected.
+
+## Delivery destinations
+
+When a job finishes, you can send its results to one or more destinations. If you do not choose a destination, the job still runs and its results are stored in the run history.
+
+Available destinations include:
+
+- A chat in the Kolmena web app, including swarm chats
+- A Telegram conversation
+- A Discord channel
+- A webhook URL
+
+<Note>
+  If a destination chat is deleted or a connected app is detached, the job will show **Needs attention**. Edit the job and choose a valid destination to resume it.
+</Note>
+
+## Limits and behavior
+
+<Accordion title="Job limits">
+  - **25 open jobs** per user (active or paused)
+  - **One run at a time** per job. If a run is still going when the next one should start, the new run is skipped.
+  - **Shortest interval** is 15 minutes.
+  - **Five consecutive failures** automatically pause the job. Resume it after you fix the cause.
+  - Jobs persist across all published versions of an agent. You do not need to recreate them when you publish a new version.
+</Accordion>
+
+## Common errors and what to do
+
+| Error | Cause | What to do |
+| --- | --- | --- |
+| Destination no longer valid | Chat deleted or app detached | Edit the job and pick a new destination |
+| Agent did not respond in time | The agent was stopped or overloaded | Start the agent and try again in a few minutes |
+| Run reached its usage limit | The job consumed its budget before finishing | Check your plan and usage in [Plans and Billing](/account/plans-and-billing) |
+| Previous run still in progress | The job interval is shorter than the task duration | Lengthen the interval or simplify the task |
+| Run missed its window | The scheduler could not start the run within an hour of the scheduled time | Resume the job and check for outages |
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Create a job" icon="plus" href="/jobs/create-a-job">
+    Walk through creating a scheduled or event-triggered job step by step.
+  </Card>
+
+  <Card title="Configure your agent" icon="settings" href="/agents/versions-and-publishing">
+    Learn how publishing works and why jobs persist across versions.
+  </Card>
+</CardGroup>

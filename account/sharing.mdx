@@ -1,0 +1,85 @@
+---
+title: "Share Chats and Dashboards on Kolmena"
+sidebarTitle: "Sharing"
+description: "Share agent and swarm chats via public links, manage dashboard access modes, invite viewers by email, and revoke access when needed."
+---
+
+Kolmena lets you share conversations and dashboards with others through public links and controlled access modes. You remain in control and can revoke access at any time.
+
+## Share an agent or swarm chat
+
+You can publish any one-on-one agent chat or swarm conversation to a read-only public link.
+
+<Steps>
+  <Step title="Open the conversation panel">
+    While chatting with an agent or inside a swarm, open the details panel on the right side of the screen.
+  </Step>
+  <Step title="Enable public sharing">
+    Find the **Public Chat** toggle and switch it on. Kolmena generates a unique share token and URL instantly.
+  </Step>
+  <Step title="Copy the link">
+    Click **Copy Link** to copy the public URL to your clipboard. Anyone with the link can view the conversation in read-only mode.
+  </Step>
+</Steps>
+
+<Note>
+  Shared chats are static snapshots. Visitors cannot send messages or interact with your agents.
+</Note>
+
+### Revoke a chat share
+
+To stop sharing, open the same details panel and toggle **Public Chat** off. The link becomes invalid immediately.
+
+## Share a dashboard
+
+Dashboards created by your agents can be shared with three access modes. Open a dashboard's **Manage Access** dialog from its card or detail view.
+
+### Access modes
+
+| Mode | Who can view |
+| --- | --- |
+| **Public** | Anyone with the link |
+| **Private** | Only you |
+| **Restricted** | People you explicitly invite |
+
+<Steps>
+  <Step title="Choose an access mode">
+    Select **Public**, **Private**, or **Restricted**.
+  </Step>
+  <Step title="Invite viewers (Restricted only)">
+    Enter an email address and click **Grant access**. The invited person receives access once they sign in. You can also copy the invite link and send it yourself.
+  </Step>
+  <Step title="Approve or deny requests">
+    If someone without access opens a Restricted dashboard link, they can request access. You will see pending requests in the same dialog and can **Approve** or **Deny** them.
+  </Step>
+</Steps>
+
+### Manage dashboard members
+
+In the **Manage Access** dialog, the **Who can access** list shows every viewer, including the owner, invited viewers, and pending signups. Click **Remove** next to any member to revoke their access.
+
+### Dashboard access links
+
+When a dashboard is set to Public or Restricted, visitors can open it through a direct access link in this format:
+
+```text
+https://app.kolmena.ai/dashboard-access/<jobId>
+```
+
+If the dashboard is Private, visitors see an access-denied message and can request access only if the owner allows it.
+
+<Tip>
+  Marketplace copies of dashboards cannot be shared. The Manage Access option is hidden for those items.
+</Tip>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Agents & Swarms" icon="bot" href="/agents/index">
+    Learn how to create and manage agents and swarms.
+  </Card>
+
+  <Card title="Marketplace" icon="store" href="/marketplace/index">
+    Discover agents and dashboards you can install or sell.
+  </Card>
+</CardGroup>

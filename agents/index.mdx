@@ -1,0 +1,67 @@
+---
+title: "Custom Agents: Build AI Assistants for Any Task"
+sidebarTitle: "Overview"
+description: "Learn how custom agents differ from Maya, how to manage your agent list, and what you can configure for each agent in Kolmena."
+---
+
+Custom agents in Kolmena are AI assistants you design for specific jobs. Unlike Maya, your personal agent that handles general requests, a custom agent has its own identity, instructions, and skills tailored to a particular workflow.
+
+Your agents live on the **Agents** page, where you can browse them as cards or a table. Each agent shows its name, description, runtime status, and connected integrations. You can filter by **All** or **Active**, search by name, and sort by newest or oldest.
+
+## What you can configure
+
+Every agent has a dedicated workspace with several areas you can set up:
+
+<CardGroup cols={2}>
+  <Card title="Basics" icon="user">
+    Set the agent's name, avatar, description, system instructions, and temperature. Manage which models it can use and whether its memory is isolated.
+  </Card>
+
+  <Card title="Channels" icon="message-circle">
+    Connect the agent to Telegram, Discord, or X/Twitter so it can talk to people outside Kolmena.
+  </Card>
+
+  <Card title="Integrations" icon="plug">
+    Add MCP services and apps that give the agent tools like web search, file access, or third-party APIs.
+  </Card>
+
+  <Card title="Skills" icon="book-open">
+    Install or write skills that teach the agent how to perform specialized tasks.
+  </Card>
+
+  <Card title="Examples" icon="message-square">
+    Provide example conversations so the agent learns the tone and format you expect.
+  </Card>
+
+  <Card title="Knowledge" icon="folder">
+    Upload documents and files the agent can reference during conversations.
+  </Card>
+</CardGroup>
+
+## Agent status
+
+Each agent displays a runtime status badge:
+
+| Status | Meaning |
+| --- | --- |
+| Active | The agent is running and ready to respond |
+| Inactive | The agent is stopped |
+| Starting / Stopping | The agent is transitioning between states |
+
+You can start or stop any agent from its card on the Agents page, or from the agent's own header.
+
+## Marketplace agents
+
+Some agents in your list may come from the Marketplace. These show a **Marketplace** badge and may have limited configuration options depending on the listing.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Create an Agent" icon="plus" href="/agents/create-an-agent">
+    Build your first custom agent with a name, instructions, and model settings.
+  </Card>
+
+  <Card title="Messaging Channels" icon="message-circle" href="/agents/messaging-channels">
+    Connect your agent to Telegram, Discord, or X/Twitter.
+  </Card>
+</CardGroup>

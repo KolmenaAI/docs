@@ -1,0 +1,94 @@
+---
+title: "Handle Interaction Requests from Your Agents"
+sidebarTitle: "Interaction Requests"
+description: "Learn how to answer, decline, and manage interaction requests from agents. Handle credential requests and understand request statuses like withdrawn or timed out."
+---
+
+When an agent needs your input to keep working, it sends an **interaction request**. These requests appear in your chat thread and ask you to answer a question, make a choice, or provide a credential. Responding keeps the agent moving; ignoring it can pause the task.
+
+## Types of Interaction Requests
+
+Agents send requests for a few common reasons:
+
+| Request type | What it means |
+| --- | --- |
+| **Question** | The agent needs clarification or a decision before it can continue. |
+| **Form** | The agent is collecting several pieces of information and shows which fields are still needed. |
+| **Credential** | The agent needs an API key, token, or password to call a service on your behalf. |
+
+## Answer a Request
+
+<Steps>
+  <Step title="Open the request">
+    In the chat thread, the agent's message will show the question or form. Read it carefully.
+  </Step>
+  <Step title="Type or select your answer">
+    For text questions, type your response and click **Send**. For multiple choice, select the option that fits, or pick **Something else** to explain manually.
+  </Step>
+  <Step title="Submit or skip">
+    Click **Done** when finished, or **Skip** if you want the agent to move on without that answer.
+  </Step>
+</Steps>
+
+<Tip>
+  Use the arrow keys to navigate between options and Enter to select. This works for quick multiple-choice responses.
+</Tip>
+
+## Decline or Dismiss a Request
+
+If you do not want to answer, you have options:
+
+- **Skip** tells the agent to proceed without the missing information.
+- **Dismiss these questions** removes the current batch of requests from the thread.
+- **Decline** marks the request as declined, which the agent can see in its status.
+
+## Request Statuses
+
+Each interaction request has a status so you can see what happened:
+
+| Status | Meaning |
+| --- | --- |
+| **Answered** | You responded and the agent received it. |
+| **Declined** | You chose not to answer. |
+| **Withdrawn** | The agent canceled the request, often because it found another way forward or no longer needs the input. |
+| **Timed out** | The request expired because it was not answered within the allowed window. |
+| **Closed** | The request was resolved or superseded by another event. |
+
+## Handle Credential Requests
+
+When an agent needs access to a service, it may ask for your key or token.
+
+<Steps>
+  <Step title="Review the request">
+    The agent names the service it needs access to. Check that you recognize the service.
+  </Step>
+  <Step title="Paste or reuse a saved key">
+    Type or paste your key into the field. If you already saved a credential for that service, you can choose **Use your saved key** instead.
+  </Step>
+  <Step title="Save to Credentials (optional)">
+    Click **Save to Credentials** to store the key securely for future use. The key is encrypted the moment you send it and never shown again in chat.
+  </Step>
+  <Step title="Send">
+    Click **Send** to grant access. The agent can now call the service on your behalf.
+  </Step>
+</Steps>
+
+<Warning>
+  Saving a credential replaces the saved key for every agent that uses that service. If you want to keep the old key for other agents, choose **Keep saved key** instead.
+</Warning>
+
+<Note>
+  You can revoke any saved credential at any time from the [Credentials](/integrations/credentials) page. The agent will stop receiving it immediately.
+</Note>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Chat with Maya" icon="message-square" href="/maya/chat-with-maya">
+    Start and manage your conversations.
+  </Card>
+
+  <Card title="Credentials" icon="key" href="/integrations/credentials">
+    Manage saved keys and service access.
+  </Card>
+</CardGroup>

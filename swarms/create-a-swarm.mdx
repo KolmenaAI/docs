@@ -1,0 +1,48 @@
+---
+title: "Create and Configure a Swarm of AI Agents"
+sidebarTitle: "Create a Swarm"
+description: "Build a swarm by naming it, writing a goal prompt, choosing a leader, and selecting at least two member agents from your roster or external sources."
+---
+
+You can create a swarm from the Swarms page in your workspace. A swarm needs a clear goal, a leader, and at least two members. Once saved, the swarm is ready to receive messages and delegate work.
+
+<Steps>
+  <Step title="Open the create dialog">
+    Go to **Swarms** in the sidebar, then click **New Swarm**.
+  </Step>
+  <Step title="Name the swarm">
+    Enter a name that reflects the mission, such as "Weekly Report Team" or "Customer Support Escalation."
+  </Step>
+  <Step title="Write the goal prompt">
+    Describe what the swarm should accomplish. The prompt should be at least 50 characters so the leader has enough context to plan and delegate. You can click **Improve Prompt** after adding agents to enrich the description with their capabilities.
+  </Step>
+  <Step title="Pick a leader">
+    Choose who leads the swarm:
+
+    - **Maya** — she orchestrates the swarm and chats with you directly.
+    - **One of your agents** — the agent becomes the orchestrator and speaks for the swarm.
+
+    The leader must be one of the selected members. You cannot assign an external agent as leader.
+  </Step>
+  <Step title="Add members">
+    Select at least two agents total. You can add:
+
+    - **Your agents** from the Internal tab. Use the search box to filter by name.
+    - **External agents** from the External tab. Paste the agent's base URL and verify it. Kolmena reads the agent card from `/.well-known/agent-card.json` under that URL.
+
+    If you deselect the current leader, the crown moves to the first remaining selected agent automatically.
+  </Step>
+  <Step title="Create the swarm">
+    Click **Create Swarm**. Kolmena builds the team and takes you to the swarm chat.
+  </Step>
+</Steps>
+
+## Tips for a strong swarm
+
+- **Match skills to the goal.** A research swarm benefits from an analyst and a writer. A support swarm benefits from a triage agent and an escalation agent.
+- **Keep the prompt focused.** One clear mission is easier to delegate than a broad list of unrelated tasks.
+- **Start with your own agents.** External agents are useful for extending reach, but your own agents share your knowledge base and credentials.
+
+<Note>
+  A swarm needs at least two members and a leader. External agents count toward the member minimum, but only your own agents can lead.
+</Note>

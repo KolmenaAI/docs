@@ -1,0 +1,82 @@
+---
+title: "Pair a Browser for Agent Web Access"
+sidebarTitle: "Browsers"
+description: "Install the Kolmena browser extension, pair your browser, and hand over live tabs so your agents can work on sites you are already signed into."
+---
+
+The browser integration lets your agents interact with live web pages you are already signed into. You install the Kolmena browser extension, pair your browser, and hand over individual tabs when an agent needs them. Nothing runs until you explicitly give a tab, and you can take it back at any time.
+
+## Install the extension
+
+<Steps>
+  <Step title="Get the extension">
+    Open **Settings > Your browsers** in Kolmena. If the extension is not installed, click **Get the extension** to open the Chrome Web Store listing.
+  </Step>
+  <Step title="Install in Chrome, Edge, or Brave">
+    Add the Kolmena extension to your browser. It works in Chromium-based browsers including Chrome, Edge, and Brave.
+  </Step>
+  <Step title="Reload the settings page">
+    Return to **Settings > Your browsers** and reload the page so Kolmena detects the extension.
+  </Step>
+</Steps>
+
+## Pair your browser
+
+<Steps>
+  <Step title="Click Pair this browser">
+    On the **Your browsers** page, click **Pair this browser**. Kolmena mints a secure token and hands it directly to the extension.
+  </Step>
+  <Step title="Confirm pairing">
+    The extension accepts the token and establishes a secure connection. Your browser now appears in the list with its platform and browser name (for example, "Mac — Chrome").
+  </Step>
+</Steps>
+
+You can pair more than one browser or device. Each one appears as a separate entry in the list.
+
+## Hand over a tab
+
+When an agent needs to work on a website you are signed into:
+
+1. Open a new tab and go to the site.
+2. Sign in if you are not already.
+3. Click the Kolmena extension icon in your toolbar.
+4. Choose **Give this tab to my agent**.
+5. Return to Kolmena and ask the agent to continue.
+
+The browser list in **Settings > Your browsers** shows which tab is currently offered. While the agent is working, Chrome displays a banner on that tab.
+
+## Unpair a browser
+
+To remove a paired browser:
+
+1. Go to **Settings > Your browsers**.
+2. Find the browser in the list.
+3. Click **Unpair**.
+
+The token is revoked immediately. The extension will no longer be able to hand over tabs, and any active session ends on the next reconnect attempt.
+
+## Browser states
+
+| State | What it means |
+| --- | --- |
+| Tab ready | A tab has been handed over and the agent can use it. |
+| Online, no tab handed over | The browser is paired but no tab is currently offered. |
+| Offline | The browser is closed or the extension is not active. Open the browser to bring it back. |
+
+## Troubleshooting
+
+- **Pairing failed** — Make sure the extension is installed and enabled. Reload the settings page and try again.
+- **Extension not detected** — If you are on a local or test build, you may need the latest extension version that allows localhost connections.
+- **Popup blocked** — Some connections open a provider popup. Allow pop-ups for Kolmena if prompted.
+
+## Security notes
+
+- The token is handed directly from Kolmena to the extension through a secure channel. It never touches local storage or the clipboard.
+- Agents can only access tabs you explicitly hand over. They cannot open new tabs or browse on their own.
+- You can unpair at any time to revoke access immediately.
+
+## Next steps
+
+- [Connect apps for API-based integrations](/integrations/connect-apps)
+- [Add credentials agents need to sign in](/integrations/credentials)
+- [Install skills that work with web data](/integrations/skills)

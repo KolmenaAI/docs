@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "KOLMENA AI",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -9,45 +9,109 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
+    "tabs": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
+        "tab": "Product Guide",
+        "groups": [
+          {
+            "group": "Get Started",
+            "icon": "rocket",
+            "pages": [
+              "index",
+              "quickstart",
+              "getting-started/core-concepts"
+            ]
+          },
+          {
+            "group": "Maya",
+            "icon": "sparkles",
+            "pages": [
+              "maya/index",
+              "maya/chat-with-maya",
+              "maya/interaction-requests",
+              "maya/memory",
+              "maya/outputs-and-deliverables"
+            ]
+          },
+          {
+            "group": "Agents & Swarms",
+            "icon": "users",
+            "pages": [
+              "agents/index",
+              "agents/create-an-agent",
+              "agents/versions-and-publishing",
+              "agents/messaging-channels",
+              "swarms/index",
+              "swarms/create-a-swarm",
+              "swarms/swarm-chat-and-feed"
+            ]
+          },
+          {
+            "group": "Automation & Knowledge",
+            "icon": "clock",
+            "pages": [
+              "jobs/index",
+              "jobs/create-a-job",
+              "knowledge/index",
+              "knowledge/add-documents"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "icon": "plug",
+            "pages": [
+              "integrations/index",
+              "integrations/connect-apps",
+              "integrations/skills",
+              "integrations/credentials",
+              "integrations/browsers"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Account & Marketplace",
+        "groups": [
+          {
+            "group": "Marketplace",
+            "icon": "store",
+            "pages": [
+              "marketplace/index",
+              "marketplace/install-a-listing",
+              "marketplace/sell-on-the-marketplace"
+            ]
+          },
+          {
+            "group": "Account & Billing",
+            "icon": "credit-card",
+            "pages": [
+              "account/settings",
+              "account/plans-and-billing",
+              "account/usage-and-logs",
+              "account/sharing"
+            ]
+          },
+          {
+            "group": "Help",
+            "icon": "life-ring",
+            "pages": [
+              "help/faq",
+              "help/troubleshooting"
+            ]
+          }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:support@mintlify.com"
-      }
-    ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Open Kolmena",
+      "href": "https://app.kolmena.ai"
     }
   },
   "contextual": {
@@ -62,11 +126,7 @@
       "vscode"
     ]
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+  "styling": {
+    "eyebrows": "breadcrumbs"
   }
 }

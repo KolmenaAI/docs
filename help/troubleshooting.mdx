@@ -1,0 +1,90 @@
+---
+title: "Troubleshooting Common Issues in Kolmena"
+sidebarTitle: "Troubleshooting"
+description: "Fix common Kolmena problems quickly: agents that won't start, jobs that stop, disconnected apps, missing credentials, payment declines, and how to report an issue from the app."
+---
+
+When something in Kolmena is not working as expected, use this guide to diagnose the problem and get back on track. Each section covers a specific symptom, the likely cause, and the steps to resolve it.
+
+<Accordion title="Agent is not starting, updating, or responding">
+  If an agent hangs on start or stops responding in chat, try the following in order:
+
+  1. **Wait a moment, then refresh.** Large agents or complex knowledge bases can take longer to start. If you see a timeout message, wait 30 seconds and try again.
+  2. **Check the agent status.** In the chat panel, look for a "Starting agent" indicator. If it stays stuck, open the agent settings and click **Stop**, then **Start** to force a fresh start.
+  3. **Review recent changes.** If the issue began after you published a new version, roll back to the previous version from the agent's version history and verify it starts correctly.
+  4. **Check for interaction requests.** An agent pauses when it needs your input. Open the chat or the Interaction Requests panel and answer or decline any pending questions so the agent can resume.
+
+  If the agent still fails to start, the background build may have encountered an error. Check the active builds panel for details.
+</Accordion>
+
+<Accordion title="Job stopped after repeated failures">
+  A job automatically pauses after **5 consecutive failed runs** and appears in the **Needs Attention** section of the Jobs page. Kolmena does this to prevent wasted usage while the underlying issue remains unfixed.
+
+  To resolve it:
+
+  1. Open the agent's **Configure → Jobs** page.
+  2. Find the paused job and review the run history to identify the error.
+  3. Fix the cause (for example, reconnect a disconnected app account, correct the task description, or adjust the schedule).
+  4. Click **Resume** to re-enable the job.
+
+  <Note>
+    You can have up to **25 open jobs** (active or paused) at one time. If you hit the limit, delete an unused job before adding a new one. Only one run of a job executes at a time, and the shortest supported interval is **15 minutes**.
+  </Note>
+</Accordion>
+
+<Accordion title="Connected app needs reconnecting">
+  Some integrations require periodic re-authentication or can be invalidated by changes on the provider side. When an app account disconnects, any job that depends on it pauses automatically.
+
+  To reconnect:
+
+  1. Go to **Integrations → Connect Apps**.
+  2. Locate the app with a **Needs reconnecting** status.
+  3. Click **Connect** and complete the provider's authentication flow again.
+  4. Return to the agent's **Jobs** page and **Resume** any paused jobs that relied on that account.
+
+  If you no longer need the integration, you can disconnect it. The stored credential will be removed, and you can reconnect again later if needed.
+</Accordion>
+
+<Accordion title="Missing credential or credential request">
+  Kolmena does not grant access to integrations by default. If an agent or job needs a connected app and no valid credential exists, it will pause and request one.
+
+  To fix a missing credential:
+
+  1. Open the **Integrations → Credentials** page to see which apps are connected.
+  2. If the required app is missing, go to **Integrations → Connect Apps** and add the account.
+  3. If the app is listed but shows **Needs reconnecting**, re-authenticate it.
+  4. Return to the agent or job and retry the task.
+
+  <Warning>
+    For security reasons, saved credentials **cannot be read back** after they are stored. If you lost access or need to rotate a token, disconnect the old account and connect a new one.
+  </Warning>
+
+  When granting access, remember that **All agents** grants never include Maya. If you want Maya to use an integration, grant it to her explicitly.
+</Accordion>
+
+<Accordion title="Payment or top-up failed">
+  If a charge is declined or a top-up fails, Kolmena pauses auto top-ups to prevent repeated declines.
+
+  Common causes and fixes:
+
+  | Symptom | Likely cause | What to do |
+  | --- | --- | --- |
+  | Card needs verification | 3-D Secure / SCA challenge pending | Open the billing portal from **Account → Plans & Billing** and complete the verification step. |
+  | Payment declined | Expired card or insufficient funds | Update your payment method in the billing portal. |
+  | Top-up uncollectible | Terminal decline on an LLM top-up | Update your card, then re-enable **Auto Top-ups** in **Account → Plans & Billing**. |
+
+  You can also enable **Auto Top-ups** so Kolmena automatically purchases additional queries when you run low, which helps prevent tasks from stopping mid-execution.
+</Accordion>
+
+<Accordion title="How to report a problem from the app">
+  If you encounter a bug, unexpected behavior, or have an idea for improvement, you can send feedback directly from Kolmena.
+
+  1. Click the **Share Feedback** button in the app (usually in the bottom-right corner or main menu).
+  2. Describe what happened or what you would like to see. Be specific: include the agent name, job name, and the time the issue occurred if relevant.
+  3. Attach up to **3 files** (PNG, JPG, or MP4, up to 10 MB each) to help the team reproduce the issue.
+  4. Click **Send Feedback**.
+
+  The Kolmena team reads every submission. You will see a confirmation toast when it is sent successfully.
+</Accordion>
+
+If the issue persists after trying the steps above, check the [FAQ](/help/faq) or review your recent [usage and logs](/account/usage-and-logs) for additional clues.

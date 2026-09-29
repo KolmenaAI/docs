@@ -1,0 +1,90 @@
+---
+title: "Add Documents to Knowledge"
+sidebarTitle: "Add Documents"
+description: "Upload files, paste text, or add web links to an agent or swarm's knowledge library. Organize items into folders and control which agents can access them."
+---
+
+Knowledge gives your agents and swarms the context they need to answer questions, follow instructions, and make better decisions. You can upload files, paste plain text, or add web links, then organize everything into folders and choose which agents and swarms can use each resource.
+
+## Upload files
+
+<Steps>
+  <Step title="Open the Knowledge tab">
+    Go to an agent or swarm, then select **Knowledge** from the top navigation.
+  </Step>
+  <Step title="Add files">
+    Click **Files** and either drag files into the dropzone or click to browse. You can also drop files directly onto the Knowledge page.
+  </Step>
+  <Step title="Wait for processing">
+    Each file is automatically converted into searchable text. While processing, the status shows **Waiting** or **Processing**. Once ready, the agent can recall the content during conversations and tasks.
+  </Step>
+</Steps>
+
+<Note>
+  Supported types include documents, images, audio, and video. There is a per-file size limit shown in the UI. If a file is too large, split it into smaller files and upload again.
+</Note>
+
+## Add text or web links
+
+If you have text that is not in a file, or you want to reference a public web page, use the other add options:
+
+- **Text**: Click **Text**, enter a resource name, paste the content, and confirm.
+- **Link**: Click **Link**, paste one or more URLs (one per line or comma-separated, up to 20 at a time), and confirm. Each page is fetched and saved as searchable Markdown.
+
+## Organize with folders
+
+Keep your library tidy by creating folders and moving items into them.
+
+<Steps>
+  <Step title="Create a folder">
+    Click **New Folder**, enter a name, and choose a parent folder if you want nesting.
+  </Step>
+  <Step title="Move items">
+    Select one or more files or folders, click **Move To**, and pick the destination folder. You can also drag and drop items in the tree.
+  </Step>
+  <Step title="Rename or delete folders">
+    Open a folder's menu to **Rename** it. To delete, choose **Delete Folder**. If the folder is not empty, move the contents first, or use **Force Delete** to remove everything inside.
+  </Step>
+</Steps>
+
+## Give agents and swarms access
+
+By default, nothing is shared automatically. You control which agents and swarms can read each knowledge resource.
+
+<Steps>
+  <Step title="Open access settings">
+    On a knowledge item, click the access pill (it may show **Everyone** or a count). This opens **Access to** {name}.
+  </Step>
+  <Step title="Choose who can use it">
+    Toggle access for individual agents and swarms, or select **All agents & swarms** to share broadly. The **All agents** grant never includes Maya.
+  </Step>
+  <Step title="Save">
+    Click to confirm. You will see an **Access updated** confirmation.
+  </Step>
+</Steps>
+
+## Delete or archive documents
+
+To remove a file, open its menu and choose **Delete**. The item moves to the **Archive**, where you can **Restore** it later or **Delete forever** to purge it. To empty the entire archive, use **Delete All**.
+
+<Warning>
+  Deleting a folder or document permanently removes it. If you delete an agent, its attached knowledge files are also removed.
+</Warning>
+
+## Troubleshoot processing errors
+
+If a document fails to process, check the error message and try the recommended fix:
+
+| Error | What to do |
+| --- | --- |
+| Unsupported file type | Convert the file to PDF, DOCX, or plain text and re-upload. |
+| File too large | Split the document into smaller files. |
+| No readable text found | If the file is a scan, make sure the text is legible, then retry. |
+| Extraction timeout | Try splitting the file, removing heavy sheets, or uploading as CSV. |
+| Generic failure | Click **Retry** on the document, or re-upload if retrying fails. |
+
+## Next steps
+
+- [Create an agent](/agents/create-an-agent)
+- [Create a swarm](/swarms/create-a-swarm)
+- [Connect apps](/integrations/connect-apps)

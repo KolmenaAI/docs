@@ -1,0 +1,87 @@
+---
+title: "Connect Agents to Telegram, Discord, and X/Twitter"
+sidebarTitle: "Messaging Channels"
+description: "Let your custom agents talk to people on Telegram, Discord, and X/Twitter. Learn how to connect each channel and what credentials you need."
+---
+
+Messaging channels let your custom agents communicate outside Kolmena. Once connected, an agent can read and reply to messages on Telegram, Discord, or X/Twitter directly.
+
+You manage channels from an agent's **Configure** tab, under **Channels**. Each channel shows its status: **Connected**, **Needs Setup**, or **Not Connected**.
+
+## Telegram
+
+Connecting Telegram lets your agent respond in chats through a bot.
+
+<Steps>
+  <Step title="Open the Telegram channel card">
+    In your agent's Configure > Channels section, find Telegram and click **Connect**.
+  </Step>
+  <Step title="Link your Telegram account">
+    Kolmena prompts you to link your own Telegram account first. This ensures the agent recognizes you as its owner. Click **Link Telegram account**, open the link in Telegram, and press **Start**.
+  </Step>
+  <Step title="Verify the link">
+    Return to Kolmena and click **I pressed Start** to confirm the connection.
+  </Step>
+  <Step title="Save the channel settings">
+    The bot token and allowed chats are managed through the channel configuration. Save to activate the connection.
+  </Step>
+</Steps>
+
+<Note>
+  If you do not link your Telegram account, the agent will not answer anyone until you manually add chat IDs to the allowed chats list.
+</Note>
+
+## Discord
+
+Connecting Discord requires a bot token and two steps inside the Discord Developer Portal.
+
+<Steps>
+  <Step title="Open the Discord channel card">
+    In your agent's Configure > Channels section, find Discord and click **Connect**.
+  </Step>
+  <Step title="Enter your bot token">
+    Provide the Discord API token for your bot. This is stored securely by Kolmena.
+  </Step>
+  <Step title="Enable privileged intents in Discord">
+    In the Discord Developer Portal, go to your bot's settings and enable **Presence**, **Server Members**, and **Message Content** under Privileged Gateway Intents. Without these, Discord refuses the connection.
+  </Step>
+  <Step title="Invite the bot to a server">
+    After saving the token, Kolmena provides an invite link. Click it to add the bot to a Discord server. Until you do this, the bot is online but sees no messages.
+  </Step>
+</Steps>
+
+<Warning>
+  Disconnecting a Discord bot in Kolmena deletes the stored token, but the bot stays connected to Discord until the agent restarts.
+</Warning>
+
+## X/Twitter
+
+Connecting X/Twitter lets your agent post or respond on the platform.
+
+<Steps>
+  <Step title="Open the X/Twitter channel card">
+    In your agent's Configure > Channels section, find X/Twitter and click **Connect**.
+  </Step>
+  <Step title="Provide API credentials">
+    Enter your Twitter API key, API secret key, access token, and access token secret. These credentials authenticate the agent to act on your account.
+  </Step>
+  <Step title="Save and activate">
+    Save the configuration. The channel status changes to Connected once the credentials are validated.
+  </Step>
+</Steps>
+
+## Managing connected channels
+
+For any connected channel, click **Settings** on the card to update credentials or options. Click **Disconnect** to remove the channel. For binding-backed channels (Telegram, Discord, X/Twitter), disconnecting removes the stored credentials and the agent stops receiving or sending messages after its next restart.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Create an Agent" icon="plus" href="/agents/create-an-agent">
+    Build an agent you can connect to external channels.
+  </Card>
+
+  <Card title="Integrations" icon="plug" href="/integrations/index">
+    Add apps and services that give your agent more capabilities.
+  </Card>
+</CardGroup>

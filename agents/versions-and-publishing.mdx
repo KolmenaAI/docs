@@ -1,0 +1,65 @@
+---
+title: "Agent Versions, Drafts, and Publishing"
+sidebarTitle: "Versions and Publishing"
+description: "Understand how agent versions work in Kolmena: editing drafts, publishing changes, restoring old versions, and how jobs survive across updates."
+---
+
+Kolmena uses a version system for every custom agent so you can edit safely and roll back if needed. Each agent has a live published version, a working draft for edits, and an archive of previously published versions.
+
+## How versions work
+
+When you open an agent's **Configure** tab, you always edit the **draft**. The draft is a working copy of the live version. Your changes are saved automatically as you type, but they do not affect the running agent until you publish.
+
+| Version type | What it is |
+| --- | --- |
+| Live | The currently published version that the running agent uses |
+| Draft | Unpublished changes you are currently editing |
+| Archived | Previously published versions kept in history |
+
+## Publishing changes
+
+When you are ready to apply your edits:
+
+<Steps>
+  <Step title="Review your draft">
+    Open **Configure** and verify your changes in Basics, Channels, Skills, or any other section.
+  </Step>
+  <Step title="Click Publish">
+    The button label adapts to the situation:
+
+    - **Publish to launch** for a brand-new agent that has never been published
+    - **Publish & restart** for a running agent (it cycles to apply changes)
+    - **Publish** for a stopped agent that has been published before
+  </Step>
+  <Step title="Confirm the result">
+    After publishing, the draft becomes the new live version. If the agent was running, it restarts automatically to pick up the changes.
+  </Step>
+</Steps>
+
+## Discarding a draft
+
+If you change your mind about edits in progress, click **Discard**. This deletes the draft and snaps the editor back to the live version. You cannot discard the draft of a never-published agent because it has no live version to fall back to.
+
+## Restoring an old version
+
+Open the **Version History** dropdown in the Configure sidebar to see every previously published version. Each row shows its publish date and time. Click any row to view it, then click **Restore** to make it live again.
+
+<Warning>
+  Restoring an archived version discards any current draft. If you have unpublished changes, Kolmena warns you before proceeding.
+</Warning>
+
+## Jobs persist across versions
+
+Any [jobs](/jobs/index) you have scheduled for an agent continue running even after you publish a new version. Jobs are tied to the agent itself, not to a specific version, so updating the agent's instructions or skills does not interrupt recurring tasks.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Create an Agent" icon="plus" href="/agents/create-an-agent">
+    Build a new agent and publish your first version.
+  </Card>
+
+  <Card title="Messaging Channels" icon="message-circle" href="/agents/messaging-channels">
+    Connect your agent to external platforms.
+  </Card>
+</CardGroup>
