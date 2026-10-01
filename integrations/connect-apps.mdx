@@ -70,6 +70,14 @@ To remove an integration:
   Disconnecting removes the stored credential. You can reconnect at any time, but you will need to sign in or paste the key again.
 </Warning>
 
+## Start jobs from app events
+
+A connected app can start a job when something happens in it, for example a new message in a Slack channel. Each event starts one job run.
+
+To set one up, open the [Jobs page](https://app.kolmena.ai/jobs), click **New Job**, and pick the app in the **Integrations** section. Then choose the agent, the event, and its settings. If the app isn't connected yet, click **Connect**. One click attaches the app to the agent and opens the sign-in window. You can also ask Maya or an agent in chat to create the job, as long as you have connected the app.
+
+If you disconnect an app account, Kolmena pauses the jobs that use it instead of deleting them. Reconnect the account, then resume the jobs. See [Create an event job](/jobs/create-a-job#create-an-event-job) for the full steps and limits.
+
 ## Connection states
 
 | State | What it means |
@@ -80,6 +88,7 @@ To remove an integration:
 
 ## Next steps
 
+- [Create an event job](/jobs/create-a-job#create-an-event-job)
 - [Manage skills your agents can use](/integrations/skills)
 - [Add and grant credentials](/integrations/credentials)
 - [Pair a browser for live web access](/integrations/browsers)

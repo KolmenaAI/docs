@@ -19,6 +19,10 @@ Kolmena is your AI agent platform where Maya is your personal assistant, you bui
     No. The "All agents" grant never includes Maya. If you want Maya to use a connected app or credential, you must grant it to her explicitly. Nothing is granted by default, so you always control exactly which agents can access what.
   </Accordion>
 
+  <Accordion title="Can a job run when something happens in a connected app?">
+    Yes. On the Jobs page, click **New Job**, pick an app in the **Integrations** section, then choose the agent, the event, and its settings. Each event starts one run, which appears in the run history. You can also ask Maya or an agent in chat to create or change an event job for an app you have connected. Some apps are polled, so events can arrive 1 to 15 minutes late. Event jobs can't be duplicated. Triggers you made in chat earlier become jobs at their next event. See [Create an event job](/jobs/create-a-job#create-an-event-job).
+  </Accordion>
+
   <Accordion title="What happens to my jobs when I publish a new agent version?">
     Jobs persist across all published versions of an agent. When you publish a new version, your scheduled jobs continue running with the updated agent configuration. You do not need to recreate them. Learn more in [Versions and Publishing](/agents/versions-and-publishing).
   </Accordion>

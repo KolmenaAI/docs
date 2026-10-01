@@ -4,7 +4,7 @@ sidebarTitle: "Jobs Overview"
 description: "Learn how jobs let agents and Maya run tasks on a schedule, monitor statuses and run history, and send results to chats, Telegram, Discord, or webhooks."
 ---
 
-Jobs are scheduled tasks that an agent or Maya runs on your behalf, either once or on a repeating interval. You can use them to generate daily reports, check data sources, send reminders, or trigger actions through connected apps. Jobs keep working even when you are not online, and they persist across every published version of an agent.
+Jobs are tasks that an agent or Maya runs on your behalf, either on a schedule or when something happens in a connected app. You can use them to generate daily reports, check data sources, send reminders, or trigger actions through connected apps. Jobs keep working even when you are not online, and they persist across every published version of an agent.
 
 You can view all of your jobs on the [Jobs page](https://app.kolmena.ai/jobs). To configure jobs for a specific agent, open the agent, go to **Configure**, then select **Jobs**.
 
@@ -15,9 +15,11 @@ A job starts from either a schedule or an app event.
 | Trigger type | What starts the job | Examples |
 | --- | --- | --- |
 | Schedule | A fixed time or interval | One time, hourly, daily, weekly, monthly, or a custom interval |
-| Integration event | An event from a connected app | A new row in a spreadsheet, a form submission, or a webhook |
+| Integration event | An event from a connected app | A new message in a Slack channel, a new row in a spreadsheet, or a form submission |
 
-Scheduled jobs let you set a start date, an optional end time, and excluded days. Integration event jobs begin when the connected app fires its trigger. You describe the task in plain language, just like a chat message, and the agent carries it out.
+Scheduled jobs let you set a start date, an optional end time, and excluded days. Event jobs start one run for each event the connected app sends, and the agent receives the event details with the task. You describe the task in plain language, just like a chat message, and the agent carries it out. You can also ask Maya or an agent in chat to create or change a job.
+
+To create an event job, open the Jobs page, click **New Job**, and pick an app in the **Integrations** section. See [Create an event job](/jobs/create-a-job#create-an-event-job).
 
 ## Statuses and filters
 
@@ -29,7 +31,7 @@ Each job appears with a status so you can see its health at a glance.
   </Card>
 
   <Card title="Paused" icon="pause">
-    The job is switched off and will not run until you enable it again.
+    The job is switched off and will not run until you enable it again. Kolmena also pauses an event job when its app account is disconnected or when it runs more than 60 times in 10 minutes.
   </Card>
 
   <Card title="Needs attention" icon="alert-triangle">
@@ -66,9 +68,12 @@ Available destinations include:
 
 <Accordion title="Job limits">
   - **25 open jobs** per user (active or paused)
-  - **One run at a time** per job. If a run is still going when the next one should start, the new run is skipped.
+  - **One run at a time** per job. If a scheduled run is still going when the next one should start, the new run is skipped. Events of one event job run in order, one after another.
   - **Shortest interval** is 15 minutes.
   - **Five consecutive failures** automatically pause the job. Resume it after you fix the cause.
+  - **60 runs in 10 minutes** pauses an event job and sends you a notice.
+  - **Event delay**: some apps are polled, so events can arrive 1 to 15 minutes late.
+  - **Event jobs can't be duplicated.**
   - Jobs persist across all published versions of an agent. You do not need to recreate them when you publish a new version.
 </Accordion>
 
@@ -80,6 +85,8 @@ Available destinations include:
 | Agent did not respond in time | The agent was stopped or overloaded | Start the agent and try again in a few minutes |
 | Run reached its usage limit | The job consumed its budget before finishing | Check your plan and usage in [Plans and Billing](/account/plans-and-billing) |
 | Previous run still in progress | The job interval is shorter than the task duration | Lengthen the interval or simplify the task |
+| Job ran more than 60 times in 10 minutes | An event job's trigger fires too often | Check the trigger settings, then resume the job |
+| App account of the job was disconnected | The account an event job uses was disconnected | Connect the account again, then resume the job |
 | Run missed its window | The scheduler could not start the run within an hour of the scheduled time | Resume the job and check for outages |
 
 ## Next steps

@@ -32,8 +32,19 @@ When something in Kolmena is not working as expected, use this guide to diagnose
   </Note>
 </Accordion>
 
+<Accordion title="Event job paused or not running">
+  An event job runs when its connected app sends an event. If it stops running, check the following:
+
+  1. **The job ran too often.** If an event job runs more than 60 times in 10 minutes, Kolmena pauses it and sends a notice. Check the trigger settings, then click **Resume**.
+  2. **The app account was disconnected.** Kolmena pauses an event job when its app account is disconnected. Connect the account again, then resume the job.
+  3. **The event is delayed.** Some apps are polled, so an event can arrive 1 to 15 minutes after it happens. Wait before assuming the job missed it.
+  4. **Run now is unavailable.** For an event job, **Run now** replays the last event, so it is available only after the first event arrives.
+
+  Events of one job run in order. If several events arrive at once, each one waits for the previous run to finish.
+</Accordion>
+
 <Accordion title="Connected app needs reconnecting">
-  Some integrations require periodic re-authentication or can be invalidated by changes on the provider side. When an app account disconnects, any job that depends on it pauses automatically.
+  Some integrations require periodic re-authentication or can be invalidated by changes on the provider side. When an app account disconnects, any job that depends on it pauses automatically. Event jobs are paused, not deleted.
 
   To reconnect:
 
