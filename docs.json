@@ -3,11 +3,11 @@
   "theme": "mint",
   "name": "KOLMENA AI",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#FE4F32",
+    "light": "#FE4F32",
+    "dark": "#FE4F32"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/logo/kolmena-symbol-orange.png",
   "navigation": {
     "tabs": [
       {
@@ -104,8 +104,9 @@
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/kolmena-logo-light.png",
+    "dark": "/logo/kolmena-logo-dark.png",
+    "href": "https://kolmena.ai"
   },
   "navbar": {
     "primary": {
@@ -128,5 +129,14 @@
   },
   "styling": {
     "eyebrows": "breadcrumbs"
+  },
+  "background": {
+    "color": {
+      "light": "#FFFFFF",
+      "dark": "#030303"
+    }
+  },
+  "fonts": {
+    "family": "Instrument Sans"
   }
 }
