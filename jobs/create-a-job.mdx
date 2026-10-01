@@ -1,10 +1,10 @@
 ---
-title: "Create and Manage Scheduled Jobs for Agents"
+title: "Create and Manage Scheduled and Event Jobs for Agents"
 sidebarTitle: "Create a Job"
-description: "Learn how to create, schedule, edit, pause, and resume recurring jobs for your agents in Kolmena, including run history and auto-stop recovery."
+description: "Learn how to create, schedule, edit, pause, and resume jobs for your agents in Kolmena, including jobs that connected-app events start, run history, and auto-stop recovery."
 ---
 
-In Kolmena, a job tells an agent to run a task on a schedule and deliver the result to a chat or channel. You can set up one-time or repeating jobs, change them later, and review every run. This page shows you how to create a job, pick a schedule, manage its state, and resume it after an automatic stop.
+In Kolmena, a job tells an agent to run a task on a schedule, or when something happens in a connected app, and deliver the result to a chat or channel. You can set up one-time, repeating, or event jobs, change them later, and review every run. This page shows you how to create a job, pick a schedule or an app event, manage its state, and resume it after an automatic stop.
 
 ## Before you begin
 
@@ -14,7 +14,7 @@ Make sure the agent you want to schedule is [created and published](/agents/crea
   You can have up to 25 active or paused jobs at a time. If you reach the limit, delete an old job before adding a new one.
 </Note>
 
-## Create a new job
+## Create a scheduled job
 
 <Steps>
   <Step title="Open the Jobs panel">
@@ -24,7 +24,7 @@ Make sure the agent you want to schedule is [created and published](/agents/crea
     Click **New Job**. Enter a **Name** and describe the **Task** in plain language so the agent knows what to do each run.
   </Step>
   <Step title="Pick a trigger">
-    Choose **Schedule** as the trigger type. You can also trigger jobs from connected apps when events occur.
+    Choose a frequency in the **Schedule** section. To start the job from a connected app instead, see [Create an event job](#create-an-event-job).
   </Step>
   <Step title="Set the schedule">
     Select a frequency: **One Time**, **Hourly**, **Daily**, **Weekly**, **Monthly**, or **Custom**.
@@ -48,9 +48,58 @@ Make sure the agent you want to schedule is [created and published](/agents/crea
   </Step>
 </Steps>
 
+## Create an event job
+
+An event job runs when something happens in a connected app, for example a new message in a Slack channel. Use it when the agent should react to activity instead of running at fixed times.
+
+<Steps>
+  <Step title="Start a new job">
+    Open the [Jobs page](https://app.kolmena.ai/jobs) and click **New Job**.
+  </Step>
+  <Step title="Pick an app">
+    In the trigger picker, find the app in the **Integrations** section. You can search triggers by name.
+  </Step>
+  <Step title="Pick the agent">
+    Choose the agent that runs the job. Kolmena asks for the agent first because the app must be attached to that agent.
+  </Step>
+  <Step title="Connect the app if needed">
+    If the app isn't connected, click **Connect**. One click attaches the app to the agent and opens the provider's sign-in window. If you have more than one account for the app, choose it under **Account**.
+  </Step>
+  <Step title="Choose the event and its settings">
+    Select the event under **Trigger**, then fill in its settings. Required settings are marked. For Slack, pick the channel from the channel picker. If an option is not listed, choose **Not in the list?** and paste an ID or link.
+  </Step>
+  <Step title="Describe the task and save">
+    Describe the **Task** in plain language, choose the destination and result type as for a scheduled job, then click **Add Job**.
+  </Step>
+</Steps>
+
+Each event starts one run. The run appears in the job's run history, and the agent receives the task together with the details of the event.
+
+### Event job behavior and limits
+
+- **Events run in order.** The events of one job run one after another, in the order they arrive.
+- **Loop protection.** If a job runs more than 60 times in 10 minutes, Kolmena pauses it and sends you a notice. Check the trigger, then resume the job.
+- **Disconnected accounts.** If you disconnect the app account a job uses, Kolmena pauses the job instead of deleting it. Connect the account again, then resume the job.
+- **Delayed events.** Some apps are polled rather than pushing events, so an event can arrive 1 to 15 minutes after it happens.
+- **No duplicates.** You can't duplicate an event job. Create a new one instead.
+
+<Note>
+  Triggers you created in chat before event jobs existed become jobs automatically the next time their event fires.
+</Note>
+
+## Create or change a job from chat
+
+You can ask Maya or an agent in chat to create or change a job, including an event job. For example:
+
+```text
+When a new message is posted in the #support Slack channel, summarize it and send the summary to this chat.
+```
+
+The agent can only create an event job for an app that the job owner has connected. If the app isn't connected, the agent offers the connect step first.
+
 ## Edit, pause, or resume a job
 
-You can change a job after it is created. Open the **Jobs** panel, find the job, and click it to edit the name, task, schedule, or destination. Click the toggle to pause or resume a job. Paused jobs keep their history but do not run until you turn them back on.
+You can change a job after it is created. Open the **Jobs** panel, find the job, and click it to edit the name, task, schedule or event, or destination. Click the toggle to pause or resume a job. Paused jobs keep their history but do not run until you turn them back on.
 
 <Warning>
   If a job fails five runs in a row, it automatically stops and shows **Needs attention**. Fix the cause (for example, reconnect an app or choose a valid destination), then click **Resume** to start it again.
@@ -59,6 +108,8 @@ You can change a job after it is created. Open the **Jobs** panel, find the job,
 ## Run a job on demand
 
 To test a schedule or rerun a task immediately, click **Run now** on an active job whose agent is started. The run appears in the job's history right away.
+
+For an event job, **Run now** replays the last event the job received. It is available after the first event arrives.
 
 ## View run history
 
