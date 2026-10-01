@@ -76,6 +76,20 @@ When something in Kolmena is not working as expected, use this guide to diagnose
   You can also enable **Auto Top-ups** so Kolmena automatically purchases additional queries when you run low, which helps prevent tasks from stopping mid-execution.
 </Accordion>
 
+<Accordion title="Billing address required when subscribing">
+  When you subscribe to, upgrade, or downgrade a paid plan, you may see: "We need a billing address to work out the tax on this plan." Kolmena returns this `BILLING_ADDRESS_REQUIRED` error when it can't determine your tax location from your account or your saved card.
+
+  To fix it:
+
+  1. Click **Add billing address** in the error message, or go to **Settings > Billing**.
+  2. In the **Billing address** panel, select your **Country** and fill in your address.
+     - US addresses need a **ZIP code**.
+     - Canadian addresses need a **province** or a **postal code**.
+  3. Click **Save address**, then subscribe again.
+
+  If saving fails because of your **VAT / GST number**, check the number's format. You can also clear the field and save without it. Kolmena only accepts tax IDs from countries it can validate. See [Taxes](/account/plans-and-billing#taxes) for details.
+</Accordion>
+
 <Accordion title="How to report a problem from the app">
   If you encounter a bug, unexpected behavior, or have an idea for improvement, you can send feedback directly from Kolmena.
 
