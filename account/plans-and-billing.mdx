@@ -21,6 +21,43 @@ Kolmena offers four plans. Each paid plan renewes monthly and includes a set num
   All plans let you create unlimited agents. Seats only limit how many agents can be **running at the same time**.
 </Note>
 
+## Taxes
+
+All Kolmena prices exclude applicable taxes. This applies to plans, LLM credit top-ups, and marketplace subscriptions. Kolmena calculates local VAT, GST, or sales tax from your billing address and adds it at checkout, so your total charge is the listed price plus tax.
+
+If you subscribed before tax-exclusive pricing, your plan price stays the same. Tax is added on top starting at your next renewal.
+
+### Billing address and VAT number
+
+Kolmena needs to know where you are to calculate tax. You set this in the **Billing address** panel under **Settings > Billing**.
+
+<Steps>
+  <Step title="Open the Billing address panel">
+    Go to **Settings > Billing** and scroll to **Billing address**.
+  </Step>
+  <Step title="Enter your address">
+    Select your **Country** and fill in the address fields. A country alone is enough for most countries. US addresses need a ZIP code. Canadian addresses need a province or a postal code.
+  </Step>
+  <Step title="Add a VAT number (optional)">
+    Businesses can enter a tax ID in **VAT / GST number**, for example `ESB12345678`.
+  </Step>
+  <Step title="Save">
+    Click **Save address**.
+  </Step>
+</Steps>
+
+If you have not entered an address, Kolmena uses the billing address from your saved card when it can. Settings shows an alert if Kolmena still cannot determine your tax location. You can't subscribe to a paid plan until you add an address. See [Troubleshooting](/help/troubleshooting) for the `billing address required` error.
+
+<Info>
+  EU and UK businesses with a valid VAT number are invoiced without VAT under the reverse charge and account for it themselves. Kolmena checks the number with the tax authority after you save it. The panel shows the status:
+
+  - **Pending**: the check is in progress. VAT still applies until the number is confirmed.
+  - **Verified**: invoices are issued without VAT.
+  - **Unverified**: the tax authority did not recognize the number, so VAT still applies. Check the number and save again.
+
+  Kolmena rejects a number that is badly formatted or that comes from a country it can't validate tax IDs for. To remove a VAT number, clear the field and save.
+</Info>
+
 ## Manage your subscription
 
 From the Billing settings page you can upgrade, downgrade, or cancel your plan.
@@ -48,10 +85,12 @@ Your usage balance is a prepaid wallet that pays for LLM calls. Credits roll ove
     In Billing settings, click **Top Up** next to your current balance.
   </Step>
   <Step title="Choose an amount">
-    Select a preset ($$10, $$25, $$50, $$100, or $$200) or enter a custom amount. The minimum top-up is $$10.
+    Select a preset ($$10, $$25, $$50, $$100, or $$200) or enter a custom amount. The minimum top-up is $$10. Amounts exclude tax.
   </Step>
   <Step title="Confirm the charge">
     Click **Top up** to charge your saved payment method immediately. Your balance updates right away.
+
+    Kolmena credits the full amount you chose and charges any applicable tax on top. For example, a \$50 top-up adds \$50 to your balance. With 20% VAT, your card is charged \$60.
   </Step>
 </Steps>
 
@@ -65,7 +104,7 @@ Auto top-up refills your balance automatically so your agents do not stop mid-ta
   </Step>
   <Step title="Configure the rules">
     - **Trigger if below**: the balance that triggers a refill (for example, \$5).
-    - **Top up by**: the amount charged each time (minimum \$10).
+    - **Top up by**: the amount added to your balance each time (minimum \$10). Applicable tax is charged on top.
     - **Monthly cap**: the most you will be charged in auto top-ups per billing window.
   </Step>
   <Step title="Save">
