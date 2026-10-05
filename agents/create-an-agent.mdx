@@ -6,6 +6,14 @@ description: "Build a new AI agent with a name, persona, instructions, and model
 
 Creating a custom agent in Kolmena takes just a few steps. You give it a name and instructions, and Maya helps build the rest.
 
+## Build an agent in a chat with Maya
+
+You can also create an agent without writing configs or prompts. Start a new chat with Maya, describe what you want, and answer a few clarifying questions in plain language. Maya generates a full persona from the conversation. Then open **Configure** to refine the result before you publish and restart.
+
+<iframe className="w-full aspect-video rounded-xl my-6" src="https://www.youtube.com/embed/ugnk2iJt5xg" title="Create an agent with Maya" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+
+## Use the agent builder
+
 <Steps>
   <Step title="Open the agent builder">
     Go to the **Agents** page and click **New Agent**. A creation modal opens where you describe what you want.
@@ -52,14 +60,32 @@ Once your agent exists, open it and go to **Configure** to adjust:
   Kolmena uses a core planner that selects the best model for each step automatically. You can manage which models are available and set a voice model, but you do not pick a single static model for the entire agent.
 </Note>
 
+### Configure the persona, skills, and examples
+
+Use the persona field to shape how the agent communicates, how direct it is, and when it should say it does not know. Temperature controls how consistent or creative its replies feel. Under **Examples**, add a real question and the answer you want back so the agent picks up the tone, structure, and level of detail.
+
+<iframe className="w-full aspect-video rounded-xl my-6" src="https://www.youtube.com/embed/Ou4FUKhiMME" title="Configuring Your Agent" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+
+### Manage models
+
+To control which models an agent can use, open **Configure**, go to **Basics**, and click **Manage Models**. Models are grouped by type, such as small and large models, image interpretation, image generation, dashboard creation, and planner models. Turn models on or off to balance quality, speed, and cost. Changes apply only to the agent you are editing.
+
+<iframe className="w-full aspect-video rounded-xl my-6" src="https://www.youtube.com/embed/JYGUQ7cJeBw" title="Models: Full Walkthrough" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+
+### Change the agent's voice
+
+Kolmena assigns each new agent a default voice, which you hear in voice mode. To change it, open **Configure**, go to **Basics**, click **Manage** in the **Manage Models** section, and select **Voice**. Preview the current voice, then filter the library of more than 17,000 voices by language, accent, gender, and use case, and test any voice before selecting it. Publish and restart the agent so it picks up the new voice.
+
+<iframe className="w-full aspect-video rounded-xl my-6" src="https://www.youtube.com/embed/aQV8C3j7QzE" title="Voice Selection" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+
 ## Next steps
 
 <CardGroup cols={2}>
-  <Card title="Versions and Publishing" icon="git-branch" href="/agents/versions-and-publishing">
+  <Card title="Versions and Publishing" color="#FE4F32" icon="code-branch" href="/agents/versions-and-publishing">
     Learn how drafts, live versions, and publishing work.
   </Card>
 
-  <Card title="Messaging Channels" icon="message-circle" href="/agents/messaging-channels">
+  <Card title="Messaging Channels" color="#FE4F32" icon="comment" href="/agents/messaging-channels">
     Connect your agent to external platforms.
   </Card>
 </CardGroup>

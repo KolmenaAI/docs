@@ -24,19 +24,19 @@ Scheduled jobs let you set a start date, an optional end time, and excluded days
 Each job appears with a status so you can see its health at a glance.
 
 <CardGroup cols={2}>
-  <Card title="Active" icon="play">
+  <Card title="Active" color="#FE4F32" icon="play">
     The job is switched on and will run at its next scheduled time or when its trigger fires.
   </Card>
 
-  <Card title="Paused" icon="pause">
+  <Card title="Paused" color="#FE4F32" icon="pause">
     The job is switched off and will not run until you enable it again.
   </Card>
 
-  <Card title="Needs attention" icon="alert-triangle">
+  <Card title="Needs attention" color="#FE4F32" icon="triangle-exclamation">
     The job has failed five runs in a row, or its destination is no longer valid. Fix the cause, then resume it.
   </Card>
 
-  <Card title="Completed" icon="check-circle">
+  <Card title="Completed" color="#FE4F32" icon="circle-check">
     A one-time job that has already run appears here.
   </Card>
 </CardGroup>
@@ -85,11 +85,11 @@ Available destinations include:
 ## Next steps
 
 <CardGroup cols={2}>
-  <Card title="Create a job" icon="plus" href="/jobs/create-a-job">
+  <Card title="Create a job" color="#FE4F32" icon="plus" href="/jobs/create-a-job">
     Walk through creating a scheduled or event-triggered job step by step.
   </Card>
 
-  <Card title="Configure your agent" icon="settings" href="/agents/versions-and-publishing">
+  <Card title="Configure your agent" color="#FE4F32" icon="user-robot" href="/agents/versions-and-publishing">
     Learn how publishing works and why jobs persist across versions.
   </Card>
 </CardGroup>

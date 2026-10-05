@@ -24,7 +24,7 @@
           },
           {
             "group": "Maya",
-            "icon": "sparkles",
+            "icon": "bee",
             "pages": [
               "maya/index",
               "maya/chat-with-maya",
