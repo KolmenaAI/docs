@@ -14,6 +14,43 @@ Make sure the agent you want to schedule is [created and published](/agents/crea
   You can have up to 25 active or paused jobs at a time. If you reach the limit, delete an old job before adding a new one.
 </Note>
 
+## Draft a job from a description
+
+The fastest way to create a job is to describe it in plain words. Maya drafts the name, task, agent, and trigger, either a schedule or an app event. You review the draft in the job form before you save it. Use this when you know what you want done but don't want to fill in every field yourself.
+
+<Steps>
+  <Step title="Open the Describe Job tab">
+    On the [Jobs page](https://app.kolmena.ai/jobs) or in an agent's **Configure > Jobs** tab, click **New Job**. The **Describe Job** tab opens.
+  </Step>
+  <Step title="Describe the job">
+    Write what the agent should do and when, then click **Draft The Job**. For example:
+
+    ```text
+    Every Monday, flag stalled deals by comparing this week's pipeline to last
+    ```
+
+    ```text
+    Summarize #design-reviews on Slack and post decisions to the thread
+    ```
+
+    Click **Stop** to cancel while Maya is drafting.
+  </Step>
+  <Step title="Review the draft">
+    The form opens with the draft and a **Drafted from your description** banner that names the agent Maya picked. Check the name, task, trigger, and settings, and change anything that is wrong. Click **Edit description** to rewrite your description and draft again.
+  </Step>
+  <Step title="Save the job">
+    Click **Add Job**.
+  </Step>
+</Steps>
+
+Keep these points in mind:
+
+- If you start the job from an agent's **Jobs** tab, the job always goes to that agent. The agent is shown locked in the draft.
+- Maya leaves out any setting she can't confirm, such as an event setting that doesn't match the app's options. Fill those in before you save.
+- Name the app in your description, for example "on Slack", so Maya picks the right event.
+- Drafting uses your balance. Usage appears as **Job drafts**. If your balance is empty, Maya can't draft the job, and the form shows a link to top up.
+- If Maya can't draft a job, add more detail to your description and try again.
+
 ## Create a scheduled job
 
 <Steps>
@@ -21,10 +58,10 @@ Make sure the agent you want to schedule is [created and published](/agents/crea
     Go to the agent you want to schedule, then select **Configure** and open the **Jobs** tab.
   </Step>
   <Step title="Start a new job">
-    Click **New Job**. Enter a **Name** and describe the **Task** in plain language so the agent knows what to do each run.
+    Click **New Job**, then open the **Choose Trigger** tab. To let Maya fill in the form for you, use the **Describe Job** tab instead. See [Draft a job from a description](#draft-a-job-from-a-description).
   </Step>
   <Step title="Pick a trigger">
-    Choose a frequency in the **Schedule** section. To start the job from a connected app instead, see [Create an event job](#create-an-event-job).
+    Choose a frequency in the **Schedule** section. Then enter a **Name** and describe the **Task** in plain language so the agent knows what to do each run. To start the job from a connected app instead, see [Create an event job](#create-an-event-job).
   </Step>
   <Step title="Set the schedule">
     Select a frequency: **One Time**, **Hourly**, **Daily**, **Weekly**, **Monthly**, or **Custom**.
@@ -57,7 +94,7 @@ An event job runs when something happens in a connected app, for example a new m
     Open the [Jobs page](https://app.kolmena.ai/jobs) and click **New Job**.
   </Step>
   <Step title="Pick an app">
-    In the trigger picker, find the app in the **Integrations** section. You can search triggers by name.
+    On the **Choose Trigger** tab, find the app in the **Integrations** section. You can search triggers by name.
   </Step>
   <Step title="Pick the agent">
     Choose the agent that runs the job. Kolmena asks for the agent first because the app must be attached to that agent.
