@@ -14,7 +14,9 @@ A skill is a bundle of code and configuration that gives an agent new abilities.
 - Interacting with external APIs
 - Running custom business logic
 
-Skills are versioned. When an update is available, you can accept the latest revision so your agents use the newest version.
+Each skill has one live version. All users and agents get the live version automatically, so you never need to update a skill by hand. Kolmena publishes new versions of Kolmena skills and can roll a skill back to an earlier version. Your agents pick up the change within seconds.
+
+Kolmena skills show a **Kolmena skill** label in the list and in the skill's detail window. You can turn a Kolmena skill on or off, but you cannot edit it.
 
 ## Browse and install skills
 
@@ -39,6 +41,14 @@ Click **Add Skill** in the header to choose how to bring a skill into your libra
   </Step>
 </Steps>
 
+### Skill names
+
+You cannot create a skill with the same name as a Kolmena skill. If you try, Kolmena shows the error "A Kolmena skill already uses this name. Choose another name." This applies when you write, upload, or add a skill from the web.
+
+You also cannot write a new skill with the same name as one of your existing skills. Kolmena shows "You already have a skill with this name. Edit that skill instead."
+
+If Kolmena later publishes a skill with the same name as one of your skills, your agents use the Kolmena skill instead of yours.
+
 ## Enable and disable skills
 
 Each skill row shows whether it is on for your agents:
@@ -50,19 +60,29 @@ Each skill row shows whether it is on for your agents:
 Use the switch on each row to toggle a skill on or off for all agents. To grant it to specific agents instead, click the access pill and choose the agents you want.
 
 <Note>
-  Changes to skills may require a restart to take effect. When there are pending changes, a banner appears at the top of the page with an **Apply changes** button. Click it to restart the affected agents and sync the new skills.
+  Skill changes apply to running agents within seconds. You do not need to restart your agents after you turn a skill on or off or change which agents can use it.
 </Note>
 
-## Update a skill
+## Edit a skill
 
-When a skill you installed has a newer version, an **Update to vN** link appears on the row. Click it to accept the latest revision. The skill is updated in your library, and you can apply the change to your running agents from the banner.
+You can edit skills you created yourself. Kolmena skills cannot be edited.
+
+1. Open the skill's detail window and click **Edit**.
+2. Update the description and instructions. The skill name cannot be changed.
+3. Click **Save**.
+
+Kolmena saves your changes as the skill's new live version. Your running agents reload the skill within seconds.
+
+## Skill updates
+
+You do not need to update skills. When Kolmena publishes a new version of a Kolmena skill, every agent that uses it switches to that version automatically. If Kolmena rolls a skill back, your agents switch back to the earlier version the same way.
 
 ## Remove a skill
 
 To remove a skill you added yourself, open its detail modal and click **Delete**. The skill is removed from your account and from every agent that uses it. Built-in and default skills cannot be deleted.
 
 <Warning>
-  Deleting a skill is permanent. If you delete a skill that agents are actively using, they will lose that capability immediately after the next restart.
+  Deleting a skill is permanent. If you delete a skill that agents are actively using, they lose that capability within seconds.
 </Warning>
 
 ## Manage per-agent skills
@@ -73,7 +93,7 @@ You can also manage skills for one agent at a time:
 2. Toggle skills on or off for that agent only.
 3. Per-agent choices override the workspace default, so you can give one agent a unique set of capabilities.
 
-This walkthrough shows how to enable a skill for one agent (for example, PDF creation), restart it, and find the files it produces in the agent's outputs or on the platform-level **Outputs** page.
+This walkthrough shows how to enable a skill for one agent (for example, PDF creation) and find the files it produces in the agent's outputs or on the platform-level **Outputs** page.
 
 <iframe className="w-full aspect-video rounded-xl my-6" src="https://www.youtube.com/embed/MC5XEcqqWCg" title="Agent customization walkthrough" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
 
