@@ -1,18 +1,26 @@
 ---
 title: "Maya: Your Personal AI Agent and Hive Queen"
 sidebarTitle: "Overview"
-description: "Meet Maya, your personal AI assistant on Kolmena. Learn how she helps you create agents, manage swarms, and get work done across your hive."
+description: "Meet Maya, your personal AI assistant on Kolmena. Learn how she handles email, calendar, reminders, and research, and builds agents and swarms when you ask."
 ---
 
-Maya is your personal AI agent and the central guide to Kolmena. She lives in the **Talk to Maya** chat and acts as the queen of your hive: she helps you build agents, configure swarms, answer questions, and delegate tasks to the right specialist.
+Maya is your personal AI assistant. She lives in the **Talk to Maya** chat and helps with everyday work: your email, calendar, reminders, files and apps, and research. She is also the queen of your hive. She asks the agents in your swarms for help, and she builds agents and swarms when you ask.
 
-Think of Maya as your on-call coordinator. You can ask her anything, from "Build me a marketing agent" to "What did my finance swarm produce last week?" She understands your context, remembers what matters, and routes work to the agents and swarms you have created.
+You can ask her anything, from "What's on my calendar tomorrow?" to "Draft a reply to Alex's last email" or "What did my finance swarm produce last week?" She understands your context, remembers what matters, and routes work to the agents and swarms you have created.
 
 ## What Maya Can Do
 
 <CardGroup cols={2}>
+  <Card title="Email and Calendar" color="#FE4F32" icon="calendar">
+    Maya reads your connected apps to summarize your inbox, check your schedule, and draft replies. She asks you to confirm before she sends or changes anything.
+  </Card>
+
+  <Card title="Reminders and Research" color="#FE4F32" icon="magnifying-glass">
+    Ask Maya to remind you of something, schedule a recurring check, or research a topic and report back.
+  </Card>
+
   <Card title="Create Agents" color="#FE4F32" icon="user-robot">
-    Describe the role you need and Maya will draft an agent with the right identity, skills, and plugins.
+    When you ask, Maya drafts an agent with the right identity, skills, and plugins.
   </Card>
 
   <Card title="Orchestrate Swarms" color="#FE4F32" icon="users">
@@ -27,6 +35,17 @@ Think of Maya as your on-call coordinator. You can ask her anything, from "Build
     From memory settings to credentials, Maya can guide you through configuration and troubleshooting.
   </Card>
 </CardGroup>
+
+## Maya and your apps
+
+Maya gets every app and credential you enable for **All agents**, plus any you attach to her directly. Untick her in an app's or credential's access settings to keep it away from her.
+
+- Maya runs read-only tools, such as reading email or listing events, directly.
+- Before a change, such as sending an email or editing a calendar event, she asks you to confirm. On the web, tap **Yes** on the card. In Telegram or Discord, or when you type your reply, answer `1` to approve or `2` to decline. Any other reply does nothing.
+- Maya's scheduled jobs can read and report, but they can't send or change data in your apps.
+- Maya never asks you to paste an API key in chat. Keys go through the secure credential card or the [Credentials](/integrations/credentials) page.
+
+See [Connect apps](/integrations/connect-apps#how-maya-uses-connected-apps) for details.
 
 ## How Maya Remembers
 

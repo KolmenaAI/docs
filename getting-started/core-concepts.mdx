@@ -10,7 +10,7 @@ Kolmena uses a specific vocabulary to describe conversations, agents, and how wo
 
 | Term | What it means |
 | --- | --- |
-| **Maya** | Your personal AI assistant and the queen of your hive. Maya guides you through Kolmena, helps you create and configure agents, and routes messages to the right agent or swarm member. |
+| **Maya** | Your personal AI assistant and the queen of your hive. Maya helps with email, calendar, reminders, and research, builds agents and swarms when you ask, and routes messages to the right agent or swarm member. |
 | **Agent** | An autonomous AI operator that understands context, makes decisions, and executes actions through skills and knowledge. You define its identity, behavior, and logic. |
 | **Swarm** | A team of agents that collaborate, specialize, and execute complex workflows together. One agent acts as the leader and delegates tasks to the other members. |
 | **Job** | A scheduled, recurring task assigned to an agent. Jobs persist across all published versions of that agent, run one at a time, and stop automatically after five consecutive failures until you resume them. You can have up to 25 open jobs per user, with the shortest interval set to 15 minutes. |
@@ -29,7 +29,7 @@ Kolmena uses a specific vocabulary to describe conversations, agents, and how wo
 | **Decline** | Settling an interaction request without giving what it asked for. The agent still resumes, but knows it was declined. |
 | **Withdraw** | An agent closing its own open interaction request without waiting for your answer, typically because you moved on in the conversation. |
 | **Credential** | A named value you bring from a third-party service, such as an API key or token, that agents can use once granted. Nobody can read a credential back after it is saved. |
-| **Grant** | Permission you give an agent to use one of your credentials. Nothing is granted by default, and Maya needs her own grant too. |
+| **Grant** | Permission you give an agent to use one of your credentials. Nothing is granted by default. **All agents** includes Maya, and unticking an agent removes its access. |
 | **Credential Request** | An interaction request specifically for the credentials an agent needs to continue its work. |
 | **Fulfillment** | Settling a credential request: the credentials are stored (or reused), then granted to the requesting agent, all in one step. |
 
