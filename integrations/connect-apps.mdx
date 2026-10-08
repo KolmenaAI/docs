@@ -42,7 +42,7 @@ Connecting depends on the app's authentication type:
     </Accordion>
   </Step>
   <Step title="Choose which agents can use it">
-    On the **Agents** tab inside the modal, check the agents you want to grant access to. By default, enabling an integration for the workspace makes it available to all agents except Maya. Maya must be granted explicitly if you want her to use it.
+    On the **Agents** tab inside the modal, check the agents you want to grant access to. By default, enabling an integration for the workspace makes it available to all your agents, including Maya. To keep the app away from one agent, untick that agent. A per-agent switch-off always wins over the workspace default.
   </Step>
   <Step title="Narrow the actions">
     On the **Actions** tab, pick which tools the agent may call. You can reset to the default set at any time.
@@ -50,6 +50,8 @@ Connecting depends on the app's authentication type:
 </Steps>
 
 ## Enable for Maya or a single agent
+
+Maya gets every app that is on for all agents, plus any app attached to her directly. Untick her on the app's **Agents** tab to turn an app off for her.
 
 Instead of enabling an app for the whole workspace, you can attach it to one agent only:
 
@@ -59,6 +61,22 @@ Instead of enabling an app for the whole workspace, you can attach it to one age
 4. Adjust the allowed actions on the **Actions** tab.
 
 An agent-level attachment overrides the workspace default for that agent.
+
+### How Maya uses connected apps
+
+Maya runs read-only tools directly, such as reading your inbox or listing calendar events. Before any change, such as sending an email or editing a calendar event, she asks you to confirm. The change runs once, exactly as shown in the question.
+
+- **On the web:** tap **Yes** on the confirmation card to approve, or **No** to decline.
+- **In Telegram or Discord, or when you type your reply:** Maya asks a numbered question. Reply `1` to approve or `2` to decline. Any other reply does nothing.
+
+```text
+Send this email to alex@example.com?
+1) Yes
+2) No
+Reply with the number.
+```
+
+Maya's scheduled jobs run with nobody to confirm. They can read and report, but they can't send or change data in your apps. For a recurring send, ask Maya for a job that prepares the item and posts it in chat for you to confirm.
 
 ## Disconnect an app
 

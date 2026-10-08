@@ -15,6 +15,7 @@ Agents send requests for a few common reasons:
 | **Question** | The agent needs clarification or a decision before it can continue. |
 | **Form** | The agent is collecting several pieces of information and shows which fields are still needed. |
 | **Credential** | The agent needs an API key, token, or password to call a service on your behalf. |
+| **Confirmation** | Maya wants to change something in one of your apps, such as sending an email, and needs your approval first. |
 
 ## Answer a Request
 
@@ -42,6 +43,15 @@ If you do not want to answer, you have options:
 - **Dismiss these questions** removes the current batch of requests from the thread.
 - **Decline** marks the request as declined, which the agent can see in its status.
 
+## Confirm Maya's app changes
+
+Maya runs read-only app tools directly. Before any change, such as sending an email or editing a calendar event, she shows you exactly what she will do and waits for your answer. The change runs once, with the details you saw.
+
+- **On the web:** tap **Yes** on the card to approve, or **No** to decline.
+- **In Telegram or Discord, or when you type your reply:** answer `1` to approve or `2` to decline. Any other reply does nothing.
+
+Scheduled jobs have nobody to confirm, so Maya's jobs can read and report but can't send or change app data.
+
 ## Request Statuses
 
 Each interaction request has a status so you can see what happened:
@@ -56,7 +66,9 @@ Each interaction request has a status so you can see what happened:
 
 ## Handle Credential Requests
 
-When an agent needs access to a service, it may ask for your key or token.
+When an agent needs access to a service, it may ask for your key or token through a secure credential card. Maya never asks you to paste a key into chat and does not save keys typed there.
+
+A card can name target agents. For example, when Maya builds an agent that needs an API key, the card names that agent. Only the agents listed on the card get the key.
 
 <Steps>
   <Step title="Review the request">
