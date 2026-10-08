@@ -30,6 +30,8 @@ Jobs can't save memories with the remember tool either. To have an agent remembe
 
 When memory is off for an agent, the agent tells you plainly that nothing was saved. It also points you to the **Remember for** setting in **Settings → Memory**. Agents don't promise to remember something before the save has actually happened.
 
+When memory is off for an agent, the agent also can't search your earlier chats. If you ask it about a past conversation, it tells you that the search is off and where to turn it back on.
+
 ## Memory Settings
 
 Open **Settings** and select the **Memory** tab to configure how Kolmena remembers.
@@ -37,6 +39,9 @@ Open **Settings** and select the **Memory** tab to configure how Kolmena remembe
 <Steps>
   <Step title="Choose who remembers">
     Use the **Remember for** setting. Select **Off** to stop Kolmena from building a long-term memory. Agents then rely only on the current conversation context. Select **Maya only** if you want memory to help your personal assistant but not other agents. Select **All agents** (the default) to let every agent in your hive draw on shared context.
+  </Step>
+  <Step title="Choose whether to use past conversations">
+    The **Use past conversations** switch is on by default. When it is on, Kolmena saves facts from your chats, and agents can search your earlier chats when you refer to them. Turn it off to stop both while keeping the rest of your memory settings. Facts that Kolmena already saved stay in the **Memories** list until you delete them. While the switch is off, you can't edit memories.
   </Step>
   <Step title="Pick a processing model">
     Choose which AI model reads your conversations to decide what is worth remembering. A stronger model extracts more nuanced detail and costs more per message. Changing the model only affects new memories; existing ones stay as they are.
