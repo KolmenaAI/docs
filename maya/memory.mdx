@@ -6,22 +6,48 @@ description: "Manage Kolmena's long-term memory for Maya and your agents. Config
 
 Kolmena builds a long-term memory from your conversations so Maya and your agents can stay context-aware across chats. You control whether memory is on, who it applies to, and how it is shared. You can also view, edit, or delete anything that has been remembered.
 
+## Memory is on by default
+
+Memory is on for every account unless you turn it off. The default is **All agents** with a **Shared brain**, so every agent in your hive can draw on the same memory. You don't need to accept a consent dialog first.
+
+- **New users** see a one-time **Memory is on** card above the chat composer. Click **Got it** to dismiss it, or click **Memory settings** to change how memory works.
+- **Existing users** who never turned memory on now have it on.
+- **Users who chose Off** keep memory off.
+
+To turn memory off, open **Settings → Memory** and set **Remember for** to **Off**.
+
+### Which chats create memories
+
+Kolmena only builds memory from conversations with you, such as your chats in the web app and on Telegram. Kolmena does not create memories from:
+
+- Scheduled job runs, including job results that another agent posts into your chat
+- Agent-to-agent and swarm work between your agents
+- X (Twitter) mention chats
+
+Jobs can't save memories with the remember tool either. To have an agent remember something, tell it directly in a chat.
+
+### When memory is off
+
+When memory is off for an agent, the agent tells you plainly that nothing was saved. It also points you to the **Remember for** setting in **Settings → Memory**. Agents don't promise to remember something before the save has actually happened.
+
+When memory is off for an agent, the agent also can't search your earlier chats. If you ask it about a past conversation, it tells you that the search is off and where to turn it back on.
+
 ## Memory Settings
 
 Open **Settings** and select the **Memory** tab to configure how Kolmena remembers.
 
 <Steps>
-  <Step title="Toggle memory on or off">
-    Choose whether Kolmena builds a long-term memory at all. When memory is off, agents rely only on the current conversation context.
-  </Step>
   <Step title="Choose who remembers">
-    Select **Maya only** if you want memory to help your personal assistant but not other agents. Select **All agents** to let every agent in your hive draw on shared context.
+    Use the **Remember for** setting. Select **Off** to stop Kolmena from building a long-term memory. Agents then rely only on the current conversation context. Select **Maya only** if you want memory to help your personal assistant but not other agents. Select **All agents** (the default) to let every agent in your hive draw on shared context.
+  </Step>
+  <Step title="Choose whether to use past conversations">
+    The **Use past conversations** switch is on by default. When it is on, Kolmena saves facts from your chats, and agents can search your earlier chats when you refer to them. Turn it off to stop both while keeping the rest of your memory settings. Facts that Kolmena already saved stay in the **Memories** list until you delete them. While the switch is off, you can't edit memories.
   </Step>
   <Step title="Pick a processing model">
     Choose which AI model reads your conversations to decide what is worth remembering. A stronger model extracts more nuanced detail and costs more per message. Changing the model only affects new memories; existing ones stay as they are.
   </Step>
   <Step title="Set visibility">
-    Choose **Shared brain** so every agent can draw on the same memory pool. Choose **Private per agent** so each agent's new memories stay separate. Note: switching to private does not pull back memories already shared across agents.
+    Choose **Shared brain** (the default) so every agent can draw on the same memory pool. Choose **Private per agent** so each agent's new memories stay separate. Note: switching to private does not pull back memories already shared across agents.
   </Step>
 </Steps>
 
@@ -33,7 +59,7 @@ In the Memory settings page, scroll to the **Memories** section. You will see a 
 | --- | --- |
 | **Memory** | A short summary of the fact or experience. |
 | **Type** | Whether it is a **Fact** or an **Experience**. |
-| **Source** | Where it came from: chat, Telegram, jobs, swarm, API, or saved by an agent. |
+| **Source** | Where it came from: chat, Telegram, API, or saved by an agent. Older memories may also show jobs or swarm. |
 | **Agent** | Which agent learned it, or **Shared** if it lives in the shared brain. |
 | **Date learned** | When the memory was created. |
 | **Provenance** | Whether it is shared across agents, private to one agent, or limited to a single conversation. |
