@@ -40,6 +40,40 @@ Kolmena supports signing in with Email, Google, SMS, and Discord. You can link m
   Linking or unlinking an account may briefly refresh your session so Kolmena recognizes the change.
 </Tip>
 
+## Maya
+
+The Maya tab lets you choose which models Maya uses and connect Maya to messaging apps under **Channels**.
+
+### Connect your own Telegram bot
+
+You can give Maya its own Telegram bot. Your bot answers only you, because every message it handles runs your Maya with your tools, connected accounts, and credits.
+
+<Steps>
+  <Step title="Create a bot with BotFather">
+    In Telegram, open @BotFather, create a new bot, and copy the bot token it gives you.
+  </Step>
+  <Step title="Add the token to Kolmena">
+    Go to **Settings > Maya > Channels**, click **Connect** on the Telegram row, paste the token into **Bot Token**, and click **Save**.
+  </Step>
+  <Step title="Link your Telegram account">
+    Connecting a bot does not link your Telegram account. If your account isn't linked yet, Kolmena shows a **Link your Telegram account first** notice under the Telegram row. Click **Link Telegram account**, press **Start** in the Telegram chat that opens, then return to Kolmena and click **I pressed Start**.
+  </Step>
+</Steps>
+
+<Warning>
+  Until you link your Telegram account, your bot answers nobody, including you.
+</Warning>
+
+Your bot handles messages from other people as follows:
+
+| Who sends the message | What your bot does |
+| --- | --- |
+| You, from a linked Telegram account | Maya answers. |
+| Anyone else, in a private chat | The bot replies once: "This bot answers only its owner. If it is your bot, link your Telegram account in Kolmena: **Settings → Maya → Channels**." Maya does not run. |
+| Anyone else, in a group | The bot stays silent. |
+
+Linking your Telegram account also lets Maya answer you on the shared Kolmena bot.
+
 ## Other Settings Tabs
 
 | Tab | What you can do |
