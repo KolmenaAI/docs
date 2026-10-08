@@ -58,15 +58,23 @@ Dashboards created by your agents can be shared with three access modes. Open a 
 
 In the **Manage Access** dialog, the **Who can access** list shows every viewer, including the owner, invited viewers, and pending signups. Click **Remove** next to any member to revoke their access.
 
-### Dashboard access links
+### App links
 
-When a dashboard is set to Public or Restricted, visitors can open it through a direct access link in this format:
+Every dashboard or app, whether an Instant App or a Full App, has one readable link in this format:
 
 ```text
-https://app.kolmena.ai/dashboard-access/<jobId>
+/a/<id>
 ```
 
-If the dashboard is Private, visitors see an access-denied message and can request access only if the owner allows it.
+The `<id>` is built from the app's title plus a short random suffix, for example `/a/sales-dashboard-k3j5q2xa`. The link is set when the app is created and does not change if the title changes. When you ask your agent to change the app, it publishes a new version (v2, v3, and so on) at the same link.
+
+Links in the old `/dashboard-access/<jobId>` format still work. Kolmena redirects them to the app's `/a/<id>` link.
+
+If the app is Private, visitors see an access-denied message and can request access only if the owner allows it.
+
+### Change access from the app's top bar
+
+When you open your own app, a top bar shows the app title, the current version, and an access selector. Choose **Private** or **Anyone with the link** to change who can open it. If the app is set to Restricted in the **Manage Access** dialog, the selector also lists **Restricted**. Visitors see the current access mode as plain text instead of a selector.
 
 <Tip>
   Marketplace copies of dashboards cannot be shared. The Manage Access option is hidden for those items.

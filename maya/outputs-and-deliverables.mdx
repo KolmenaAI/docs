@@ -38,6 +38,39 @@ Click any output to open a preview panel. What you can do depends on the file ty
   If a preview says the file is too large, use the **Download** button to get the full file.
 </Tip>
 
+## Dashboards and Apps
+
+When you ask an agent for an app, dashboard, chart page, or simple site, it builds an **Instant App** by default. There are two kinds of app:
+
+| Kind | What it is | Plans |
+| --- | --- | --- |
+| **Instant App** | A single self-contained page, published in one turn. Kolmena serves it without waking your agent. | All plans |
+| **Full App** | A server-backed build for apps that a single page can't handle, such as ones that need server secrets, data stored beyond the browser, background jobs, multiple pages, or a realtime server. | Partnership and Enterprise |
+
+For example, a request like this produces an Instant App:
+
+```text
+Build a dashboard of last month's sales by region with a bar chart.
+```
+
+When the app is ready, the agent replies with its link, such as `/a/sales-dashboard-k3j5q2xa`. To learn how links and access work, see [Sharing](/account/sharing).
+
+### Update an app
+
+Ask the agent for a change in the same chat. It publishes a new version (v2, v3, and so on) at the same link, so anyone you shared it with sees the latest version.
+
+### Apps tab
+
+The **Apps** tab lists your dashboards and apps. Each card shows an **Instant** or **App** badge for the kind of app, and the version number once the app has more than one version.
+
+### Limits
+
+- On the Free and Builder plans, the agent builds an Instant App and explains why when you ask for a Full App. See [Plans & Billing](/account/plans-and-billing).
+- Requests sent from messengers such as Telegram, WhatsApp, Discord, or Slack always produce Instant Apps, on any plan.
+- You can still ask for changes to an existing Full App on any plan and from any channel.
+- An Instant App can't be turned into a Full App. A Full App is a new app with a new link.
+- An Instant App page is limited to about 3 MB.
+
 ## Download a File
 
 Every output has a **Download** button in the preview panel. Click it to save the file to your computer. If the download fails, check your network connection and try again.
