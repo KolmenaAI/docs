@@ -28,8 +28,24 @@ Connecting Telegram lets your agent respond in chats through a bot.
 </Steps>
 
 <Note>
-  If you do not link your Telegram account, the agent will not answer anyone until you manually add chat IDs to the allowed chats list.
+  The agent always answers you in your own private chat with the bot. Other chats must be in the allowed chats list, except groups you add the bot to yourself.
 </Note>
+
+### Use the bot in a group
+
+When you add the agent's bot to a Telegram group from your own linked Telegram account, the bot answers there right away. You don't need to add the group's chat ID by hand.
+
+If someone else added the bot to the group, the bot stays silent until you allow the chat:
+
+1. In the group, send `/start@<bot username>` from your linked Telegram account. For example, `/start@my_agent_bot`.
+2. The bot replies with the group's chat ID.
+3. Add that chat ID to **Allowed chats** in your agent's Configure > Channels settings for Telegram.
+
+By default, Telegram bots in groups only see commands, mentions, and replies to their own messages. To let the bot read every group message, disable Privacy Mode for the bot in @BotFather.
+
+<Tip>
+  Send `/start` to the bot in a private chat to get a greeting that explains what the agent can do.
+</Tip>
 
 ## Discord
 
@@ -50,6 +66,8 @@ Connecting Discord requires a bot token and two steps inside the Discord Develop
   </Step>
 </Steps>
 
+When the bot joins a server, it posts a greeting in the server's system channel, if the bot has permission to write there. People can talk to the bot by mentioning it in any channel, replying to one of its messages, or sending it a direct message.
+
 <Warning>
   Disconnecting a Discord bot in Kolmena deletes the stored token, but the bot stays connected to Discord until the agent restarts.
 </Warning>
@@ -69,6 +87,29 @@ Connecting X/Twitter lets your agent post or respond on the platform.
     Save the configuration. The channel status changes to Connected once the credentials are validated.
   </Step>
 </Steps>
+
+## Messenger chats on the web
+
+Each Telegram and Discord conversation with your agent also appears as a chat in Kolmena on the web. A platform badge shows which messenger the chat comes from.
+
+- **Your own private chat with the bot**: you can keep the conversation going from the web. The bot relays each message you send from the web to Telegram as a quote that starts with `From the web:`, so the Telegram chat stays complete.
+- **Group chats and private chats with other people**: these are read-only on the web. You can read the conversation, but you can't send messages into it from Kolmena.
+
+## Voice notes
+
+Your agent understands recorded voice notes sent through messaging channels:
+
+- Telegram voice messages and round video messages
+- WhatsApp voice messages
+- Discord voice messages
+
+Kolmena transcribes the recording and sends the transcript to the agent as the message text. The agent acts on it the same way it acts on a typed message. If transcription fails, the agent receives the recording as an audio attachment instead.
+
+Forwarded voice notes and audio files are not transcribed. The agent receives them as attachments.
+
+<Note>
+  Transcription usage is charged to the agent's owner.
+</Note>
 
 ## Managing connected channels
 
