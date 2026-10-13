@@ -1,0 +1,149 @@
+---
+title: "Company Accounts on the Enterprise Plan"
+sidebarTitle: "Company Accounts"
+description: "Manage divisions, employees, and a monthly token pool for your company, and learn how billing works for employees on a company account."
+---
+
+A company account lets an organization on the Enterprise plan give its employees access to Kolmena from a single monthly token pool. A company admin manages divisions, employees, and token allocations. Employees on the company roster get the Enterprise plan without paying for a subscription themselves.
+
+## For company admins
+
+### Sign in to your company dashboard
+
+Sign in with the admin email Kolmena set up for your company. You skip onboarding and land on a dashboard branded with your company logo and name, shown above your profile in the sidebar.
+
+Open **Administration > Settings** in the sidebar to manage your company. The settings page has three tabs: **Divisions**, **Employees**, and **Tokens**.
+
+### Divisions
+
+Divisions are the business units of your company, for example Finance or Sales. Assign employees to a division to allocate tokens per division.
+
+- Enter a name and click **Add division**.
+- Click **Rename** to change a division name.
+- Delete a division to remove it. Its employees stay on the roster without a division.
+
+<Note>
+  Divisions are only available if they are part of your company plan. Contact Kolmena to enable them.
+</Note>
+
+### Employees
+
+Employees sign up with their work email. They don't need an invite code. Each employee has these fields:
+
+| Field | Description |
+| --- | --- |
+| **Employee number** | Optional. Unique within your company. |
+| **First name** / **Last name** | Required. |
+| **Email** | Required. The employee's work email. |
+| **Division** | Optional. Must match one of your divisions. |
+| **Allow token purchase** | Lets the employee top up their own balance with their card. |
+| **Managed daily balance** | Spreads the employee's monthly allocation over the remaining days of the month. |
+
+The employee table also shows each employee's remaining balance, how much they topped up, and how much they used.
+
+#### Add employees one by one
+
+<Steps>
+  <Step title="Open the employee dialog">
+    In the **Employees** tab, click **Add employee**.
+  </Step>
+  <Step title="Fill in the details">
+    Enter the employee's details and set **Allow token purchase** and **Managed daily balance**.
+  </Step>
+  <Step title="Save">
+    Save the employee. If the employee already has a Kolmena account with that email, Kolmena links it to your company.
+  </Step>
+</Steps>
+
+#### Import employees from a spreadsheet
+
+<Steps>
+  <Step title="Download the template">
+    Click **Download template** to get `kolmena-employees.xlsx`. The workbook has the employee columns and an instructions sheet that lists your divisions.
+  </Step>
+  <Step title="Fill in one row per employee">
+    For **Allow token purchase** and **Managed daily balance**, enter `X` for on or leave the cell blank for off.
+  </Step>
+  <Step title="Upload the file">
+    Click **Import spreadsheet** and select your `.xlsx` file. Kolmena adds every valid row and links existing accounts, just like employees you add manually.
+  </Step>
+  <Step title="Review rejected rows">
+    The **Import results** dialog shows how many employees were added. Rows that weren't added are listed with their row number and reason. Fix those rows in your spreadsheet and upload only them again.
+  </Step>
+</Steps>
+
+Kolmena rejects a row when:
+
+- A required field is missing, invalid, or too long.
+- The email or employee number is already on an employee list, or appears more than once in the file.
+- The division doesn't match any of your divisions, or divisions aren't enabled for your company.
+- A toggle column contains something other than `X` or a blank cell.
+
+Kolmena rejects the whole file if it isn't an Excel workbook (`.xlsx`) or the header row is missing a required column. Start from the template to avoid this.
+
+#### Remove an employee
+
+Click **Remove employee**. The employee keeps what they already spent this month. The rest of their allocation returns to the pool.
+
+### Tokens
+
+The **Tokens** tab shows your company's monthly pool, how much is allocated and unallocated, and your employee count. The pool size comes from your plan tier, which covers up to a set number of employees. If you have more employees than your tier covers, there is no pool that month. Contact Kolmena to move to a bigger plan.
+
+Choose an **Allocation method**:
+
+<Tabs>
+  <Tab title="Manual">
+    Enter each employee's allocation for the month, in dollars. The total can't exceed the pool. Click **Save allocation**.
+  </Tab>
+  <Tab title="Automatic">
+    Kolmena splits the whole pool equally between all employees on the 1st of every month. Click **Run allocation now** to allocate the current month straight away, for example after adding employees mid-month. Automatic allocation is only available if it's part of your plan.
+  </Tab>
+  <Tab title="Per division">
+    Give each division a budget. Kolmena splits each budget equally between the division's employees. Employees without a division get no tokens in this mode.
+  </Tab>
+</Tabs>
+
+Re-running an allocation never exceeds the pool. Spend by employees who left comes off the pool first. An employee who already spent more than their new share keeps that spend, and the remaining employees split what's left.
+
+### How allocations expire
+
+- Unspent allocation expires at the end of the month. A new pool starts on the 1st.
+- With **Managed daily balance** on, Kolmena releases the employee's allocation day by day. Unspent daily balance carries over to the following days until month end. When today's share runs out, the employee waits for tomorrow unless they top up.
+
+## For employees
+
+When your company adds your work email to its roster, your account joins the company account.
+
+- **Enterprise plan**: You get unlimited agent seats and Full App builds.
+- **Managed plan**: Your company manages your plan. In **Settings > Billing**, the plan options show **Managed by your company**, and you can't upgrade or cancel.
+- **Personal subscription**: If you had a paid personal subscription, Kolmena cancels it when you join, with a prorated refund for the unused time.
+- **Branding**: Your company logo and name appear in the sidebar.
+
+### Your balance
+
+**Settings > Billing** and the sidebar show your balance broken down into:
+
+| Item | Description |
+| --- | --- |
+| **Company allocation** | Tokens your company allocated to you this month. |
+| **Employee top-up** | Credits you bought yourself. |
+| **Total** | Company allocation plus your own top-up. |
+| **Available today** | What you can spend today when your company releases your allocation daily. |
+
+You can only top up if your company admin turned on **Allow token purchase** for you. Otherwise the top-up options are hidden.
+
+### Leaving the company
+
+If your company removes you from its roster, your account moves to the Free plan.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Plans and Billing" color="#FE4F32" icon="credit-card" href="/account/plans-and-billing">
+    Compare plans and manage credits.
+  </Card>
+
+  <Card title="Usage and Logs" color="#FE4F32" icon="chart-bar" href="/account/usage-and-logs">
+    See exactly how your balance is being spent.
+  </Card>
+</CardGroup>
