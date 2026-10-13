@@ -87,6 +87,7 @@
             "pages": [
               "account/settings",
               "account/plans-and-billing",
+              "account/company-accounts",
               "account/usage-and-logs",
               "account/sharing"
             ]
