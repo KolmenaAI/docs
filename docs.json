@@ -176,7 +176,8 @@
                 "icon": "store",
                 "pages": [
                   "es/marketplace/index",
-                  "es/marketplace/install-a-listing"
+                  "es/marketplace/install-a-listing",
+                  "es/marketplace/sell-on-the-marketplace"
                 ]
               },
               {
@@ -263,7 +264,8 @@
                 "icon": "store",
                 "pages": [
                   "pt/marketplace/index",
-                  "pt/marketplace/install-a-listing"
+                  "pt/marketplace/install-a-listing",
+                  "pt/marketplace/sell-on-the-marketplace"
                 ]
               },
               {
