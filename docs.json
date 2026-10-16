@@ -161,7 +161,8 @@
                 "pages": [
                   "es/integrations/index",
                   "es/integrations/connect-apps",
-                  "es/integrations/skills"
+                  "es/integrations/skills",
+                  "es/integrations/credentials"
                 ]
               }
             ]
@@ -242,7 +243,9 @@
                 "icon": "plug",
                 "pages": [
                   "pt/integrations/index",
-                  "pt/integrations/connect-apps"
+                  "pt/integrations/connect-apps",
+                  "pt/integrations/skills",
+                  "pt/integrations/credentials"
                 ]
               }
             ]

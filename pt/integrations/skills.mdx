@@ -1,0 +1,94 @@
+---
+title: "Instalar e gerir skills para os seus agentes"
+sidebarTitle: "Skills"
+description: "Explore, instale e gira skills que alargam o que os seus agentes podem fazer. Adicione skills a partir da web, carregue as suas ou escreva uma diretamente."
+---
+
+As skills são capacidades reutilizáveis que alargam o que os seus agentes sabem fazer. Vão desde utilitários integrados até lógica personalizada escrita por si. Gere as skills na página **Skills** da barra lateral e também as pode controlar em cada agente, em **Configure > Skills**.
+
+## O que são as skills
+
+Uma skill é um pacote de código e configuração que dá novas capacidades a um agente. Alguns exemplos:
+
+- Obter e analisar páginas web
+- Interagir com API externas
+- Executar lógica de negócio personalizada
+
+As skills têm versões. Quando houver uma atualização disponível, pode aceitar a revisão mais recente para que os seus agentes usem a versão mais nova.
+
+## Explorar e instalar skills
+
+Abra **Skills** a partir da barra lateral. A página mostra dois separadores:
+
+- **All**: todas as skills disponíveis para si, incluindo as predefinidas integradas e as que adicionou.
+- **Enabled**: apenas as skills atualmente ativadas para os seus agentes.
+
+### Adicionar uma skill
+
+Clique em **Add Skill** no cabeçalho para escolher como trazer uma skill para a sua biblioteca:
+
+<Steps>
+  <Step title="Add From the Web">
+    Cole o URL de um repositório público de skills (por exemplo, do GitHub). O Kolmena transfere e analisa a skill e, depois, adiciona-a à sua biblioteca. Se a skill precisar de configuração adicional, vai ver um aviso e pode concluí-la antes de a ativar.
+  </Step>
+  <Step title="Upload a Skill File">
+    Selecione um ficheiro de skill no seu computador e carregue-o diretamente. É útil para skills que criou localmente ou que recebeu de um colega.
+  </Step>
+  <Step title="Write Your Own Skill">
+    Crie uma skill diretamente no editor. Dê-lhe um nome, uma descrição e o código que define o que faz. Depois de guardada, aparece na sua biblioteca como qualquer outra skill.
+  </Step>
+</Steps>
+
+## Ativar e desativar skills
+
+Cada linha de skill mostra se está ativada para os seus agentes:
+
+- **Default**: skills integradas que são ativadas automaticamente para todos os agentes. Não as pode desativar globalmente, mas pode desativá-las num agente específico a partir do separador **Skills** desse agente.
+- **Enabled for all agents**: skills que ativou para todos os agentes.
+- **Ativada para alguns agentes**: skills que concedeu apenas a agentes específicos.
+
+Use o interruptor de cada linha para ativar ou desativar uma skill para todos os agentes. Para a conceder apenas a agentes específicos, clique na etiqueta de acesso e escolha os agentes pretendidos.
+
+<Note>
+  As alterações às skills podem exigir um reinício para terem efeito. Quando há alterações pendentes, aparece um aviso no topo da página com um botão **Apply changes**. Clique nele para reiniciar os agentes afetados e sincronizar as novas skills.
+</Note>
+
+## Atualizar uma skill
+
+Quando uma skill que instalou tem uma versão mais recente, aparece uma ligação **Update to vN** na linha. Clique nela para aceitar a revisão mais recente. A skill é atualizada na sua biblioteca e pode aplicar a alteração aos agentes em execução a partir do aviso.
+
+## Remover uma skill
+
+Para remover uma skill que adicionou, abra a janela de detalhes e clique em **Delete**. A skill é removida da sua conta e de todos os agentes que a usam. As skills integradas e predefinidas não podem ser eliminadas.
+
+<Warning>
+  Eliminar uma skill é permanente. Se eliminar uma skill que os agentes estão a usar, perdem essa capacidade logo após o reinício seguinte.
+</Warning>
+
+## Gerir as skills de cada agente
+
+Também pode gerir as skills de um agente de cada vez:
+
+1. Abra o agente e aceda a **Configure > Skills**.
+2. Ative ou desative skills apenas para esse agente.
+3. As escolhas de cada agente substituem a predefinição do espaço de trabalho, para que possa dar a um agente um conjunto de capacidades próprio.
+
+Este vídeo mostra como ativar uma skill para um agente (por exemplo, a criação de PDF), reiniciá-lo e encontrar os ficheiros que produz nos outputs do agente ou na página **Outputs** da plataforma.
+
+<iframe className="w-full aspect-video rounded-xl my-6" src="https://www.youtube.com/embed/MC5XEcqqWCg" title="Agent customization walkthrough" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+
+## Próximos passos
+
+<CardGroup cols={3}>
+  <Card title="Ligar aplicações" color="#FE4F32" icon="plug" href="/pt/integrations/connect-apps">
+    Ligue aplicações para que os agentes possam usar serviços externos.
+  </Card>
+
+  <Card title="Credenciais" color="#FE4F32" icon="key" href="/pt/integrations/credentials">
+    Adicione as credenciais de que os seus agentes precisam para iniciar sessão.
+  </Card>
+
+  <Card title="Browsers" color="#FE4F32" icon="globe" href="/pt/integrations/browsers">
+    Emparelhe um browser para aceder à web em direto.
+  </Card>
+</CardGroup>
