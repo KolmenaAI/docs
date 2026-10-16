@@ -1,1 +1,41 @@
+---
+title: "Conceptos y términos clave de Kolmena"
+sidebarTitle: "Conceptos clave"
+description: "Aprende los términos clave que se usan en Kolmena, como Maya, agentes, enjambres, tareas, conocimiento, habilidades, credenciales y listados del mercado."
+---
 
+Kolmena usa un vocabulario específico para describir las conversaciones, los agentes y cómo se realiza el trabajo. Conocer estos términos te ayudará a moverte por la plataforma y a sacar el máximo partido a tus agentes.
+
+## Términos clave
+
+| Término | Qué significa |
+| --- | --- |
+| **Maya** | Tu asistente personal de IA y la reina de tu colmena. Maya te guía por Kolmena, te ayuda a crear y configurar agentes, y dirige los mensajes al agente o miembro del enjambre adecuado. |
+| **Agente** | Un operador de IA autónomo que entiende el contexto, toma decisiones y ejecuta acciones mediante habilidades y conocimiento. Tú defines su identidad, su comportamiento y su lógica. |
+| **Enjambre** | Un equipo de agentes que colaboran, se especializan y ejecutan juntos flujos de trabajo complejos. Un agente actúa como líder y delega tareas en los demás miembros. |
+| **Tarea** | Un trabajo programado y recurrente asignado a un agente. Las tareas se mantienen en todas las versiones publicadas de ese agente, se ejecutan de una en una y se detienen automáticamente tras cinco fallos consecutivos hasta que las reanudes. Puedes tener hasta 25 tareas abiertas por usuario, con un intervalo mínimo de 15 minutos. |
+| **Conocimiento** | Documentos y archivos que adjuntas a un agente para que trabaje con contexto y precisión. El conocimiento puede incluir hojas de cálculo, PDF, archivos de texto y otro material de referencia. |
+| **Habilidad** | Una capacidad que añades a un agente, ya sea subiendo un archivo de habilidad, importándola desde la web o escribiendo instrucciones personalizadas. Las habilidades le indican al agente cómo realizar una tarea concreta. |
+| **Aplicación** | Un servicio de terceros que conectas a Kolmena para que tus agentes puedan interactuar con él, como Telegram, Discord o WhatsApp. |
+| **Entregable** | Un archivo o resultado creado por un agente o enjambre, como un documento, una imagen, una hoja de cálculo o una aplicación web. Los entregables aparecen en tu panel **Resultados**. |
+| **Listado del mercado** | Un agente o enjambre publicado que otras personas pueden descubrir, instalar y usar. Puedes vender listados como compras únicas o suscripciones mensuales, y recibir pagos a través de Stripe Connect. |
+| **Canal** | La identidad de una conversación. Cada chat (con Maya, con un agente o con un enjambre) vive en su propio canal, y cada mensaje pertenece exactamente a un canal. |
+| **Transcripción** | Los mensajes de un canal tal como aparecen en pantalla, ya sea en el chat de Maya, en el chat de un agente o en el feed de un enjambre. |
+| **Historial de chats** | La lista de tus canales que se muestra en la barra lateral. Solo muestra nombres y actividad, nunca el contenido completo de los mensajes. |
+| **Turno** | Un intercambio: tu mensaje y la respuesta que genera. Un turno puede terminar mientras el trabajo que inició sigue ejecutándose en segundo plano. |
+| **Delegación** | Trabajo que Maya encarga a los miembros de un enjambre. La delegación dura más que el propio turno de Maya, así que los miembros pueden seguir trabajando varios minutos después de que ella responda. |
+| **Solicitud de interacción** | Una pregunta persistente que un agente te hace. El turno del agente termina cuando pregunta; en cuanto respondes, el agente continúa donde lo dejó. |
+| **Reanudar** | El turno que recibe un agente después de que resuelves su solicitud de interacción. El agente retoma el trabajo en pausa con tu respuesta. |
+| **Rechazar** | Resolver una solicitud de interacción sin dar lo que pedía. El agente se reanuda igualmente, pero sabe que se rechazó. |
+| **Retirar** | Cuando un agente cierra su propia solicitud de interacción abierta sin esperar tu respuesta, normalmente porque la conversación ha avanzado. |
+| **Credencial** | Un valor con nombre que traes de un servicio de terceros, como una clave de API o un token, que los agentes pueden usar una vez que les concedes acceso. Nadie puede volver a leer una credencial después de guardarla. |
+| **Concesión de acceso** | El permiso que das a un agente para usar una de tus credenciales. Por defecto no se concede nada, y Maya también necesita su propio acceso. |
+| **Solicitud de credenciales** | Una solicitud de interacción específica para las credenciales que un agente necesita para continuar su trabajo. |
+| **Resolución** | Resolver una solicitud de credenciales: las credenciales se guardan (o se reutilizan) y se conceden al agente que las pidió, todo en un solo paso. |
+
+## Guías relacionadas
+
+- [Chatea con Maya](/es/maya/chat-with-maya)
+- [Crea un agente](/es/agents/create-an-agent)
+- [Crea un enjambre](/es/swarms/create-a-swarm)
+- [Crea una tarea](/es/jobs/create-a-job)
