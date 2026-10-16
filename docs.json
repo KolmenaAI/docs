@@ -135,7 +135,9 @@
               {
                 "group": "Agentes y enjambres",
                 "icon": "users",
-                "pages": []
+                "pages": [
+                  "es/agents/index"
+                ]
               },
               {
                 "group": "Automatización y conocimiento",
@@ -200,7 +202,9 @@
               {
                 "group": "Agentes e swarms",
                 "icon": "users",
-                "pages": []
+                "pages": [
+                  "pt/agents/index"
+                ]
               },
               {
                 "group": "Automação e conhecimento",
