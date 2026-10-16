@@ -115,7 +115,9 @@
               {
                 "group": "Primeros pasos",
                 "icon": "rocket",
-                "pages": []
+                "pages": [
+                  "es/quickstart"
+                ]
               }
             ]
           }
@@ -130,7 +132,9 @@
               {
                 "group": "Primeiros passos",
                 "icon": "rocket",
-                "pages": []
+                "pages": [
+                  "pt/quickstart"
+                ]
               }
             ]
           }
