@@ -124,7 +124,10 @@
               {
                 "group": "Maya",
                 "icon": "bee",
-                "pages": []
+                "pages": [
+                  "es/maya/index",
+                  "es/maya/chat-with-maya"
+                ]
               },
               {
                 "group": "Agentes y enjambres",
@@ -183,7 +186,10 @@
               {
                 "group": "Maya",
                 "icon": "bee",
-                "pages": []
+                "pages": [
+                  "pt/maya/index",
+                  "pt/maya/chat-with-maya"
+                ]
               },
               {
                 "group": "Agentes e swarms",
