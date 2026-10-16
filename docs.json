@@ -9,94 +9,129 @@
   },
   "favicon": "/logo/kolmena-symbol-orange.png",
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Product Guide",
-        "groups": [
+        "language": "en",
+        "tabs": [
           {
-            "group": "Get Started",
-            "icon": "rocket",
-            "pages": [
-              "index",
-              "quickstart",
-              "getting-started/core-concepts"
+            "tab": "Product Guide",
+            "groups": [
+              {
+                "group": "Get Started",
+                "icon": "rocket",
+                "pages": [
+                  "index",
+                  "quickstart",
+                  "getting-started/core-concepts"
+                ]
+              },
+              {
+                "group": "Maya",
+                "icon": "bee",
+                "pages": [
+                  "maya/index",
+                  "maya/chat-with-maya",
+                  "maya/interaction-requests",
+                  "maya/memory",
+                  "maya/outputs-and-deliverables"
+                ]
+              },
+              {
+                "group": "Agents & Swarms",
+                "icon": "users",
+                "pages": [
+                  "agents/index",
+                  "agents/create-an-agent",
+                  "agents/versions-and-publishing",
+                  "agents/messaging-channels",
+                  "swarms/index",
+                  "swarms/create-a-swarm",
+                  "swarms/swarm-chat-and-feed"
+                ]
+              },
+              {
+                "group": "Automation & Knowledge",
+                "icon": "clock",
+                "pages": [
+                  "jobs/index",
+                  "jobs/create-a-job",
+                  "knowledge/index",
+                  "knowledge/add-documents"
+                ]
+              },
+              {
+                "group": "Integrations",
+                "icon": "plug",
+                "pages": [
+                  "integrations/index",
+                  "integrations/connect-apps",
+                  "integrations/skills",
+                  "integrations/credentials",
+                  "integrations/browsers"
+                ]
+              }
             ]
           },
           {
-            "group": "Maya",
-            "icon": "bee",
-            "pages": [
-              "maya/index",
-              "maya/chat-with-maya",
-              "maya/interaction-requests",
-              "maya/memory",
-              "maya/outputs-and-deliverables"
-            ]
-          },
-          {
-            "group": "Agents & Swarms",
-            "icon": "users",
-            "pages": [
-              "agents/index",
-              "agents/create-an-agent",
-              "agents/versions-and-publishing",
-              "agents/messaging-channels",
-              "swarms/index",
-              "swarms/create-a-swarm",
-              "swarms/swarm-chat-and-feed"
-            ]
-          },
-          {
-            "group": "Automation & Knowledge",
-            "icon": "clock",
-            "pages": [
-              "jobs/index",
-              "jobs/create-a-job",
-              "knowledge/index",
-              "knowledge/add-documents"
-            ]
-          },
-          {
-            "group": "Integrations",
-            "icon": "plug",
-            "pages": [
-              "integrations/index",
-              "integrations/connect-apps",
-              "integrations/skills",
-              "integrations/credentials",
-              "integrations/browsers"
+            "tab": "Account & Marketplace",
+            "groups": [
+              {
+                "group": "Marketplace",
+                "icon": "store",
+                "pages": [
+                  "marketplace/index",
+                  "marketplace/install-a-listing",
+                  "marketplace/sell-on-the-marketplace"
+                ]
+              },
+              {
+                "group": "Account & Billing",
+                "icon": "credit-card",
+                "pages": [
+                  "account/settings",
+                  "account/plans-and-billing",
+                  "account/usage-and-logs",
+                  "account/sharing"
+                ]
+              },
+              {
+                "group": "Help",
+                "icon": "life-ring",
+                "pages": [
+                  "help/faq",
+                  "help/troubleshooting"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        "tab": "Account & Marketplace",
-        "groups": [
+        "language": "es",
+        "tabs": [
           {
-            "group": "Marketplace",
-            "icon": "store",
-            "pages": [
-              "marketplace/index",
-              "marketplace/install-a-listing",
-              "marketplace/sell-on-the-marketplace"
+            "tab": "Guía del producto",
+            "groups": [
+              {
+                "group": "Primeros pasos",
+                "icon": "rocket",
+                "pages": []
+              }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "language": "pt",
+        "tabs": [
           {
-            "group": "Account & Billing",
-            "icon": "credit-card",
-            "pages": [
-              "account/settings",
-              "account/plans-and-billing",
-              "account/usage-and-logs",
-              "account/sharing"
-            ]
-          },
-          {
-            "group": "Help",
-            "icon": "life-ring",
-            "pages": [
-              "help/faq",
-              "help/troubleshooting"
+            "tab": "Guia do produto",
+            "groups": [
+              {
+                "group": "Primeiros passos",
+                "icon": "rocket",
+                "pages": []
+              }
             ]
           }
         ]
