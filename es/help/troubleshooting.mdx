@@ -1,0 +1,90 @@
+---
+title: "Solución de problemas habituales en Kolmena"
+sidebarTitle: "Solución de problemas"
+description: "Soluciona rápido los problemas habituales de Kolmena: agentes que no se inician, tareas que se detienen, aplicaciones desconectadas, credenciales que faltan, pagos rechazados y cómo informar de un problema desde la aplicación."
+---
+
+Cuando algo en Kolmena no funciona como esperas, usa esta guía para diagnosticar el problema y volver a ponerte en marcha. Cada sección trata un síntoma concreto, su causa probable y los pasos para resolverlo.
+
+<Accordion title="El agente no se inicia, no se actualiza o no responde">
+  Si un agente se queda bloqueado al iniciarse o deja de responder en el chat, prueba lo siguiente en este orden:
+
+  1. **Espera un momento y recarga.** Los agentes grandes o las bases de conocimiento complejas pueden tardar más en iniciarse. Si ves un mensaje de tiempo de espera agotado, espera 30 segundos y vuelve a intentarlo.
+  2. **Comprueba el estado del agente.** En el panel del chat, busca el indicador "Iniciando el agente…". Si se queda bloqueado, abre la configuración del agente y haz clic en **Detener** y después en **Iniciar** para forzar un inicio limpio.
+  3. **Revisa los cambios recientes.** Si el problema empezó después de publicar una versión nueva, vuelve a la versión anterior desde el historial de versiones del agente y comprueba que se inicia correctamente.
+  4. **Revisa las solicitudes de interacción.** Un agente se pausa cuando necesita tu intervención. Abre el chat o el panel de solicitudes de interacción y responde o rechaza las preguntas pendientes para que el agente pueda continuar.
+
+  Si el agente sigue sin iniciarse, es posible que la compilación en segundo plano haya encontrado un error. Consulta los detalles en el panel de compilaciones activas.
+</Accordion>
+
+<Accordion title="Una tarea se detuvo tras varios fallos seguidos">
+  Una tarea se pausa automáticamente tras **5 ejecuciones fallidas consecutivas** y aparece en el filtro **Requieren atención** de la página Tareas. Kolmena lo hace para no malgastar uso mientras el problema de fondo siga sin resolverse.
+
+  Para solucionarlo:
+
+  1. Abre la página **Configurar → Tareas** del agente.
+  2. Busca la tarea en pausa y revisa el historial de ejecuciones para identificar el error.
+  3. Corrige la causa (por ejemplo, vuelve a conectar una cuenta de aplicación desconectada, corrige la descripción de la tarea o ajusta la programación).
+  4. Haz clic en **Reanudar** para volver a activar la tarea.
+
+  <Note>
+    Puedes tener hasta **25 tareas abiertas** (activas o en pausa) a la vez. Si alcanzas el límite, elimina una tarea que no uses antes de añadir otra. Solo se ejecuta una ejecución de cada tarea a la vez, y el intervalo mínimo admitido es de **15 minutos**.
+  </Note>
+</Accordion>
+
+<Accordion title="Una aplicación conectada requiere reconexión">
+  Algunas integraciones requieren volver a autenticarse periódicamente o pueden quedar invalidadas por cambios en el proveedor. Cuando se desconecta la cuenta de una aplicación, cualquier tarea que dependa de ella se pausa automáticamente.
+
+  Para volver a conectarla:
+
+  1. Ve a la página **Integraciones**.
+  2. Busca la aplicación con el estado **Requiere reconexión**.
+  3. Haz clic en **Conectar** y completa de nuevo el proceso de autenticación del proveedor.
+  4. Vuelve a la página **Tareas** del agente y haz clic en **Reanudar** en las tareas en pausa que dependían de esa cuenta.
+
+  Si ya no necesitas la integración, puedes desconectarla. La credencial guardada se eliminará, y podrás volver a conectarla más adelante si la necesitas.
+</Accordion>
+
+<Accordion title="Falta una credencial o hay una solicitud de credenciales">
+  Kolmena no concede acceso a las integraciones por defecto. Si un agente o una tarea necesita una aplicación conectada y no existe una credencial válida, se pausará y pedirá una.
+
+  Para solucionar una credencial que falta:
+
+  1. Abre **Configuración → Credenciales** para ver qué credenciales tienes guardadas.
+  2. Si falta la aplicación necesaria, ve a la página **Integraciones** y añade la cuenta.
+  3. Si la aplicación aparece pero muestra **Requiere reconexión**, vuelve a autenticarla.
+  4. Vuelve al agente o a la tarea y reintenta el trabajo.
+
+  <Warning>
+    Por motivos de seguridad, las credenciales guardadas **no se pueden volver a leer** una vez almacenadas. Si perdiste el acceso o necesitas rotar un token, desconecta la cuenta antigua y conecta una nueva.
+  </Warning>
+
+  Al conceder acceso, recuerda que **Todos los agentes** nunca incluye a Maya. Si quieres que Maya use una integración, concédesela de forma explícita.
+</Accordion>
+
+<Accordion title="Falló un pago o una recarga">
+  Si se rechaza un cargo o falla una recarga, Kolmena pausa las recargas automáticas para evitar rechazos repetidos.
+
+  Causas habituales y soluciones:
+
+  | Síntoma | Causa probable | Qué hacer |
+  | --- | --- | --- |
+  | La tarjeta necesita verificación | Verificación 3-D Secure / SCA pendiente | Abre el portal de facturación desde **Configuración → Facturación** y completa el paso de verificación. |
+  | Pago rechazado | Tarjeta caducada o fondos insuficientes | Actualiza tu método de pago en el portal de facturación. |
+  | No se pudo cobrar la recarga | Rechazo definitivo de una recarga de LLM | Actualiza tu tarjeta y vuelve a activar las **Recargas automáticas** en **Configuración → Facturación**. |
+
+  También puedes activar las **Recargas automáticas** para que Kolmena compre automáticamente consultas adicionales cuando te quede poco saldo, lo que ayuda a evitar que las tareas se detengan a mitad de ejecución.
+</Accordion>
+
+<Accordion title="Cómo informar de un problema desde la aplicación">
+  Si encuentras un error, un comportamiento inesperado o tienes una idea de mejora, puedes enviar tus comentarios directamente desde Kolmena.
+
+  1. Haz clic en el botón **Compartir comentarios** de la aplicación (normalmente en la esquina inferior derecha o en el menú principal).
+  2. Describe qué pasó o qué te gustaría ver. Sé concreto: incluye el nombre del agente, el nombre de la tarea y la hora en que ocurrió el problema, si procede.
+  3. Adjunta hasta **3 archivos** (PNG, JPG o MP4, de hasta 10 MB cada uno) para ayudar al equipo a reproducir el problema.
+  4. Haz clic en **Enviar comentarios**.
+
+  El equipo de Kolmena lee todos los envíos. Verás un aviso de confirmación cuando se envíe correctamente.
+</Accordion>
+
+Si el problema persiste después de seguir los pasos anteriores, consulta las [Preguntas frecuentes](/es/help/faq) o revisa tu [uso y registros](/es/account/usage-and-logs) recientes para encontrar más pistas.
