@@ -1,0 +1,87 @@
+---
+title: "Acompanhar a utilização do Kolmena e inspecionar os registos dos agentes"
+sidebarTitle: "Utilização e registos"
+description: "Acompanhe os gastos com LLM, a utilização de tokens e a atividade de agentes, swarms e modelos. Pesquise e filtre os registos dos agentes em direto."
+---
+
+O Kolmena oferece-lhe duas áreas dedicadas para perceber o que os seus agentes estão a fazer e quanto custa: a página **Usage**, com a repartição dos gastos e da atividade, e o separador **Logs** nas definições, com os fluxos de registos detalhados dos agentes.
+
+## Página Usage
+
+Abra **Usage** a partir da navegação principal para ver um painel em direto do seu consumo de LLM. Os dados são atualizados automaticamente em segundo plano.
+
+### Separadores de âmbito
+
+No topo da página, escolha o que quer analisar:
+
+| Separador | O que mostra |
+| --- | --- |
+| **Agents** | Gastos e tokens por agente |
+| **Swarms** | Utilização agrupada por swarm |
+| **Models** | Consumo repartido por modelo de LLM |
+| **Knowledge** | Atividade relacionada com consultas à base de conhecimento |
+| **Others** | Atividade do sistema, como a memória, a atribuição de nomes aos chats e o enriquecimento |
+
+### Intervalos de tempo e métricas
+
+Use o seletor de intervalo para alternar entre **24H**, **7D**, **1M**, **3M** ou **All**. Alterne a métrica entre **Spend** (USD) e **Tokens**.
+
+### Cartões de resumo
+
+O topo da página mostra quatro cartões em direto:
+
+- **Total Spent**
+- **Total Tokens**
+- **Total Requests**
+- **Average Daily Spend**
+
+### Gráfico e tabela
+
+Um gráfico empilhado mostra a utilização no período selecionado. Por baixo, uma tabela lista todos os elementos do âmbito atual. Clique em qualquer linha para abrir um **painel de detalhes** com a repartição por modelo e as execuções recentes.
+
+<Tip>
+  O intervalo de datas apresentado por cima do gráfico corresponde ao período exato abrangido pelos dados. Se mudar de separador enquanto os dados estão a carregar, a tabela fica esbatida até o novo âmbito carregar.
+</Tip>
+
+## Registos
+
+Os registos dos agentes estão em **Settings > Logs**. É um fluxo em direto e filtrável de tudo o que os seus agentes produzem.
+
+### Filtrar o fluxo
+
+Use a barra de ferramentas para restringir o que vê:
+
+| Filtro | Opções |
+| --- | --- |
+| **Level** | All, Trace, Debug, Info, Warning, Error, Fatal |
+| **Agent** | All Agents, ou um agente específico seu |
+| **Container** | Filtra pelo contentor de execução |
+| **Time range** | 1 hour, 24 hours, 7 days ou 30 days |
+| **Search** | Pesquisa de texto livre nas mensagens |
+| **Filtros de atributos** | Adicione filtros `key=value` (até 5) |
+
+### Gráfico e tabela
+
+Um gráfico de barras empilhadas no topo mostra o volume de registos por gravidade no período selecionado. A tabela por baixo lista até às 1000 entradas mais recentes, com a data e hora, o indicador de gravidade e a mensagem. Clique em qualquer campo de contexto apresentado na linha (por exemplo, `key=value`) para o adicionar como filtro.
+
+### Atualizações em direto e ações
+
+- Ative as **atualizações em direto** para receber as novas entradas de registo em tempo real.
+- Clique no botão de atualizar para forçar um recarregamento manual.
+- Clique em **Copy** para copiar todas as linhas de registo visíveis para a área de transferência.
+
+<Warning>
+  A lista de registos está limitada a 1000 linhas por consulta. Se precisar de entradas mais antigas, ajuste o intervalo de tempo ou os filtros para restringir o período.
+</Warning>
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Planos e faturação" color="#FE4F32" icon="credit-card" href="/pt/account/plans-and-billing">
+    Carregue o seu saldo ou faça upgrade do plano.
+  </Card>
+
+  <Card title="Definições" color="#FE4F32" icon="user" href="/pt/account/settings">
+    Gira o seu perfil e as suas preferências.
+  </Card>
+</CardGroup>

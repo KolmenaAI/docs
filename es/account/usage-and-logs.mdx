@@ -1,0 +1,87 @@
+---
+title: "Controla el uso de Kolmena e inspecciona los registros de los agentes"
+sidebarTitle: "Uso y registros"
+description: "Supervisa el gasto en LLM, el uso de tokens y la actividad de agentes, enjambres y modelos. Busca y filtra los registros de los agentes en vivo."
+---
+
+Kolmena te ofrece dos espacios dedicados para entender qué hacen tus agentes y cuánto cuesta: la página **Uso**, con el desglose del gasto y la actividad, y la pestaña **Registros** de Configuración, con los flujos de registros detallados de los agentes.
+
+## Página Uso
+
+Abre **Uso** desde la navegación principal para ver un panel en vivo de tu consumo de LLM. Los datos se actualizan automáticamente en segundo plano.
+
+### Pestañas de ámbito
+
+En la parte superior de la página, elige qué quieres analizar:
+
+| Pestaña | Qué muestra |
+| --- | --- |
+| **Agentes** | Gasto y tokens por agente |
+| **Enjambres** | Uso agrupado por enjambre |
+| **Modelos** | Consumo desglosado por modelo de LLM |
+| **Conocimiento** | Actividad relacionada con las consultas a la base de conocimiento |
+| **Otros** | Actividad del sistema, como la memoria, la asignación de nombres a los chats y el enriquecimiento |
+
+### Rangos de tiempo y métricas
+
+Usa el selector de rango para cambiar entre **24 h**, **7 d**, **1 m**, **3 m** o **Todo**. Cambia la métrica entre **Gasto** (USD) y **Tokens**.
+
+### Tarjetas de resumen
+
+La parte superior de la página muestra cuatro tarjetas en vivo:
+
+- **Gasto total**
+- **Tokens totales**
+- **Solicitudes totales**
+- **Gasto diario medio**
+
+### Gráfico y tabla
+
+Un gráfico apilado muestra el uso en el periodo seleccionado. Debajo, una tabla enumera todos los elementos del ámbito actual. Haz clic en cualquier fila para abrir un **panel de detalles** con el desglose por modelo y las ejecuciones recientes.
+
+<Tip>
+  El rango de fechas que aparece sobre el gráfico refleja el periodo exacto que cubren los datos. Si cambias de pestaña mientras se cargan los datos, la tabla se atenúa hasta que se carga el nuevo ámbito.
+</Tip>
+
+## Registros
+
+Los registros de los agentes están en **Configuración > Registros**. Es un flujo en vivo y filtrable de todo lo que generan tus agentes.
+
+### Filtrar el flujo
+
+Usa la barra de herramientas para acotar lo que ves:
+
+| Filtro | Opciones |
+| --- | --- |
+| **Nivel** | Todos, Rastreo, Depuración, Información, Advertencia, Error, Grave |
+| **Agente** | Todos los agentes, o un agente concreto de tu propiedad |
+| **Contenedor** | Filtra por contenedor de ejecución |
+| **Rango de tiempo** | 1 hora, 24 horas, 7 días o 30 días |
+| **Buscar** | Búsqueda de texto libre en los mensajes |
+| **Filtros de atributo** | Añade filtros `key=value` (hasta 5) |
+
+### Gráfico y tabla
+
+Un gráfico de barras apiladas en la parte superior muestra el volumen de registros por gravedad en el periodo seleccionado. La tabla de debajo enumera hasta las 1000 entradas más recientes, con su marca de tiempo, su indicador de gravedad y su mensaje. Haz clic en cualquier campo de contexto integrado (por ejemplo, `key=value`) para añadirlo como filtro.
+
+### Actualizaciones en vivo y acciones
+
+- Activa **Actualizaciones en vivo** para recibir las nuevas entradas de registro en tiempo real.
+- Haz clic en el botón de actualizar para forzar una recarga manual.
+- Haz clic en **Copiar** para copiar al portapapeles todas las líneas de registro visibles.
+
+<Warning>
+  La lista de registros está limitada a 1000 filas por consulta. Si necesitas entradas más antiguas, ajusta el rango de tiempo o los filtros para acotar el periodo.
+</Warning>
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="Planes y facturación" color="#FE4F32" icon="credit-card" href="/es/account/plans-and-billing">
+    Recarga tu saldo o mejora tu plan.
+  </Card>
+
+  <Card title="Configuración" color="#FE4F32" icon="user" href="/es/account/settings">
+    Gestiona tu perfil y tus preferencias.
+  </Card>
+</CardGroup>

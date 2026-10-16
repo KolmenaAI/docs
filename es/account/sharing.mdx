@@ -1,0 +1,85 @@
+---
+title: "Comparte chats y paneles en Kolmena"
+sidebarTitle: "Compartir"
+description: "Comparte chats de agentes y enjambres mediante enlaces públicos, gestiona los modos de acceso a los paneles, invita a otras personas por correo electrónico y revoca el acceso cuando lo necesites."
+---
+
+Kolmena te permite compartir conversaciones y paneles con otras personas mediante enlaces públicos y modos de acceso controlados. Tú mantienes el control y puedes revocar el acceso en cualquier momento.
+
+## Compartir un chat de agente o de enjambre
+
+Puedes publicar cualquier chat individual con un agente o cualquier conversación de un enjambre en un enlace público de solo lectura.
+
+<Steps>
+  <Step title="Abre el panel de la conversación">
+    Mientras chateas con un agente o dentro de un enjambre, abre el panel de detalles en la parte derecha de la pantalla.
+  </Step>
+  <Step title="Activa el uso compartido público">
+    Busca el interruptor **Chat público** y actívalo. Kolmena genera al instante un token y una URL únicos para compartir.
+  </Step>
+  <Step title="Copia el enlace">
+    Haz clic en **Copiar enlace** para copiar la URL pública al portapapeles. Cualquier persona con el enlace puede ver la conversación en modo de solo lectura.
+  </Step>
+</Steps>
+
+<Note>
+  Los chats compartidos son instantáneas estáticas. Los visitantes no pueden enviar mensajes ni interactuar con tus agentes.
+</Note>
+
+### Dejar de compartir un chat
+
+Para dejar de compartir, abre el mismo panel de detalles y desactiva **Chat público**. El enlace deja de funcionar de inmediato.
+
+## Compartir un panel
+
+Los paneles creados por tus agentes se pueden compartir con tres modos de acceso. Abre la ventana **Gestionar acceso** de un panel desde su tarjeta o su vista de detalles.
+
+### Modos de acceso
+
+| Modo | Quién puede verlo |
+| --- | --- |
+| **Público** | Cualquier persona con el enlace |
+| **Privado** | Solo tú |
+| **Restringido** | Las personas que invites expresamente |
+
+<Steps>
+  <Step title="Elige un modo de acceso">
+    Selecciona **Público**, **Privado** o **Restringido**.
+  </Step>
+  <Step title="Invita a personas (solo en Restringido)">
+    Escribe una dirección de correo electrónico y haz clic en **Conceder acceso**. La persona invitada obtiene acceso en cuanto inicia sesión. También puedes copiar el enlace de invitación y enviarlo tú.
+  </Step>
+  <Step title="Aprueba o rechaza solicitudes">
+    Si alguien sin acceso abre el enlace de un panel restringido, puede solicitar acceso. Verás las solicitudes pendientes en la misma ventana y podrás **Aprobar** o **Rechazar** cada una.
+  </Step>
+</Steps>
+
+### Gestionar los miembros de un panel
+
+En la ventana **Gestionar acceso**, la lista **Quién tiene acceso** muestra a todas las personas que pueden verlo, incluidos el propietario, las personas invitadas y los registros pendientes. Haz clic en **Eliminar** junto a cualquier miembro para revocar su acceso.
+
+### Enlaces de acceso a los paneles
+
+Cuando un panel está configurado como Público o Restringido, los visitantes pueden abrirlo mediante un enlace de acceso directo con este formato:
+
+```text
+https://app.kolmena.ai/dashboard-access/<jobId>
+```
+
+Si el panel es Privado, los visitantes ven un mensaje de acceso denegado y solo pueden solicitar acceso si el propietario lo permite.
+
+<Tip>
+  Las copias de paneles procedentes del Mercado no se pueden compartir. La opción Gestionar acceso está oculta en esos elementos.
+</Tip>
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="Agentes y enjambres" color="#FE4F32" icon="robot" href="/es/agents/index">
+    Aprende a crear y gestionar agentes y enjambres.
+  </Card>
+
+  <Card title="Mercado" color="#FE4F32" icon="store" href="/es/marketplace/index">
+    Descubre agentes y paneles que puedes instalar o vender.
+  </Card>
+</CardGroup>

@@ -185,7 +185,9 @@
                 "icon": "credit-card",
                 "pages": [
                   "es/account/settings",
-                  "es/account/plans-and-billing"
+                  "es/account/plans-and-billing",
+                  "es/account/usage-and-logs",
+                  "es/account/sharing"
                 ]
               },
               {
@@ -276,7 +278,9 @@
                 "icon": "credit-card",
                 "pages": [
                   "pt/account/settings",
-                  "pt/account/plans-and-billing"
+                  "pt/account/plans-and-billing",
+                  "pt/account/usage-and-logs",
+                  "pt/account/sharing"
                 ]
               },
               {
