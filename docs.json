@@ -136,7 +136,8 @@
                 "group": "Agentes y enjambres",
                 "icon": "users",
                 "pages": [
-                  "es/agents/index"
+                  "es/agents/index",
+                  "es/agents/create-an-agent"
                 ]
               },
               {
@@ -203,7 +204,8 @@
                 "group": "Agentes e swarms",
                 "icon": "users",
                 "pages": [
-                  "pt/agents/index"
+                  "pt/agents/index",
+                  "pt/agents/create-an-agent"
                 ]
               },
               {
