@@ -183,7 +183,10 @@
               {
                 "group": "Cuenta y facturación",
                 "icon": "credit-card",
-                "pages": []
+                "pages": [
+                  "es/account/settings",
+                  "es/account/plans-and-billing"
+                ]
               },
               {
                 "group": "Ayuda",
@@ -271,7 +274,10 @@
               {
                 "group": "Conta e faturação",
                 "icon": "credit-card",
-                "pages": []
+                "pages": [
+                  "pt/account/settings",
+                  "pt/account/plans-and-billing"
+                ]
               },
               {
                 "group": "Ajuda",
