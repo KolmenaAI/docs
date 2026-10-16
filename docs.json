@@ -126,7 +126,8 @@
                 "icon": "bee",
                 "pages": [
                   "es/maya/index",
-                  "es/maya/chat-with-maya"
+                  "es/maya/chat-with-maya",
+                  "es/maya/interaction-requests"
                 ]
               },
               {
@@ -188,7 +189,8 @@
                 "icon": "bee",
                 "pages": [
                   "pt/maya/index",
-                  "pt/maya/chat-with-maya"
+                  "pt/maya/chat-with-maya",
+                  "pt/maya/interaction-requests"
                 ]
               },
               {

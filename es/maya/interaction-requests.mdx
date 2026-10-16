@@ -1,0 +1,94 @@
+---
+title: "Responde a las solicitudes de interacción de tus agentes"
+sidebarTitle: "Solicitudes de interacción"
+description: "Aprende a responder, rechazar y gestionar las solicitudes de interacción de los agentes. Gestiona solicitudes de credenciales y entiende estados como retirado o caducado."
+---
+
+Cuando un agente necesita tu intervención para seguir trabajando, envía una **solicitud de interacción**. Estas solicitudes aparecen en la conversación y te piden que respondas una pregunta, elijas una opción o proporciones una credencial. Responder mantiene al agente en marcha; ignorarla puede pausar la tarea.
+
+## Tipos de solicitudes de interacción
+
+Los agentes envían solicitudes por algunos motivos habituales:
+
+| Tipo de solicitud | Qué significa |
+| --- | --- |
+| **Pregunta** | El agente necesita una aclaración o una decisión antes de continuar. |
+| **Formulario** | El agente está recopilando varios datos y muestra qué campos faltan todavía. |
+| **Credencial** | El agente necesita una clave de API, un token o una contraseña para usar un servicio en tu nombre. |
+
+## Responder una solicitud
+
+<Steps>
+  <Step title="Abre la solicitud">
+    En la conversación, el mensaje del agente mostrará la pregunta o el formulario. Léelo con atención.
+  </Step>
+  <Step title="Escribe o selecciona tu respuesta">
+    En las preguntas de texto, escribe tu respuesta y haz clic en **Enviar**. En las de opción múltiple, selecciona la opción que corresponda o elige **Otra cosa** para explicarlo tú.
+  </Step>
+  <Step title="Envía u omite">
+    Haz clic en **Listo** cuando termines, u **Omitir** si quieres que el agente siga sin esa respuesta.
+  </Step>
+</Steps>
+
+<Tip>
+  Usa las teclas de flecha para moverte entre las opciones e Intro para seleccionar. Así respondes rápido a las preguntas de opción múltiple.
+</Tip>
+
+## Rechazar o descartar una solicitud
+
+Si no quieres responder, tienes varias opciones:
+
+- **Omitir** le indica al agente que continúe sin la información que falta.
+- **Descartar estas preguntas** quita de la conversación el grupo actual de solicitudes.
+- **Rechazar** marca la solicitud como rechazada, y el agente puede verlo en su estado.
+
+## Estados de las solicitudes
+
+Cada solicitud de interacción tiene un estado para que veas qué ha pasado:
+
+| Estado | Significado |
+| --- | --- |
+| **Respondido** | Respondiste y el agente recibió la respuesta. |
+| **Rechazado** | Decidiste no responder. |
+| **Retirado** | El agente canceló la solicitud, a menudo porque encontró otra forma de avanzar o ya no necesita la información. |
+| **Caducado** | La solicitud expiró porque no se respondió dentro del plazo permitido. |
+| **Cerrado** | La solicitud se resolvió o la sustituyó otro evento. |
+
+## Gestionar solicitudes de credenciales
+
+Cuando un agente necesita acceder a un servicio, puede pedirte tu clave o token.
+
+<Steps>
+  <Step title="Revisa la solicitud">
+    El agente indica el servicio al que necesita acceder. Comprueba que reconoces el servicio.
+  </Step>
+  <Step title="Pega una clave o reutiliza una guardada">
+    Escribe o pega tu clave en el campo. Si ya guardaste una credencial para ese servicio, puedes elegir **Usar tu clave guardada**.
+  </Step>
+  <Step title="Guarda en Credenciales (opcional)">
+    Haz clic en **Guardar en Credenciales** para almacenar la clave de forma segura y usarla en el futuro. La clave se cifra en cuanto la envías y no vuelve a mostrarse en el chat.
+  </Step>
+  <Step title="Envía">
+    Haz clic en **Enviar** para conceder acceso. El agente ya puede usar el servicio en tu nombre.
+  </Step>
+</Steps>
+
+<Warning>
+  Guardar una credencial reemplaza la clave guardada para todos los agentes que usan ese servicio. Si quieres conservar la clave anterior para otros agentes, elige **Mantener la clave guardada**.
+</Warning>
+
+<Note>
+  Puedes revocar cualquier credencial guardada en cualquier momento desde la página [Credenciales](/es/integrations/credentials). El agente dejará de recibirla de inmediato.
+</Note>
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="Chatea con Maya" color="#FE4F32" icon="message-dots" href="/es/maya/chat-with-maya">
+    Inicia y gestiona tus conversaciones.
+  </Card>
+
+  <Card title="Credenciales" color="#FE4F32" icon="key" href="/es/integrations/credentials">
+    Gestiona las claves guardadas y el acceso a servicios.
+  </Card>
+</CardGroup>
