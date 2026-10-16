@@ -158,7 +158,9 @@
               {
                 "group": "Integraciones",
                 "icon": "plug",
-                "pages": []
+                "pages": [
+                  "es/integrations/index"
+                ]
               }
             ]
           },
