@@ -118,6 +118,46 @@
                 "pages": [
                   "es/quickstart"
                 ]
+              },
+              {
+                "group": "Maya",
+                "icon": "bee",
+                "pages": []
+              },
+              {
+                "group": "Agentes y enjambres",
+                "icon": "users",
+                "pages": []
+              },
+              {
+                "group": "Automatización y conocimiento",
+                "icon": "clock",
+                "pages": []
+              },
+              {
+                "group": "Integraciones",
+                "icon": "plug",
+                "pages": []
+              }
+            ]
+          },
+          {
+            "tab": "Cuenta y Mercado",
+            "groups": [
+              {
+                "group": "Mercado",
+                "icon": "store",
+                "pages": []
+              },
+              {
+                "group": "Cuenta y facturación",
+                "icon": "credit-card",
+                "pages": []
+              },
+              {
+                "group": "Ayuda",
+                "icon": "life-ring",
+                "pages": []
               }
             ]
           }
@@ -135,6 +175,46 @@
                 "pages": [
                   "pt/quickstart"
                 ]
+              },
+              {
+                "group": "Maya",
+                "icon": "bee",
+                "pages": []
+              },
+              {
+                "group": "Agentes e swarms",
+                "icon": "users",
+                "pages": []
+              },
+              {
+                "group": "Automação e conhecimento",
+                "icon": "clock",
+                "pages": []
+              },
+              {
+                "group": "Integrações",
+                "icon": "plug",
+                "pages": []
+              }
+            ]
+          },
+          {
+            "tab": "Conta e Marketplace",
+            "groups": [
+              {
+                "group": "Marketplace",
+                "icon": "store",
+                "pages": []
+              },
+              {
+                "group": "Conta e faturação",
+                "icon": "credit-card",
+                "pages": []
+              },
+              {
+                "group": "Ajuda",
+                "icon": "life-ring",
+                "pages": []
               }
             ]
           }
