@@ -1,0 +1,85 @@
+---
+title: "Partilhar chats e dashboards no Kolmena"
+sidebarTitle: "Partilha"
+description: "Partilhe chats de agentes e swarms através de ligações públicas, gira os modos de acesso aos dashboards, convide pessoas por e-mail e revogue o acesso quando for necessário."
+---
+
+O Kolmena permite-lhe partilhar conversas e dashboards com outras pessoas através de ligações públicas e de modos de acesso controlados. Mantém o controlo e pode revogar o acesso a qualquer momento.
+
+## Partilhar um chat de agente ou de swarm
+
+Pode publicar qualquer chat individual com um agente ou conversa de um swarm numa ligação pública só de leitura.
+
+<Steps>
+  <Step title="Abra o painel da conversa">
+    Enquanto conversa com um agente ou dentro de um swarm, abra o painel de detalhes do lado direito do ecrã.
+  </Step>
+  <Step title="Ative a partilha pública">
+    Encontre o interruptor **Public Chat** e ative-o. O Kolmena gera de imediato um token e um URL de partilha únicos.
+  </Step>
+  <Step title="Copie a ligação">
+    Clique em **Copy Link** para copiar o URL público para a área de transferência. Qualquer pessoa com a ligação pode ver a conversa em modo só de leitura.
+  </Step>
+</Steps>
+
+<Note>
+  Os chats partilhados são instantâneos estáticos. Os visitantes não podem enviar mensagens nem interagir com os seus agentes.
+</Note>
+
+### Deixar de partilhar um chat
+
+Para deixar de partilhar, abra o mesmo painel de detalhes e desative **Public Chat**. A ligação deixa de funcionar de imediato.
+
+## Partilhar um dashboard
+
+Os dashboards criados pelos seus agentes podem ser partilhados com três modos de acesso. Abra a janela **Manage Access** de um dashboard a partir do respetivo cartão ou da vista de detalhes.
+
+### Modos de acesso
+
+| Modo | Quem pode ver |
+| --- | --- |
+| **Public** | Qualquer pessoa com a ligação |
+| **Private** | Apenas você |
+| **Restricted** | As pessoas que convidar explicitamente |
+
+<Steps>
+  <Step title="Escolha um modo de acesso">
+    Selecione **Public**, **Private** ou **Restricted**.
+  </Step>
+  <Step title="Convide pessoas (apenas em Restricted)">
+    Introduza um endereço de e-mail e clique em **Grant access**. A pessoa convidada obtém acesso assim que iniciar sessão. Também pode copiar a ligação de convite e enviá-la diretamente.
+  </Step>
+  <Step title="Aprove ou recuse pedidos">
+    Se alguém sem acesso abrir a ligação de um dashboard restrito, pode pedir acesso. Vai ver os pedidos pendentes na mesma janela e pode escolher **Approve** ou **Deny** para cada um.
+  </Step>
+</Steps>
+
+### Gerir os membros de um dashboard
+
+Na janela **Manage Access**, a lista **Who can access** mostra todas as pessoas com acesso, incluindo o proprietário, as pessoas convidadas e os registos pendentes. Clique em **Remove** ao lado de qualquer membro para revogar o acesso.
+
+### Ligações de acesso aos dashboards
+
+Quando um dashboard está definido como Public ou Restricted, os visitantes podem abri-lo através de uma ligação de acesso direto neste formato:
+
+```text
+https://app.kolmena.ai/dashboard-access/<jobId>
+```
+
+Se o dashboard for Private, os visitantes veem uma mensagem de acesso negado e só podem pedir acesso se o proprietário o permitir.
+
+<Tip>
+  As cópias de dashboards provenientes do Marketplace não podem ser partilhadas. A opção Manage Access está oculta nesses itens.
+</Tip>
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Agentes e swarms" color="#FE4F32" icon="robot" href="/pt/agents/index">
+    Saiba como criar e gerir agentes e swarms.
+  </Card>
+
+  <Card title="Marketplace" color="#FE4F32" icon="store" href="/pt/marketplace/index">
+    Descubra agentes e dashboards que pode instalar ou vender.
+  </Card>
+</CardGroup>

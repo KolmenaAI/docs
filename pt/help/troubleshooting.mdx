@@ -1,0 +1,90 @@
+---
+title: "Resolução de problemas comuns no Kolmena"
+sidebarTitle: "Resolução de problemas"
+description: "Resolva rapidamente os problemas comuns do Kolmena: agentes que não arrancam, jobs que param, aplicações desligadas, credenciais em falta, pagamentos recusados e como comunicar um problema a partir da aplicação."
+---
+
+Quando algo no Kolmena não funciona como esperado, use este guia para diagnosticar o problema e voltar ao trabalho. Cada secção aborda um sintoma específico, a causa provável e os passos para o resolver.
+
+<Accordion title="O agente não arranca, não atualiza ou não responde">
+  Se um agente ficar bloqueado ao arrancar ou deixar de responder no chat, experimente o seguinte, por esta ordem:
+
+  1. **Aguarde um momento e atualize a página.** Os agentes grandes ou as bases de conhecimento complexas podem demorar mais a arrancar. Se vir uma mensagem de tempo esgotado, aguarde 30 segundos e tente novamente.
+  2. **Verifique o estado do agente.** No painel do chat, procure o indicador "Starting agent…". Se ficar bloqueado, abra as definições do agente e clique em **Stop** e, depois, em **Start** para forçar um novo arranque.
+  3. **Reveja as alterações recentes.** Se o problema começou depois de publicar uma nova versão, reverta para a versão anterior a partir do histórico de versões do agente e confirme que arranca corretamente.
+  4. **Verifique os pedidos de interação.** Um agente fica em pausa quando precisa da sua intervenção. Abra o chat ou o painel de pedidos de interação e responda ou recuse as perguntas pendentes para que o agente possa retomar.
+
+  Se o agente continuar sem arrancar, a compilação em segundo plano pode ter encontrado um erro. Consulte os detalhes no painel de compilações ativas.
+</Accordion>
+
+<Accordion title="Um job parou após várias falhas seguidas">
+  Um job é colocado em pausa automaticamente após **5 execuções falhadas consecutivas** e aparece no filtro **Needs attention** da página Jobs. O Kolmena faz isto para evitar desperdiçar utilização enquanto o problema de fundo não for resolvido.
+
+  Para resolver:
+
+  1. Abra a página **Configure → Jobs** do agente.
+  2. Encontre o job em pausa e reveja o histórico de execuções para identificar o erro.
+  3. Corrija a causa (por exemplo, volte a ligar a conta de uma aplicação desligada, corrija a descrição da tarefa ou ajuste o agendamento).
+  4. Clique em **Resume** para voltar a ativar o job.
+
+  <Note>
+    Pode ter até **25 jobs abertos** (ativos ou em pausa) ao mesmo tempo. Se atingir o limite, elimine um job que não use antes de adicionar outro. Só é executada uma execução de cada job de cada vez, e o intervalo mínimo suportado é de **15 minutos**.
+  </Note>
+</Accordion>
+
+<Accordion title="Uma aplicação ligada precisa de ser religada">
+  Algumas integrações exigem uma nova autenticação periódica ou podem ficar inválidas devido a alterações do lado do fornecedor. Quando a conta de uma aplicação é desligada, todos os jobs que dependem dela são colocados em pausa automaticamente.
+
+  Para voltar a ligar:
+
+  1. Aceda à página **Integrations**.
+  2. Encontre a aplicação com o estado **Needs reconnecting**.
+  3. Clique em **Connect** e conclua novamente o processo de autenticação do fornecedor.
+  4. Volte à página **Jobs** do agente e clique em **Resume** nos jobs em pausa que dependiam dessa conta.
+
+  Se já não precisar da integração, pode desligá-la. A credencial guardada é removida, e pode voltar a ligá-la mais tarde, se for necessário.
+</Accordion>
+
+<Accordion title="Credencial em falta ou pedido de credenciais">
+  O Kolmena não concede acesso às integrações por predefinição. Se um agente ou job precisar de uma aplicação ligada e não existir uma credencial válida, fica em pausa e pede uma.
+
+  Para resolver uma credencial em falta:
+
+  1. Abra **Settings → Credentials** para ver as credenciais que tem guardadas.
+  2. Se a aplicação necessária estiver em falta, aceda à página **Integrations** e adicione a conta.
+  3. Se a aplicação estiver na lista, mas mostrar **Needs reconnecting**, volte a autenticá-la.
+  4. Volte ao agente ou ao job e tente novamente a tarefa.
+
+  <Warning>
+    Por motivos de segurança, as credenciais guardadas **não podem ser lidas novamente** depois de armazenadas. Se perdeu o acesso ou precisa de rodar um token, desligue a conta antiga e ligue uma nova.
+  </Warning>
+
+  Ao conceder acesso, lembre-se de que **All agents** nunca inclui a Maya. Se quiser que a Maya use uma integração, conceda-lha explicitamente.
+</Accordion>
+
+<Accordion title="O pagamento ou o carregamento falhou">
+  Se uma cobrança for recusada ou um carregamento falhar, o Kolmena pausa os carregamentos automáticos para evitar recusas repetidas.
+
+  Causas comuns e soluções:
+
+  | Sintoma | Causa provável | O que fazer |
+  | --- | --- | --- |
+  | Card needs verification | Verificação 3-D Secure / SCA pendente | Abra o portal de faturação em **Settings → Billing** e conclua o passo de verificação. |
+  | Pagamento recusado | Cartão expirado ou fundos insuficientes | Atualize o método de pagamento no portal de faturação. |
+  | Top-up could not be collected | Recusa definitiva de um carregamento de LLM | Atualize o cartão e volte a ativar o **Auto Top-up** em **Settings → Billing**. |
+
+  Também pode ativar o **Auto Top-up** para que o Kolmena compre automaticamente consultas adicionais quando o saldo estiver baixo, o que ajuda a evitar que as tarefas parem a meio da execução.
+</Accordion>
+
+<Accordion title="Como comunicar um problema a partir da aplicação">
+  Se encontrar um erro, um comportamento inesperado ou tiver uma ideia de melhoria, pode enviar feedback diretamente a partir do Kolmena.
+
+  1. Clique no botão **Share Feedback** na aplicação (normalmente no canto inferior direito ou no menu principal).
+  2. Descreva o que aconteceu ou o que gostaria de ver. Seja específico: inclua o nome do agente, o nome do job e a hora a que o problema ocorreu, se for relevante.
+  3. Anexe até **3 ficheiros** (PNG, JPG ou MP4, com até 10 MB cada) para ajudar a equipa a reproduzir o problema.
+  4. Clique em **Send Feedback**.
+
+  A equipa do Kolmena lê todas as mensagens. Vai ver uma notificação de confirmação quando o envio for concluído.
+</Accordion>
+
+Se o problema persistir depois de seguir os passos acima, consulte as [Perguntas frequentes](/pt/help/faq) ou reveja a sua [utilização e registos](/pt/account/usage-and-logs) recentes para encontrar mais pistas.

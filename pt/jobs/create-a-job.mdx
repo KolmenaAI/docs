@@ -1,0 +1,95 @@
+---
+title: "Criar e gerir jobs agendados para agentes"
+sidebarTitle: "Criar um job"
+description: "Saiba como criar, agendar, editar, pausar e retomar jobs recorrentes para os seus agentes no Kolmena, incluindo o histórico de execuções e a recuperação após uma paragem automática."
+---
+
+No Kolmena, um job indica a um agente que execute uma tarefa segundo um agendamento e entregue o resultado num chat ou canal. Pode configurar jobs únicos ou recorrentes, alterá-los mais tarde e rever cada execução. Esta página mostra como criar um job, escolher um agendamento, gerir o seu estado e retomá-lo após uma paragem automática.
+
+## Antes de começar
+
+Confirme que o agente que quer agendar está [criado e publicado](/pt/agents/create-an-agent). Os jobs mantêm-se em todas as versões publicadas desse agente, pelo que as atualizações do agente não estragam os agendamentos existentes.
+
+<Note>
+  Pode ter até 25 jobs ativos ou em pausa ao mesmo tempo. Se atingir o limite, elimine um job antigo antes de adicionar um novo.
+</Note>
+
+## Criar um novo job
+
+<Steps>
+  <Step title="Abra o painel Jobs">
+    Aceda ao agente que quer agendar, selecione **Configure** e abra o separador **Jobs**.
+  </Step>
+  <Step title="Comece um novo job">
+    Clique em **New Job**. Introduza um **Name** e descreva a **Task** em linguagem simples, para que o agente saiba o que fazer em cada execução.
+  </Step>
+  <Step title="Escolha um acionador">
+    Escolha **Schedule** como tipo de acionador. Também pode acionar jobs a partir de aplicações ligadas quando ocorrem eventos.
+  </Step>
+  <Step title="Defina o agendamento">
+    Selecione uma frequência: **One Time**, **Hourly**, **Daily**, **Weekly**, **Monthly** ou **Custom**.
+
+    - Nos jobs de hora a hora, pode definir um intervalo horário e os minutos específicos de cada hora.
+    - Nos jobs diários, pode excluir dias específicos.
+    - O intervalo mínimo permitido é de **15 minutos**.
+  </Step>
+  <Step title="Escolha o destino">
+    Decida para onde vão os resultados:
+
+    - **New chat for this job**: cria um chat dedicado.
+    - **Um chat existente**: envia os resultados para um chat que já tem com o agente.
+    - **Job runs only (no chat)**: guarda os resultados sem os enviar para um chat.
+  </Step>
+  <Step title="Defina o tipo de resultado">
+    Escolha se o agente deve produzir **A reply in the chat** ou **A file, dashboard, or app**. Se escolher um ficheiro, dashboard ou aplicação, cada execução tem de o criar; uma execução sem ele conta como falhada.
+  </Step>
+  <Step title="Guarde o job">
+    Clique em **Add Job**. Vai ver uma confirmação de que o job foi adicionado, e o agente é iniciado, se necessário.
+  </Step>
+</Steps>
+
+## Editar, pausar ou retomar um job
+
+Pode alterar um job depois de o criar. Abra o painel **Jobs**, encontre o job e clique nele para editar o nome, a tarefa, o agendamento ou o destino. Clique no interruptor para pausar ou retomar um job. Os jobs em pausa mantêm o histórico, mas não são executados até os voltar a ativar.
+
+<Warning>
+  Se um job falhar cinco execuções seguidas, para automaticamente e mostra **Needs attention**. Corrija a causa (por exemplo, volte a ligar uma aplicação ou escolha um destino válido) e, depois, clique em **Resume** para o iniciar novamente.
+</Warning>
+
+## Executar um job a pedido
+
+Para testar um agendamento ou voltar a executar uma tarefa de imediato, clique em **Run now** num job ativo cujo agente esteja iniciado. A execução aparece logo no histórico do job.
+
+## Ver o histórico de execuções
+
+Clique em **View runs** em qualquer job para abrir o histórico. Pode ver:
+
+| Campo | O que mostra |
+| --- | --- |
+| Estado | Completed, Failed, Running, Cancelled ou Skipped |
+| Acionador | Scheduled ou Started by an agent |
+| Duração | Quanto tempo demorou a execução |
+| Utilização | Chamadas ao modelo e tokens consumidos |
+| Entregue | Se o resultado chegou ao destino |
+
+Selecione uma execução para ler a transcrição do agente e as mensagens que produziu. Se a execução falhou, o erro explica porquê (por exemplo, destino indisponível, agente parado ou orçamento esgotado).
+
+## Eliminar um job
+
+Abra o menu do job e escolha **Delete**. O job e o respetivo histórico de execuções são removidos. Os chats criados para o job ficam na sua lista de conversas.
+
+## Próximos passos
+
+<CardGroup cols={3}>
+  <Card title="Visão geral dos jobs" color="#FE4F32" icon="calendar-clock" href="/pt/jobs/index">
+    Saiba como funcionam os jobs, os agendamentos e os acionadores.
+  </Card>
+
+  <Card title="Ligar aplicações" color="#FE4F32" icon="plug" href="/pt/integrations/connect-apps">
+    Ligue aplicações para usar acionadores por evento.
+  </Card>
+
+  <Card title="Versões e publicação" color="#FE4F32" icon="code-branch" href="/pt/agents/versions-and-publishing">
+    Veja como as versões do agente afetam os seus jobs.
+  </Card>
+</CardGroup>

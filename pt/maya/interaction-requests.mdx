@@ -1,0 +1,94 @@
+---
+title: "Responder aos pedidos de interação dos seus agentes"
+sidebarTitle: "Pedidos de interação"
+description: "Saiba como responder, recusar e gerir os pedidos de interação dos agentes. Trate dos pedidos de credenciais e perceba estados como retirado ou expirado."
+---
+
+Quando um agente precisa da sua intervenção para continuar a trabalhar, envia um **pedido de interação** (interaction request). Estes pedidos aparecem na conversa e pedem-lhe que responda a uma pergunta, faça uma escolha ou forneça uma credencial. Responder mantém o agente a trabalhar; ignorar o pedido pode pôr a tarefa em pausa.
+
+## Tipos de pedidos de interação
+
+Os agentes enviam pedidos por alguns motivos comuns:
+
+| Tipo de pedido | O que significa |
+| --- | --- |
+| **Pergunta** | O agente precisa de um esclarecimento ou de uma decisão antes de continuar. |
+| **Formulário** | O agente está a recolher várias informações e mostra os campos que ainda faltam. |
+| **Credencial** | O agente precisa de uma chave de API, um token ou uma palavra-passe para usar um serviço em seu nome. |
+
+## Responder a um pedido
+
+<Steps>
+  <Step title="Abra o pedido">
+    Na conversa, a mensagem do agente mostra a pergunta ou o formulário. Leia-a com atenção.
+  </Step>
+  <Step title="Escreva ou selecione a sua resposta">
+    Nas perguntas de texto, escreva a resposta e clique em **Send**. Nas de escolha múltipla, selecione a opção adequada ou escolha **Something else** para explicar por palavras suas.
+  </Step>
+  <Step title="Submeta ou ignore">
+    Clique em **Done** quando terminar, ou em **Skip** se quiser que o agente continue sem essa resposta.
+  </Step>
+</Steps>
+
+<Tip>
+  Use as teclas de seta para navegar entre as opções e Enter para selecionar. Assim responde rapidamente a perguntas de escolha múltipla.
+</Tip>
+
+## Recusar ou descartar um pedido
+
+Se não quiser responder, tem várias opções:
+
+- **Skip** indica ao agente que continue sem a informação em falta.
+- **Dismiss these questions** remove da conversa o conjunto atual de pedidos.
+- **Decline** marca o pedido como recusado, o que o agente consegue ver no respetivo estado.
+
+## Estados dos pedidos
+
+Cada pedido de interação tem um estado para que possa ver o que aconteceu:
+
+| Estado | Significado |
+| --- | --- |
+| **Answered** | Respondeu e o agente recebeu a resposta. |
+| **Declined** | Optou por não responder. |
+| **Withdrawn** | O agente cancelou o pedido, muitas vezes porque encontrou outra forma de avançar ou já não precisa da informação. |
+| **Timed out** | O pedido expirou porque não foi respondido dentro do prazo permitido. |
+| **Closed** | O pedido foi resolvido ou substituído por outro evento. |
+
+## Tratar pedidos de credenciais
+
+Quando um agente precisa de aceder a um serviço, pode pedir-lhe a sua chave ou token.
+
+<Steps>
+  <Step title="Reveja o pedido">
+    O agente indica o serviço a que precisa de aceder. Confirme que reconhece o serviço.
+  </Step>
+  <Step title="Cole uma chave ou reutilize uma guardada">
+    Escreva ou cole a chave no campo. Se já guardou uma credencial para esse serviço, pode escolher **Use your saved key**.
+  </Step>
+  <Step title="Guarde nas credenciais (opcional)">
+    Clique em **Save to Credentials** para guardar a chave em segurança e usá-la no futuro. A chave é encriptada no momento em que a envia e nunca volta a ser mostrada no chat.
+  </Step>
+  <Step title="Envie">
+    Clique em **Send** para conceder acesso. O agente pode agora usar o serviço em seu nome.
+  </Step>
+</Steps>
+
+<Warning>
+  Guardar uma credencial substitui a chave guardada para todos os agentes que usam esse serviço. Se quiser manter a chave anterior para outros agentes, escolha **Keep saved key**.
+</Warning>
+
+<Note>
+  Pode revogar qualquer credencial guardada a qualquer momento na página [Credentials](/pt/integrations/credentials). O agente deixa de a receber de imediato.
+</Note>
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Conversar com a Maya" color="#FE4F32" icon="message-dots" href="/pt/maya/chat-with-maya">
+    Inicie e gira as suas conversas.
+  </Card>
+
+  <Card title="Credenciais" color="#FE4F32" icon="key" href="/pt/integrations/credentials">
+    Gira as chaves guardadas e o acesso a serviços.
+  </Card>
+</CardGroup>

@@ -1,0 +1,100 @@
+---
+title: "Adicionar documentos ao conhecimento"
+sidebarTitle: "Adicionar documentos"
+description: "Carregue ficheiros, cole texto ou adicione ligações web à biblioteca de conhecimento de um agente ou swarm. Organize os itens em pastas e controle que agentes lhes podem aceder."
+---
+
+O conhecimento dá aos seus agentes e swarms o contexto de que precisam para responder a perguntas, seguir instruções e tomar melhores decisões. Pode carregar ficheiros, colar texto simples ou adicionar ligações web e, depois, organizar tudo em pastas e escolher que agentes e swarms podem usar cada recurso.
+
+## Carregar ficheiros
+
+<Steps>
+  <Step title="Abra o separador Knowledge">
+    Aceda a um agente ou swarm e selecione **Knowledge** na navegação superior.
+  </Step>
+  <Step title="Adicione ficheiros">
+    Clique em **Files** e arraste os ficheiros para a área de largar ou clique para os procurar. Também pode largar ficheiros diretamente na página Knowledge.
+  </Step>
+  <Step title="Aguarde o processamento">
+    Cada ficheiro é convertido automaticamente em texto pesquisável. Durante o processamento, o estado mostra **Waiting** ou **Processing**. Quando estiver pronto, o agente pode consultar o conteúdo durante as conversas e as tarefas.
+  </Step>
+</Steps>
+
+<Note>
+  Os tipos suportados incluem documentos, imagens, áudio e vídeo. A interface mostra um limite de tamanho por ficheiro. Se um ficheiro for demasiado grande, divida-o em ficheiros mais pequenos e carregue-os novamente.
+</Note>
+
+## Adicionar texto ou ligações web
+
+Se tiver texto que não está num ficheiro, ou se quiser referir uma página web pública, use as outras opções para adicionar:
+
+- **Text**: clique em **Text**, introduza um nome para o recurso, cole o conteúdo e confirme.
+- **Link**: clique em **Link**, cole um ou mais URLs (um por linha ou separados por vírgulas, até 20 de cada vez) e confirme. Cada página é obtida e guardada como Markdown pesquisável.
+
+## Organizar com pastas
+
+Mantenha a biblioteca arrumada criando pastas e movendo itens para dentro delas.
+
+<Steps>
+  <Step title="Crie uma pasta">
+    Clique em **New Folder**, introduza um nome e escolha uma pasta principal se quiser criar uma subpasta.
+  </Step>
+  <Step title="Mova itens">
+    Selecione um ou mais ficheiros ou pastas, clique em **Move To** e escolha a pasta de destino. Também pode arrastar e largar itens na árvore.
+  </Step>
+  <Step title="Mude o nome ou elimine pastas">
+    Abra o menu de uma pasta e escolha **Rename** para lhe mudar o nome. Para a eliminar, escolha **Delete Folder**. Se a pasta não estiver vazia, mova primeiro o conteúdo ou use **Force Delete** para remover tudo o que contém.
+  </Step>
+</Steps>
+
+## Dar acesso a agentes e swarms
+
+Por predefinição, nada é partilhado automaticamente. É você que controla que agentes e swarms podem ler cada recurso de conhecimento.
+
+<Steps>
+  <Step title="Abra as definições de acesso">
+    Num item de conhecimento, clique na etiqueta de acesso (pode mostrar **Everyone** ou um número). Abre-se a janela **Access to**, seguida do nome do item.
+  </Step>
+  <Step title="Escolha quem o pode usar">
+    Ative o acesso para agentes e swarms individuais, ou selecione **All agents & swarms** para partilhar com todos. A opção **All agents** nunca inclui a Maya.
+  </Step>
+  <Step title="Guarde">
+    Clique para confirmar. Vai ver a confirmação **Access updated**.
+  </Step>
+</Steps>
+
+## Eliminar ou arquivar documentos
+
+Para remover um ficheiro, abra o respetivo menu e escolha **Delete**. O item passa para o **Archive**, onde o pode recuperar mais tarde com **Restore** ou apagá-lo com **Delete forever**. Para esvaziar todo o arquivo, use **Delete All**.
+
+<Warning>
+  Eliminar uma pasta ou um documento remove-o definitivamente. Se eliminar um agente, os ficheiros de conhecimento associados a ele também são removidos.
+</Warning>
+
+## Resolver erros de processamento
+
+Se um documento não for processado, verifique a mensagem de erro e experimente a solução recomendada:
+
+| Erro | O que fazer |
+| --- | --- |
+| Unsupported file type | Converta o ficheiro para PDF, DOCX ou texto simples e carregue-o novamente. |
+| Ficheiro demasiado grande | Divida o documento em ficheiros mais pequenos. |
+| Nenhum texto legível encontrado | Se o ficheiro for uma digitalização, confirme que o texto está legível e tente novamente. |
+| Tempo limite de extração | Experimente dividir o ficheiro, remover folhas pesadas ou carregá-lo como CSV. |
+| Falha genérica | Clique em **Retry** no documento, ou carregue-o novamente se a nova tentativa falhar. |
+
+## Próximos passos
+
+<CardGroup cols={3}>
+  <Card title="Criar um agente" color="#FE4F32" icon="plus" href="/pt/agents/create-an-agent">
+    Crie um agente que use o seu conhecimento.
+  </Card>
+
+  <Card title="Criar um swarm" color="#FE4F32" icon="users" href="/pt/swarms/create-a-swarm">
+    Dê um contexto partilhado a uma equipa de agentes.
+  </Card>
+
+  <Card title="Ligar aplicações" color="#FE4F32" icon="plug" href="/pt/integrations/connect-apps">
+    Ligue os serviços com que os seus agentes trabalham.
+  </Card>
+</CardGroup>

@@ -1,0 +1,48 @@
+---
+title: "Crea y configura un enjambre de agentes de IA"
+sidebarTitle: "Crea un enjambre"
+description: "Crea un enjambre poniéndole nombre, escribiendo un prompt con su objetivo, eligiendo un líder y seleccionando al menos dos agentes miembros de tu lista o de fuentes externas."
+---
+
+Puedes crear un enjambre desde la página Enjambres de tu espacio de trabajo. Un enjambre necesita un objetivo claro, un líder y al menos dos miembros. Una vez guardado, el enjambre está listo para recibir mensajes y delegar trabajo.
+
+<Steps>
+  <Step title="Abre la ventana de creación">
+    Ve a **Enjambres** en la barra lateral y haz clic en **Nuevo enjambre**.
+  </Step>
+  <Step title="Ponle nombre al enjambre">
+    Escribe un nombre que refleje la misión, como "Equipo del informe semanal" o "Escalado de atención al cliente".
+  </Step>
+  <Step title="Escribe el prompt del objetivo">
+    Describe lo que debe conseguir el enjambre. El prompt debe tener al menos 50 caracteres para que el líder tenga suficiente contexto para planificar y delegar. Después de añadir agentes, puedes hacer clic en **Mejorar prompt** para enriquecer la descripción con sus capacidades.
+  </Step>
+  <Step title="Elige un líder">
+    Elige quién dirige el enjambre:
+
+    - **Maya**: ella orquesta el enjambre y chatea contigo directamente.
+    - **Uno de tus agentes**: el agente pasa a ser el orquestador y habla en nombre del enjambre.
+
+    El líder debe ser uno de los miembros seleccionados. No puedes asignar un agente externo como líder.
+  </Step>
+  <Step title="Añade miembros">
+    Selecciona al menos dos agentes en total. Puedes añadir:
+
+    - **Tus agentes**, desde la pestaña **Tus agentes**. Usa el cuadro de búsqueda para filtrar por nombre.
+    - **Agentes externos**, desde la pestaña **Agentes externos**. Pega la URL base del agente y haz clic en **Verificar**. Kolmena lee la tarjeta del agente desde `/.well-known/agent-card.json` en esa URL.
+
+    Si deseleccionas al líder actual, la corona pasa automáticamente al primer agente que siga seleccionado.
+  </Step>
+  <Step title="Crea el enjambre">
+    Haz clic en **Crear con Maya**. Kolmena forma el equipo y te lleva al chat del enjambre.
+  </Step>
+</Steps>
+
+## Consejos para un buen enjambre
+
+- **Adapta las habilidades al objetivo.** Un enjambre de investigación se beneficia de un analista y un redactor. Un enjambre de soporte se beneficia de un agente de clasificación y otro de escalado.
+- **Mantén el prompt centrado.** Una misión clara es más fácil de delegar que una lista amplia de tareas sin relación.
+- **Empieza con tus propios agentes.** Los agentes externos son útiles para ampliar el alcance, pero tus propios agentes comparten tu base de conocimiento y tus credenciales.
+
+<Note>
+  Un enjambre necesita al menos dos miembros y un líder. Los agentes externos cuentan para el mínimo de miembros, pero solo tus propios agentes pueden ser líderes.
+</Note>

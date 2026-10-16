@@ -1,0 +1,95 @@
+---
+title: "Crea y gestiona tareas programadas para tus agentes"
+sidebarTitle: "Crea una tarea"
+description: "Aprende a crear, programar, editar, pausar y reanudar tareas recurrentes para tus agentes en Kolmena, incluido el historial de ejecuciones y la recuperación tras una detención automática."
+---
+
+En Kolmena, una tarea le indica a un agente que ejecute un trabajo según una programación y entregue el resultado en un chat o canal. Puedes configurar tareas de una sola vez o recurrentes, cambiarlas más adelante y revisar cada ejecución. Esta página te muestra cómo crear una tarea, elegir una programación, gestionar su estado y reanudarla tras una detención automática.
+
+## Antes de empezar
+
+Asegúrate de que el agente que quieres programar está [creado y publicado](/es/agents/create-an-agent). Las tareas se mantienen en todas las versiones publicadas de ese agente, así que las actualizaciones del agente no rompen las programaciones existentes.
+
+<Note>
+  Puedes tener hasta 25 tareas activas o en pausa a la vez. Si alcanzas el límite, elimina una tarea antigua antes de añadir una nueva.
+</Note>
+
+## Crear una tarea nueva
+
+<Steps>
+  <Step title="Abre el panel de tareas">
+    Ve al agente que quieres programar, selecciona **Configurar** y abre la pestaña **Tareas**.
+  </Step>
+  <Step title="Empieza una tarea nueva">
+    Haz clic en **Nueva tarea**. Escribe un **Nombre** y describe la **Tarea** en lenguaje natural para que el agente sepa qué hacer en cada ejecución.
+  </Step>
+  <Step title="Elige un disparador">
+    Elige **Programación** como tipo de disparador. También puedes lanzar tareas desde aplicaciones conectadas cuando ocurren eventos.
+  </Step>
+  <Step title="Define la programación">
+    Selecciona una frecuencia: **Una vez**, **Cada hora**, **Diaria**, **Semanal**, **Mensual** o **Personalizada**.
+
+    - En las tareas cada hora, puedes definir una franja horaria y los minutos concretos de cada hora.
+    - En las tareas diarias, puedes excluir días concretos.
+    - El intervalo mínimo permitido es de **15 minutos**.
+  </Step>
+  <Step title="Elige el destino">
+    Decide adónde van los resultados:
+
+    - **Nuevo chat para esta tarea**: crea un chat dedicado.
+    - **Un chat existente**: envía los resultados a un chat que ya tienes con el agente.
+    - **Solo ejecuciones (sin chat)**: guarda los resultados sin enviarlos a ningún chat.
+  </Step>
+  <Step title="Define el tipo de resultado">
+    Elige si el agente debe producir **Una respuesta en el chat** o **Un archivo, un panel o una aplicación**. Si eliges un archivo, panel o aplicación, cada ejecución debe crearlo; una ejecución que no lo cree cuenta como fallida.
+  </Step>
+  <Step title="Guarda la tarea">
+    Haz clic en **Añadir tarea**. Verás una confirmación de que la tarea se añadió, y el agente se inicia si hace falta.
+  </Step>
+</Steps>
+
+## Editar, pausar o reanudar una tarea
+
+Puedes cambiar una tarea después de crearla. Abre el panel **Tareas**, busca la tarea y haz clic en ella para editar el nombre, la tarea, la programación o el destino. Haz clic en el interruptor para pausar o reanudar una tarea. Las tareas en pausa conservan su historial, pero no se ejecutan hasta que las vuelvas a activar.
+
+<Warning>
+  Si una tarea falla cinco ejecuciones seguidas, se detiene automáticamente y muestra **Requiere atención**. Corrige la causa (por ejemplo, vuelve a conectar una aplicación o elige un destino válido) y después haz clic en **Reanudar** para iniciarla de nuevo.
+</Warning>
+
+## Ejecutar una tarea al momento
+
+Para probar una programación o volver a ejecutar una tarea de inmediato, haz clic en **Ejecutar ahora** en una tarea activa cuyo agente esté iniciado. La ejecución aparece enseguida en el historial de la tarea.
+
+## Ver el historial de ejecuciones
+
+Haz clic en **Ver ejecuciones** en cualquier tarea para abrir su historial. Puedes ver:
+
+| Campo | Qué muestra |
+| --- | --- |
+| Estado | Completada, Fallida, En curso, Cancelada u Omitida |
+| Disparador | Programada o Iniciada por un agente |
+| Duración | Cuánto tardó la ejecución |
+| Uso | Llamadas al modelo y tokens consumidos |
+| Entregado | Si el resultado llegó a su destino |
+
+Selecciona una ejecución para leer la transcripción del agente y los mensajes que produjo. Si la ejecución falló, el error explica por qué (por ejemplo, destino no disponible, agente detenido o presupuesto agotado).
+
+## Eliminar una tarea
+
+Abre el menú de la tarea y elige **Eliminar**. Se eliminan la tarea y su historial de ejecuciones. Cualquier chat creado para la tarea se queda en tu lista de conversaciones.
+
+## Próximos pasos
+
+<CardGroup cols={3}>
+  <Card title="Descripción de tareas" color="#FE4F32" icon="calendar-clock" href="/es/jobs/index">
+    Aprende cómo funcionan las tareas, las programaciones y los disparadores.
+  </Card>
+
+  <Card title="Conecta aplicaciones" color="#FE4F32" icon="plug" href="/es/integrations/connect-apps">
+    Conecta aplicaciones para usar disparadores por evento.
+  </Card>
+
+  <Card title="Versiones y publicación" color="#FE4F32" icon="code-branch" href="/es/agents/versions-and-publishing">
+    Mira cómo afectan las versiones del agente a tus tareas.
+  </Card>
+</CardGroup>

@@ -1,0 +1,45 @@
+---
+title: "Conceitos e termos essenciais do Kolmena"
+sidebarTitle: "Conceitos essenciais"
+description: "Conheça os termos essenciais usados no Kolmena, incluindo Maya, agentes, swarms, jobs, conhecimento, skills, credenciais e listings do Marketplace."
+---
+
+O Kolmena usa um vocabulário específico para descrever conversas, agentes e a forma como o trabalho é feito. Compreender estes termos vai ajudá-lo a navegar na plataforma e a tirar o máximo partido dos seus agentes.
+
+<Note>
+  A interface do Kolmena está disponível em inglês. Os nomes de botões e menus aparecem em inglês nestes guias, tal como os vê no ecrã.
+</Note>
+
+## Termos essenciais
+
+| Termo | O que significa |
+| --- | --- |
+| **Maya** | A sua assistente pessoal de IA e a rainha da sua colmeia (hive). A Maya guia-o pelo Kolmena, ajuda-o a criar e configurar agentes e encaminha as mensagens para o agente ou membro do swarm certo. |
+| **Agente (Agent)** | Um operador de IA autónomo que compreende o contexto, toma decisões e executa ações através de skills e conhecimento. É você que define a sua identidade, comportamento e lógica. |
+| **Swarm** | Uma equipa de agentes que colaboram, se especializam e executam em conjunto fluxos de trabalho complexos. Um agente atua como líder (leader) e delega tarefas nos restantes membros. |
+| **Job** | Uma tarefa agendada e recorrente atribuída a um agente. Os jobs mantêm-se em todas as versões publicadas desse agente, são executados um de cada vez e param automaticamente após cinco falhas consecutivas, até que os retome. Pode ter até 25 jobs abertos por utilizador, com um intervalo mínimo de 15 minutos. |
+| **Conhecimento (Knowledge)** | Documentos e ficheiros que anexa a um agente para que trabalhe com contexto e precisão. O conhecimento pode incluir folhas de cálculo, PDF, ficheiros de texto e outro material de referência. |
+| **Skill** | Uma capacidade que adiciona a um agente, carregando um ficheiro de skill, importando-a da web ou escrevendo instruções personalizadas. As skills indicam ao agente como realizar uma tarefa específica. |
+| **Aplicação (App)** | Um serviço de terceiros que liga ao Kolmena para que os seus agentes possam interagir com ele, como o Telegram, o Discord ou o WhatsApp. |
+| **Entregável (Deliverable)** | Um ficheiro ou resultado criado por um agente ou swarm, como um documento, uma imagem, uma folha de cálculo ou uma aplicação web. Os entregáveis aparecem no painel **Outputs**. |
+| **Listing do Marketplace** | Um agente ou swarm publicado que outras pessoas podem descobrir, instalar e usar. Pode vender listings como compras únicas ou subscrições mensais e receber pagamentos através do Stripe Connect. |
+| **Canal (Channel)** | A identidade de uma conversa. Cada chat (com a Maya, com um agente ou com um swarm) existe no seu próprio canal, e cada mensagem pertence exatamente a um canal. |
+| **Transcrição (Transcript)** | As mensagens de um canal tal como aparecem no ecrã, seja no chat da Maya, no chat de um agente ou no feed de um swarm. |
+| **Histórico de chats (Chat History)** | A lista dos seus canais apresentada na barra lateral. Mostra apenas nomes e atividade, nunca o conteúdo completo das mensagens. |
+| **Turno (Turn)** | Uma troca: a sua mensagem e a resposta que ela produz. Um turno pode terminar enquanto o trabalho que iniciou continua a ser executado em segundo plano. |
+| **Delegação (Delegation)** | Trabalho que a Maya entrega aos membros de um swarm. A delegação dura mais do que o próprio turno da Maya, pelo que os membros podem continuar a trabalhar durante minutos depois de ela responder. |
+| **Pedido de interação (Interaction Request)** | Uma pergunta persistente que um agente lhe faz. O turno do agente termina quando pergunta; assim que responde, o agente retoma a partir do ponto onde ficou. |
+| **Retomar (Resume)** | O turno que um agente recebe depois de resolver o seu pedido de interação. O agente retoma o trabalho em pausa com a sua resposta. |
+| **Recusar (Decline)** | Resolver um pedido de interação sem dar o que foi pedido. O agente retoma na mesma, mas sabe que o pedido foi recusado. |
+| **Retirar (Withdraw)** | Um agente fecha o seu próprio pedido de interação aberto sem esperar pela sua resposta, normalmente porque a conversa já avançou. |
+| **Credencial (Credential)** | Um valor com nome que traz de um serviço de terceiros, como uma chave de API ou um token, que os agentes podem usar depois de lhes conceder acesso. Ninguém consegue voltar a ler uma credencial depois de guardada. |
+| **Concessão (Grant)** | A permissão que dá a um agente para usar uma das suas credenciais. Por predefinição, nada é concedido, e a Maya também precisa da sua própria concessão. |
+| **Pedido de credenciais (Credential Request)** | Um pedido de interação especificamente para as credenciais de que um agente precisa para continuar o trabalho. |
+| **Satisfação do pedido (Fulfillment)** | Resolver um pedido de credenciais: as credenciais são guardadas (ou reutilizadas) e concedidas ao agente que as pediu, tudo num só passo. |
+
+## Guias relacionados
+
+- [Conversar com a Maya](/pt/maya/chat-with-maya)
+- [Criar um agente](/pt/agents/create-an-agent)
+- [Criar um swarm](/pt/swarms/create-a-swarm)
+- [Criar um job](/pt/jobs/create-a-job)

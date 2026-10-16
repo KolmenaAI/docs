@@ -1,0 +1,136 @@
+---
+title: "Planes, facturación y recargas de créditos de Kolmena"
+sidebarTitle: "Planes y facturación"
+description: "Compara los niveles de suscripción de Kolmena, recarga créditos de LLM, configura la recarga automática y gestiona o cancela tu plan."
+---
+
+Kolmena separa tu suscripción a la plataforma de tu saldo de uso de LLM. Tu suscripción controla cuántos agentes puedes ejecutar a la vez, mientras que tu saldo de uso paga las llamadas a LLM que hacen tus agentes. Gestionas ambos desde **Configuración > Facturación**.
+
+## Niveles de suscripción
+
+Kolmena ofrece cuatro planes. Cada plan incluye un número fijo de plazas de agente simultáneas, y el uso de LLM se factura según consumo en todos los planes.
+
+<table>
+  <colgroup>
+    <col width="177" />
+    <col width="129" />
+    <col width="122" />
+    <col width="142" />
+    <col width="275" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Plan</th>
+      <th>Precio mensual</th>
+      <th>Plazas de agente</th>
+      <th>Uso de LLM</th>
+      <th>Qué incluye</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Free**<br />Empieza con Kolmena</td>
+      <td>\$0</td>
+      <td>1</td>
+      <td>Según consumo</td>
+      <td>Funciones limitadas de la plataforma, soporte de la comunidad</td>
+    </tr>
+    <tr>
+      <td>**Builder**<br />Para desarrolladores independientes y primeros usuarios</td>
+      <td>\$20</td>
+      <td>5</td>
+      <td>Según consumo</td>
+      <td>Acceso a las funciones principales de la plataforma, soporte prioritario</td>
+    </tr>
+    <tr>
+      <td>**Partnership**<br />Para equipos en crecimiento y pymes</td>
+      <td>\$60</td>
+      <td>10</td>
+      <td>Según consumo</td>
+      <td>Acceso a las funciones principales de la plataforma, soporte prioritario, orientación para la implementación, modelos opcionales de reparto de beneficios</td>
+    </tr>
+    <tr>
+      <td>**Enterprise**<br />Para grandes organizaciones</td>
+      <td>Contacta con nosotros</td>
+      <td>Según contrato</td>
+      <td>Según consumo</td>
+      <td>Plazas de agente a medida, desarrollo personalizado de agentes y enjambres, infraestructura dedicada u opción de despliegue, participación en la hoja de ruta estratégica</td>
+    </tr>
+  </tbody>
+</table>
+
+<Note>
+  Todos los planes te permiten crear agentes ilimitados. Las plazas solo limitan cuántos agentes pueden estar **en ejecución al mismo tiempo**.
+</Note>
+
+## Gestionar tu suscripción
+
+Desde la página de configuración de Facturación puedes mejorar, bajar o cancelar tu plan.
+
+<Steps>
+  <Step title="Cambia de plan">
+    Abre el selector de planes, elige un nivel nuevo y completa el pago. Si bajas de plan, el cambio se aplica al final de tu periodo de facturación actual.
+  </Step>
+  <Step title="Cancela tu suscripción">
+    Haz clic en **Cancelar plan**. Conservas el acceso completo hasta el final de tu periodo actual. No se emiten reembolsos por meses parciales. Tus agentes y tus datos no se eliminan, y puedes volver a suscribirte en cualquier momento.
+  </Step>
+  <Step title="Gestiona el método de pago o consulta las facturas">
+    Haz clic en **Gestionar en Stripe** para abrir el portal de clientes de Stripe en una pestaña nueva. Allí puedes actualizar tu tarjeta, ver facturas y gestionar los datos de facturación.
+  </Step>
+</Steps>
+
+## Créditos de LLM y recargas
+
+Tu saldo de uso es un monedero prepago que paga las llamadas a LLM. Los créditos se acumulan de un mes a otro y son válidos durante 12 meses.
+
+### Recarga manual
+
+<Steps>
+  <Step title="Abre la ventana de recarga">
+    En la configuración de Facturación, haz clic en **Recargar** junto a tu saldo actual.
+  </Step>
+  <Step title="Elige un importe">
+    Selecciona un importe predefinido ($$10, $$25, $$50, $$100 o $$200) o introduce un importe personalizado. La recarga mínima es de $$10.
+  </Step>
+  <Step title="Confirma el cargo">
+    Haz clic en **Recargar** para cobrar de inmediato en tu método de pago guardado. Tu saldo se actualiza al momento.
+  </Step>
+</Steps>
+
+### Recarga automática
+
+La recarga automática repone tu saldo automáticamente para que tus agentes no se detengan a mitad de una tarea.
+
+<Steps>
+  <Step title="Activa la recarga automática">
+    Activa **Recarga automática**. Si es la primera vez, definirás el umbral, el importe de la recarga y el límite mensual.
+  </Step>
+  <Step title="Configura las reglas">
+    - **Activar si es inferior a**: el saldo que activa una recarga (por ejemplo, \$5).
+    - **Recargar con**: el importe que se cobra cada vez (mínimo \$10).
+    - **Límite mensual**: lo máximo que se te cobrará en recargas automáticas por periodo de facturación.
+  </Step>
+  <Step title="Guarda">
+    Haz clic en **Guardar**. El límite se reinicia cada mes en la fecha de referencia de tu suscripción.
+  </Step>
+</Steps>
+
+<Warning>
+  Si se rechaza el cargo de una recarga, la recarga automática se pausa automáticamente. Actualiza tu método de pago y vuelve a activarla para reanudarla.
+</Warning>
+
+## Suscripciones del Mercado
+
+Si rentas agentes del Mercado de Kolmena, esos cargos recurrentes aparecen en una tabla independiente, **Suscripciones del marketplace**, en la página de Facturación. Se facturan por separado de tu suscripción a la plataforma.
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="Uso y registros" color="#FE4F32" icon="chart-bar" href="/es/account/usage-and-logs">
+    Mira exactamente en qué se gasta tu saldo.
+  </Card>
+
+  <Card title="Configuración" color="#FE4F32" icon="user" href="/es/account/settings">
+    Actualiza tu perfil y tus cuentas vinculadas.
+  </Card>
+</CardGroup>

@@ -1,0 +1,97 @@
+---
+title: "Conecta aplicaciones a los agentes de Kolmena"
+sidebarTitle: "Conecta aplicaciones"
+description: "Explora el catálogo de integraciones, conecta una aplicación mediante OAuth o una clave de API, actívala para tus agentes y desconéctala cuando ya no la necesites."
+---
+
+Conectar aplicaciones da a tus agentes acceso a servicios reales como Gmail, Slack, Notion, GitHub y muchos más. Exploras el catálogo, conectas tu cuenta y eliges qué agentes pueden usar cada integración.
+
+<iframe className="w-full aspect-video rounded-xl my-6" src="https://www.youtube.com/embed/pzdY4ghJey4" title="Connecting Your Tools" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+
+## Explorar el catálogo
+
+Abre **Integraciones** desde la barra lateral. La página muestra dos pestañas:
+
+- **Todas**: todas las integraciones del catálogo, agrupadas por categoría.
+- **Activadas**: solo las integraciones que has activado para tu espacio de trabajo.
+
+Usa la barra de búsqueda para encontrar una aplicación por su nombre o describe lo que quieres hacer. También puedes filtrar por categoría.
+
+## Conectar una aplicación
+
+La forma de conectarse depende del tipo de autenticación de la aplicación:
+
+<Steps>
+  <Step title="Busca la aplicación">
+    Explora el catálogo o busca en él, y haz clic en la tarjeta de la integración para abrir sus detalles.
+  </Step>
+  <Step title="Actívala">
+    Activa el interruptor para habilitar la integración en tu espacio de trabajo. Si la aplicación requiere una credencial, la ventana abre automáticamente la pestaña **Cuentas**.
+  </Step>
+  <Step title="Autentícate">
+    <Accordion title="OAuth (inicio de sesión con el proveedor)">
+      Haz clic en **Conectar** e inicia sesión con el proveedor (por ejemplo, Google para Gmail) en la ventana emergente. El token se guarda de forma segura y no vuelve a mostrarse.
+    </Accordion>
+
+    <Accordion title="Clave de API o token">
+      Pega la clave o el token en el formulario de credenciales. El valor se envía de forma segura y nunca se guarda en el chat.
+    </Accordion>
+
+    <Accordion title="Sin autenticación">
+      Algunas aplicaciones no requieren iniciar sesión. La credencial de la pasarela se gestiona automáticamente al activar la integración.
+    </Accordion>
+  </Step>
+  <Step title="Elige qué agentes pueden usarla">
+    En la pestaña **Agentes** de la ventana, marca los agentes a los que quieres dar acceso. Por defecto, activar una integración para el espacio de trabajo la pone a disposición de todos los agentes excepto Maya. Si quieres que Maya la use, tienes que concederle acceso de forma explícita.
+  </Step>
+  <Step title="Acota las acciones">
+    En la pestaña **Acciones**, elige qué herramientas puede usar el agente. Puedes volver al conjunto predeterminado en cualquier momento con **Restablecer valores predeterminados**.
+  </Step>
+</Steps>
+
+## Activar para Maya o para un solo agente
+
+En lugar de activar una aplicación para todo el espacio de trabajo, puedes vincularla a un solo agente:
+
+1. Abre el agente y ve a **Configurar > Integraciones**.
+2. Busca la aplicación en el catálogo y actívala.
+3. Conecta tu cuenta si es necesario.
+4. Ajusta las acciones permitidas en la pestaña **Acciones**.
+
+Vincular la aplicación a un agente sustituye la configuración predeterminada del espacio de trabajo para ese agente.
+
+## Desconectar una aplicación
+
+Para quitar una integración:
+
+1. Abre la tarjeta de la integración desde la pestaña **Activadas** o desde la página **Integraciones** del agente.
+2. Desactiva el interruptor.
+3. Si también quieres revocar la credencial guardada, abre la pestaña **Cuentas** y haz clic en **Desconectar**.
+
+<Warning>
+  Desconectar elimina la credencial guardada. Puedes volver a conectar en cualquier momento, pero tendrás que iniciar sesión o pegar la clave de nuevo.
+</Warning>
+
+## Estados de conexión
+
+| Estado | Qué significa |
+| --- | --- |
+| Conectado | La aplicación está lista para usarse. |
+| Requiere reconexión | La credencial existe, pero el proveedor la revocó. Desconecta y vuelve a conectar para solucionarlo. |
+| No conectado | No hay ninguna credencial guardada. Conecta para activar la aplicación. |
+
+## Próximos pasos
+
+<CardGroup cols={3}>
+  <Card title="Habilidades" color="#FE4F32" icon="wand-magic-sparkles" href="/es/integrations/skills">
+    Gestiona las habilidades que pueden usar tus agentes.
+  </Card>
+
+  <Card title="Credenciales" color="#FE4F32" icon="key" href="/es/integrations/credentials">
+    Añade y concede credenciales.
+  </Card>
+
+  <Card title="Navegadores" color="#FE4F32" icon="globe" href="/es/integrations/browsers">
+    Vincula un navegador para acceder a la web en vivo.
+  </Card>
+</CardGroup>

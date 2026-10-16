@@ -1,0 +1,94 @@
+---
+title: "Instala y gestiona habilidades para tus agentes"
+sidebarTitle: "Habilidades"
+description: "Explora, instala y gestiona habilidades que amplían lo que pueden hacer tus agentes. Añade habilidades desde la web, sube las tuyas o escribe una directamente."
+---
+
+Las habilidades son capacidades reutilizables que amplían lo que tus agentes saben hacer. Van desde utilidades integradas hasta lógica personalizada que escribes tú. Gestionas las habilidades desde la página **Habilidades** de la barra lateral, y también puedes controlarlas en cada agente en **Configurar > Habilidades**.
+
+## Qué son las habilidades
+
+Una habilidad es un paquete de código y configuración que da nuevas capacidades a un agente. Algunos ejemplos:
+
+- Descargar y analizar páginas web
+- Interactuar con API externas
+- Ejecutar lógica de negocio personalizada
+
+Las habilidades tienen versiones. Cuando hay una actualización disponible, puedes aceptar la última revisión para que tus agentes usen la versión más reciente.
+
+## Explorar e instalar habilidades
+
+Abre **Habilidades** desde la barra lateral. La página muestra dos pestañas:
+
+- **Todas**: todas las habilidades disponibles para ti, incluidas las predeterminadas integradas y las que has añadido.
+- **Habilitadas**: solo las habilidades activadas actualmente para tus agentes.
+
+### Añadir una habilidad
+
+Haz clic en **Agregar habilidad** en la cabecera para elegir cómo incorporar una habilidad a tu biblioteca:
+
+<Steps>
+  <Step title="Agregar desde la web">
+    Pega la URL de un repositorio público de habilidades (por ejemplo, de GitHub). Kolmena descarga y revisa la habilidad, y después la añade a tu biblioteca. Si la habilidad necesita configuración adicional, verás un aviso y podrás completarla antes de habilitarla.
+  </Step>
+  <Step title="Subir un archivo de habilidad">
+    Selecciona un archivo de habilidad de tu equipo y súbelo directamente. Es útil para habilidades que has creado en local o que te ha pasado un compañero.
+  </Step>
+  <Step title="Escribe tu propia habilidad">
+    Crea una habilidad directamente en el editor. Dale un nombre, una descripción y el código que define lo que hace. Una vez guardada, aparece en tu biblioteca como cualquier otra habilidad.
+  </Step>
+</Steps>
+
+## Habilitar y deshabilitar habilidades
+
+Cada fila de habilidad muestra si está activada para tus agentes:
+
+- **Predeterminada**: habilidades integradas que se habilitan automáticamente para todos los agentes. No puedes desactivarlas globalmente, pero puedes deshabilitarlas en cada agente desde su pestaña **Habilidades**.
+- **Habilitado para todos los agentes**: habilidades que has activado para todos los agentes.
+- **Habilitada para algunos agentes**: habilidades que has concedido solo a agentes concretos.
+
+Usa el interruptor de cada fila para activar o desactivar una habilidad para todos los agentes. Para concederla solo a agentes concretos, haz clic en la etiqueta de acceso y elige los agentes que quieras.
+
+<Note>
+  Los cambios en las habilidades pueden requerir un reinicio para aplicarse. Cuando hay cambios pendientes, aparece un aviso en la parte superior de la página con un botón **Aplicar cambios**. Haz clic en él para reiniciar los agentes afectados y sincronizar las habilidades nuevas.
+</Note>
+
+## Actualizar una habilidad
+
+Cuando una habilidad que instalaste tiene una versión más reciente, aparece un enlace **Actualizar a vN** en la fila. Haz clic en él para aceptar la última revisión. La habilidad se actualiza en tu biblioteca y puedes aplicar el cambio a tus agentes en ejecución desde el aviso.
+
+## Eliminar una habilidad
+
+Para eliminar una habilidad que añadiste tú, abre su ventana de detalles y haz clic en **Eliminar**. La habilidad se elimina de tu cuenta y de todos los agentes que la usan. Las habilidades integradas y predeterminadas no se pueden eliminar.
+
+<Warning>
+  Eliminar una habilidad es permanente. Si eliminas una habilidad que los agentes están usando, perderán esa capacidad justo después del siguiente reinicio.
+</Warning>
+
+## Gestionar las habilidades de cada agente
+
+También puedes gestionar las habilidades de un agente concreto:
+
+1. Abre el agente y ve a **Configurar > Habilidades**.
+2. Activa o desactiva habilidades solo para ese agente.
+3. Las opciones de cada agente sustituyen la configuración predeterminada del espacio de trabajo, así que puedes dar a un agente un conjunto de capacidades propio.
+
+Este recorrido muestra cómo habilitar una habilidad para un agente (por ejemplo, la creación de PDF), reiniciarlo y encontrar los archivos que produce en los resultados del agente o en la página **Resultados** de la plataforma.
+
+<iframe className="w-full aspect-video rounded-xl my-6" src="https://www.youtube.com/embed/MC5XEcqqWCg" title="Agent customization walkthrough" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+
+## Próximos pasos
+
+<CardGroup cols={3}>
+  <Card title="Conecta aplicaciones" color="#FE4F32" icon="plug" href="/es/integrations/connect-apps">
+    Conecta aplicaciones para que los agentes puedan usar servicios externos.
+  </Card>
+
+  <Card title="Credenciales" color="#FE4F32" icon="key" href="/es/integrations/credentials">
+    Añade las credenciales que tus agentes necesitan para iniciar sesión.
+  </Card>
+
+  <Card title="Navegadores" color="#FE4F32" icon="globe" href="/es/integrations/browsers">
+    Vincula un navegador para acceder a la web en vivo.
+  </Card>
+</CardGroup>

@@ -1,0 +1,87 @@
+---
+title: "Ligar agentes ao Telegram, Discord e X/Twitter"
+sidebarTitle: "Canais de mensagens"
+description: "Permita que os seus agentes personalizados falem com pessoas no Telegram, Discord e X/Twitter. Saiba como ligar cada canal e de que credenciais precisa."
+---
+
+Os canais de mensagens permitem que os seus agentes personalizados comuniquem fora do Kolmena. Depois de ligado, um agente pode ler e responder diretamente a mensagens no Telegram, Discord ou X/Twitter.
+
+Os canais são geridos no separador **Configure** de um agente, em **Channels**. Cada canal mostra o seu estado: **Connected**, **Needs setup** ou **Not connected**.
+
+## Telegram
+
+Ligar o Telegram permite que o seu agente responda em chats através de um bot.
+
+<Steps>
+  <Step title="Abra o cartão do canal Telegram">
+    Na secção Configure > Channels do seu agente, encontre o Telegram e clique em **Connect**.
+  </Step>
+  <Step title="Associe a sua conta do Telegram">
+    O Kolmena pede-lhe primeiro que associe a sua própria conta do Telegram. Assim, o agente reconhece-o como proprietário. Clique em **Link Telegram account**, abra a ligação no Telegram e prima **Start**.
+  </Step>
+  <Step title="Verifique a associação">
+    Volte ao Kolmena e clique em **I pressed Start** para confirmar a ligação.
+  </Step>
+  <Step title="Guarde as definições do canal">
+    O token do bot e os chats permitidos são geridos na configuração do canal. Guarde para ativar a ligação.
+  </Step>
+</Steps>
+
+<Note>
+  Se não associar a sua conta do Telegram, o agente não responde a ninguém até adicionar manualmente os IDs de chat à lista de chats permitidos.
+</Note>
+
+## Discord
+
+Ligar o Discord requer um token de bot e dois passos no Discord Developer Portal.
+
+<Steps>
+  <Step title="Abra o cartão do canal Discord">
+    Na secção Configure > Channels do seu agente, encontre o Discord e clique em **Connect**.
+  </Step>
+  <Step title="Introduza o token do bot">
+    Forneça o token da API do Discord do seu bot. O Kolmena guarda-o em segurança.
+  </Step>
+  <Step title="Ative os intents privilegiados no Discord">
+    No Discord Developer Portal, aceda às definições do bot e ative **Presence**, **Server Members** e **Message Content** em Privileged Gateway Intents. Sem estes intents, o Discord recusa a ligação.
+  </Step>
+  <Step title="Convide o bot para um servidor">
+    Depois de guardar o token, o Kolmena fornece uma ligação de convite. Clique nela para adicionar o bot a um servidor do Discord. Até o fazer, o bot está online, mas não vê nenhuma mensagem.
+  </Step>
+</Steps>
+
+<Warning>
+  Desligar um bot do Discord no Kolmena elimina o token guardado, mas o bot continua ligado ao Discord até o agente reiniciar.
+</Warning>
+
+## X/Twitter
+
+Ligar o X/Twitter permite que o seu agente publique ou responda na plataforma.
+
+<Steps>
+  <Step title="Abra o cartão do canal X/Twitter">
+    Na secção Configure > Channels do seu agente, encontre o X/Twitter e clique em **Connect**.
+  </Step>
+  <Step title="Forneça as credenciais da API">
+    Introduza a API key, a API secret key, o access token e o access token secret do Twitter. Estas credenciais autenticam o agente para agir na sua conta.
+  </Step>
+  <Step title="Guarde e ative">
+    Guarde a configuração. O estado do canal muda para Connected assim que as credenciais forem validadas.
+  </Step>
+</Steps>
+
+## Gerir os canais ligados
+
+Em qualquer canal ligado, clique em **Settings** no cartão para atualizar as credenciais ou as opções. Clique em **Disconnect** para remover o canal. Nos canais associados (Telegram, Discord, X/Twitter), desligar remove as credenciais guardadas e o agente deixa de receber ou enviar mensagens após o reinício seguinte.
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Criar um agente" color="#FE4F32" icon="plus" href="/pt/agents/create-an-agent">
+    Crie um agente que possa ligar a canais externos.
+  </Card>
+
+  <Card title="Integrações" color="#FE4F32" icon="plug" href="/pt/integrations/index">
+    Adicione aplicações e serviços que dão mais capacidades ao seu agente.
+  </Card>
+</CardGroup>

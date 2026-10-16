@@ -1,0 +1,136 @@
+---
+title: "Planos, faturação e carregamentos de créditos do Kolmena"
+sidebarTitle: "Planos e faturação"
+description: "Compare os níveis de subscrição do Kolmena, carregue créditos de LLM, configure o carregamento automático e gira ou cancele o seu plano."
+---
+
+O Kolmena separa a sua subscrição da plataforma do seu saldo de utilização de LLM. A subscrição controla quantos agentes pode executar ao mesmo tempo, enquanto o saldo de utilização paga as chamadas de LLM feitas pelos seus agentes. Gere ambos em **Settings > Billing**.
+
+## Níveis de subscrição
+
+O Kolmena oferece quatro planos. Cada plano inclui um número definido de lugares de agente em simultâneo, e a utilização de LLM é faturada consoante o consumo em todos os planos.
+
+<table>
+  <colgroup>
+    <col width="177" />
+    <col width="129" />
+    <col width="122" />
+    <col width="142" />
+    <col width="275" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Plano</th>
+      <th>Preço mensal</th>
+      <th>Lugares de agente</th>
+      <th>Utilização de LLM</th>
+      <th>O que inclui</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Free**<br />Para começar a usar o Kolmena</td>
+      <td>\$0</td>
+      <td>1</td>
+      <td>Consoante o consumo</td>
+      <td>Funcionalidades limitadas da plataforma, suporte da comunidade</td>
+    </tr>
+    <tr>
+      <td>**Builder**<br />Para programadores independentes e early adopters</td>
+      <td>\$20</td>
+      <td>5</td>
+      <td>Consoante o consumo</td>
+      <td>Acesso às funcionalidades principais da plataforma, suporte prioritário</td>
+    </tr>
+    <tr>
+      <td>**Partnership**<br />Para equipas em crescimento e PME</td>
+      <td>\$60</td>
+      <td>10</td>
+      <td>Consoante o consumo</td>
+      <td>Acesso às funcionalidades principais da plataforma, suporte prioritário, orientação na implementação, modelos opcionais de partilha de lucros</td>
+    </tr>
+    <tr>
+      <td>**Enterprise**<br />Para grandes organizações</td>
+      <td>Contacte-nos</td>
+      <td>Por contrato</td>
+      <td>Consoante o consumo</td>
+      <td>Lugares de agente à medida, desenvolvimento personalizado de agentes e swarms, infraestrutura dedicada ou opção de implementação, participação no roadmap estratégico</td>
+    </tr>
+  </tbody>
+</table>
+
+<Note>
+  Todos os planos permitem criar agentes ilimitados. Os lugares apenas limitam quantos agentes podem estar **em execução ao mesmo tempo**.
+</Note>
+
+## Gerir a sua subscrição
+
+Na página de definições Billing, pode fazer upgrade, downgrade ou cancelar o seu plano.
+
+<Steps>
+  <Step title="Mude de plano">
+    Abra o seletor de planos, escolha um novo nível e conclua o pagamento. Se fizer downgrade, a alteração entra em vigor no fim do período de faturação atual.
+  </Step>
+  <Step title="Cancele a subscrição">
+    Clique em **Cancel Plan**. Mantém o acesso total até ao fim do período atual. Não há reembolsos por meses parciais. Os seus agentes e dados não são eliminados, e pode voltar a subscrever a qualquer momento.
+  </Step>
+  <Step title="Gira o método de pagamento ou veja as faturas">
+    Clique em **Manage in Stripe** para abrir o portal de clientes do Stripe num novo separador. Aí pode atualizar o cartão, ver faturas e gerir os dados de faturação.
+  </Step>
+</Steps>
+
+## Créditos de LLM e carregamentos
+
+O seu saldo de utilização é uma carteira pré-paga que paga as chamadas de LLM. Os créditos transitam de mês para mês e são válidos durante 12 meses.
+
+### Carregamento manual
+
+<Steps>
+  <Step title="Abra a janela de carregamento">
+    Nas definições Billing, clique em **Top Up** ao lado do saldo atual.
+  </Step>
+  <Step title="Escolha um valor">
+    Selecione um valor predefinido ($$10, $$25, $$50, $$100 ou $$200) ou introduza um valor personalizado. O carregamento mínimo é de $$10.
+  </Step>
+  <Step title="Confirme a cobrança">
+    Clique em **Top up** para cobrar de imediato no método de pagamento guardado. O saldo é atualizado de imediato.
+  </Step>
+</Steps>
+
+### Carregamento automático
+
+O carregamento automático repõe o saldo automaticamente para que os seus agentes não parem a meio de uma tarefa.
+
+<Steps>
+  <Step title="Ative o carregamento automático">
+    Ative **Auto Top-up**. Se for a primeira vez, vai definir o limiar, o valor do carregamento e o limite mensal.
+  </Step>
+  <Step title="Configure as regras">
+    - **Trigger if below**: o saldo que aciona um carregamento (por exemplo, \$5).
+    - **Top up by**: o valor cobrado de cada vez (mínimo de \$10).
+    - **Monthly cap**: o máximo que lhe será cobrado em carregamentos automáticos por período de faturação.
+  </Step>
+  <Step title="Guarde">
+    Clique em **Save**. O limite é reposto todos os meses na data de referência da sua subscrição.
+  </Step>
+</Steps>
+
+<Warning>
+  Se a cobrança de um carregamento for recusada, o carregamento automático é pausado automaticamente. Atualize o método de pagamento e volte a ativá-lo para o retomar.
+</Warning>
+
+## Subscrições do Marketplace
+
+Se alugar agentes no Marketplace do Kolmena, essas cobranças recorrentes aparecem numa tabela separada, **Marketplace Subscriptions**, na página Billing. São faturadas separadamente da subscrição da plataforma.
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Utilização e registos" color="#FE4F32" icon="chart-bar" href="/pt/account/usage-and-logs">
+    Veja exatamente em que está a ser gasto o seu saldo.
+  </Card>
+
+  <Card title="Definições" color="#FE4F32" icon="user" href="/pt/account/settings">
+    Atualize o seu perfil e as contas associadas.
+  </Card>
+</CardGroup>

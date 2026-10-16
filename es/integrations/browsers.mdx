@@ -1,0 +1,92 @@
+---
+title: "Vincula un navegador para que los agentes accedan a la web"
+sidebarTitle: "Navegadores"
+description: "Instala la extensión de navegador de Kolmena, vincula tu navegador y cede pestañas en vivo para que tus agentes trabajen en sitios en los que ya has iniciado sesión."
+---
+
+La integración con el navegador permite que tus agentes interactúen con páginas web en vivo en las que ya has iniciado sesión. Instalas la extensión de navegador de Kolmena, vinculas tu navegador y cedes pestañas concretas cuando un agente las necesita. No se ejecuta nada hasta que cedes una pestaña de forma explícita, y puedes recuperarla en cualquier momento.
+
+## Instalar la extensión
+
+<Steps>
+  <Step title="Obtén la extensión">
+    Abre **Configuración > Navegadores** en Kolmena. Si la extensión no está instalada, haz clic en **Obtener la extensión** para abrir su página en Chrome Web Store.
+  </Step>
+  <Step title="Instálala en Chrome, Edge o Brave">
+    Añade la extensión de Kolmena a tu navegador. Funciona en navegadores basados en Chromium, como Chrome, Edge y Brave.
+  </Step>
+  <Step title="Vuelve a cargar la página de configuración">
+    Vuelve a **Configuración > Navegadores** y recarga la página para que Kolmena detecte la extensión.
+  </Step>
+</Steps>
+
+## Vincular tu navegador
+
+<Steps>
+  <Step title="Haz clic en Vincular este navegador">
+    En la página **Tus navegadores**, haz clic en **Vincular este navegador**. Kolmena genera un token seguro y se lo entrega directamente a la extensión.
+  </Step>
+  <Step title="Confirma la vinculación">
+    La extensión acepta el token y establece una conexión segura. Tu navegador aparece ahora en la lista con su plataforma y su nombre (por ejemplo, "Mac — Chrome").
+  </Step>
+</Steps>
+
+Puedes vincular más de un navegador o dispositivo. Cada uno aparece como una entrada independiente en la lista.
+
+## Ceder una pestaña
+
+Cuando un agente necesita trabajar en un sitio web en el que has iniciado sesión:
+
+1. Abre una pestaña nueva y ve al sitio.
+2. Inicia sesión si aún no lo has hecho.
+3. Haz clic en el icono de la extensión de Kolmena en la barra de herramientas.
+4. Elige **Give this tab to my agent**. (La extensión solo está disponible en inglés).
+5. Vuelve a Kolmena y pide al agente que continúe.
+
+La lista de navegadores de **Configuración > Navegadores** muestra qué pestaña está cedida en ese momento. Mientras el agente trabaja, Chrome muestra un aviso en esa pestaña.
+
+## Desvincular un navegador
+
+Para quitar un navegador vinculado:
+
+1. Ve a **Configuración > Navegadores**.
+2. Busca el navegador en la lista.
+3. Haz clic en **Desvincular**.
+
+El token se revoca de inmediato. La extensión ya no podrá ceder pestañas, y cualquier sesión activa termina en el siguiente intento de reconexión.
+
+## Estados del navegador
+
+| Estado | Qué significa |
+| --- | --- |
+| Pestaña lista | Se ha cedido una pestaña y el agente puede usarla. |
+| Conectado, sin pestaña cedida | El navegador está vinculado, pero no hay ninguna pestaña cedida. |
+| Sin conexión | El navegador está cerrado o la extensión no está activa. Abre el navegador para recuperarlo. |
+
+## Solución de problemas
+
+- **La vinculación falló**: asegúrate de que la extensión está instalada y activada. Recarga la página de configuración y vuelve a intentarlo.
+- **No se detecta la extensión**: si usas una compilación local o de pruebas, puede que necesites la última versión de la extensión, que permite conexiones a localhost.
+- **Ventana emergente bloqueada**: algunas conexiones abren una ventana emergente del proveedor. Permite las ventanas emergentes para Kolmena si se te pide.
+
+## Notas de seguridad
+
+- El token pasa directamente de Kolmena a la extensión a través de un canal seguro. Nunca toca el almacenamiento local ni el portapapeles.
+- Los agentes solo pueden acceder a las pestañas que cedes de forma explícita. No pueden abrir pestañas nuevas ni navegar por su cuenta.
+- Puedes desvincular el navegador en cualquier momento para revocar el acceso de inmediato.
+
+## Próximos pasos
+
+<CardGroup cols={3}>
+  <Card title="Conecta aplicaciones" color="#FE4F32" icon="plug" href="/es/integrations/connect-apps">
+    Conecta aplicaciones para integraciones mediante API.
+  </Card>
+
+  <Card title="Credenciales" color="#FE4F32" icon="key" href="/es/integrations/credentials">
+    Añade las credenciales que los agentes necesitan para iniciar sesión.
+  </Card>
+
+  <Card title="Habilidades" color="#FE4F32" icon="wand-magic-sparkles" href="/es/integrations/skills">
+    Instala habilidades que trabajan con datos de la web.
+  </Card>
+</CardGroup>

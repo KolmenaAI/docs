@@ -1,0 +1,91 @@
+---
+title: "Criar um agente personalizado no Kolmena"
+sidebarTitle: "Criar um agente"
+description: "Crie um novo agente de IA com nome, persona, instruções e definições de modelo. Depois, converse com ele de imediato."
+---
+
+Criar um agente personalizado no Kolmena demora apenas alguns passos. Dá-lhe um nome e instruções, e a Maya ajuda a construir o resto.
+
+## Criar um agente num chat com a Maya
+
+Também pode criar um agente sem escrever configurações nem prompts. Inicie um novo chat com a Maya, descreva o que pretende e responda a algumas perguntas de esclarecimento em linguagem simples. A Maya gera uma persona completa a partir da conversa. Depois, abra **Configure** para afinar o resultado antes de publicar e reiniciar.
+
+<iframe className="w-full aspect-video rounded-xl my-6" src="https://www.youtube.com/embed/ugnk2iJt5xg" title="Create an agent with Maya" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+
+## Usar o criador de agentes
+
+<Steps>
+  <Step title="Abra o criador de agentes">
+    Aceda à página **Agents** e clique em **New Agent**. Abre-se uma janela de criação onde descreve o que pretende.
+  </Step>
+  <Step title="Dê um nome ao agente">
+    Introduza um nome com pelo menos 3 caracteres. Também pode carregar uma imagem de avatar (JPEG, PNG, GIF ou WebP).
+  </Step>
+  <Step title="Descreva o que deve fazer">
+    No campo **What Should It Do?**, escreva pelo menos 50 caracteres a descrever a função, a personalidade e as tarefas do agente. Quanto mais detalhes der, melhor será o desempenho do agente.
+
+    <Tip>
+      Clique em **Improve Prompt** para que a Maya reescreva e desenvolva a sua descrição num prompt de sistema mais completo.
+    </Tip>
+  </Step>
+  <Step title="Escolha o isolamento da memória (opcional)">
+    Ative **Private memory** se quiser que a memória deste agente fique isolada. Memória isolada significa que o agente não partilha contexto com outros agentes nem com a Maya.
+  </Step>
+  <Step title="Construa com a Maya">
+    Clique em **Build With Maya**. A Maya processa a sua descrição e cria o prompt de sistema e a configuração do agente.
+  </Step>
+</Steps>
+
+## O que acontece a seguir
+
+Quando a criação termina, o agente está pronto. Pode:
+
+- **Conversar com ele de imediato** a partir do ecrã de confirmação
+- **Abrir o respetivo espaço de trabalho** para configurar canais, skills, conhecimento e muito mais
+- **Publicá-lo** para que a configuração entre em vigor
+
+## Afinar depois de criar
+
+Depois de o agente existir, abra-o e aceda a **Configure** para ajustar:
+
+| Secção | O que definir |
+| --- | --- |
+| Basics | Instruções de sistema, temperatura, modelo de voz, modelos disponíveis, isolamento da memória |
+| Channels | Ligações ao Telegram, Discord e X/Twitter |
+| Integrations | Serviços MCP e aplicações |
+| Skills | Capacidades personalizadas ou importadas |
+| Examples | Conversas de exemplo para treino |
+
+<Note>
+  O Kolmena usa um planeador central que escolhe automaticamente o melhor modelo para cada passo. Pode gerir os modelos disponíveis e definir um modelo de voz, mas não escolhe um único modelo fixo para todo o agente.
+</Note>
+
+### Configurar a persona, as skills e os exemplos
+
+Use o campo **Persona** para definir como o agente comunica, quão direto é e quando deve dizer que não sabe. A temperatura controla se as respostas são mais consistentes ou mais criativas. Em **Examples**, adicione uma pergunta real e a resposta que pretende obter, para que o agente aprenda o tom, a estrutura e o nível de detalhe.
+
+<iframe className="w-full aspect-video rounded-xl my-6" src="https://www.youtube.com/embed/Ou4FUKhiMME" title="Configuring Your Agent" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+
+### Gerir modelos
+
+Para controlar os modelos que um agente pode usar, abra **Configure**, aceda a **Basics** e clique em **Manage Models**. Os modelos estão agrupados por tipo, como modelos pequenos e grandes, interpretação de imagens, geração de imagens, criação de dashboards e modelos de planeamento. Ative ou desative modelos para equilibrar qualidade, velocidade e custo. As alterações aplicam-se apenas ao agente que está a editar.
+
+<iframe className="w-full aspect-video rounded-xl my-6" src="https://www.youtube.com/embed/JYGUQ7cJeBw" title="Models: Full Walkthrough" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+
+### Mudar a voz do agente
+
+O Kolmena atribui a cada novo agente uma voz predefinida, que ouve no modo de voz. Para a mudar, abra **Configure**, aceda a **Basics**, clique em **Manage** na secção **Manage Models** e selecione **Voice**. Ouça a voz atual e, depois, filtre a biblioteca de mais de 17 000 vozes por idioma, sotaque, género e caso de uso, e experimente qualquer voz antes de a selecionar. Publique e reinicie o agente para que passe a usar a nova voz.
+
+<iframe className="w-full aspect-video rounded-xl my-6" src="https://www.youtube.com/embed/aQV8C3j7QzE" title="Voice Selection" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Versões e publicação" color="#FE4F32" icon="code-branch" href="/pt/agents/versions-and-publishing">
+    Saiba como funcionam os rascunhos, as versões em produção e a publicação.
+  </Card>
+
+  <Card title="Canais de mensagens" color="#FE4F32" icon="comment" href="/pt/agents/messaging-channels">
+    Ligue o seu agente a plataformas externas.
+  </Card>
+</CardGroup>

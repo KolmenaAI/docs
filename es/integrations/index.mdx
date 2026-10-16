@@ -1,0 +1,51 @@
+---
+title: "Descripción de las integraciones: aplicaciones, habilidades, credenciales y navegadores"
+sidebarTitle: "Descripción de integraciones"
+description: "Descubre cómo Kolmena conecta tus agentes con aplicaciones, habilidades, credenciales y navegadores para que actúen en tu nombre con datos reales."
+---
+
+Kolmena permite que tus agentes trabajen con servicios del mundo real mediante integraciones. Tú controlas a qué puede acceder cada agente, en qué cuentas inicia sesión y qué acciones puede realizar.
+
+La plataforma agrupa estas capacidades en cuatro áreas:
+
+- **Aplicaciones (servidores MCP)**: servicios externos como Gmail, Slack, Notion, GitHub y muchos más. Los agentes los usan a través de un catálogo de integraciones que activas para todo el espacio de trabajo o para cada agente.
+- **Habilidades**: capacidades reutilizables que puedes instalar, escribir o subir. Las habilidades amplían lo que un agente sabe hacer, desde extraer datos de páginas web hasta lógica de negocio personalizada.
+- **Credenciales**: claves de API y tokens que tus agentes usan para iniciar sesión en servicios. Se guardan cifradas y no vuelven a mostrarse después de guardarlas.
+- **Navegadores**: una extensión de navegador vinculada que permite a los agentes trabajar en páginas web en vivo en las que ya has iniciado sesión.
+
+<CardGroup cols={2}>
+  <Card title="Conecta aplicaciones" color="#FE4F32" icon="plug" href="/es/integrations/connect-apps">
+    Explora el catálogo, conecta una aplicación con OAuth o una clave de API y actívala para Maya o cualquier agente.
+  </Card>
+
+  <Card title="Habilidades" color="#FE4F32" icon="wrench" href="/es/integrations/skills">
+    Explora, instala y gestiona habilidades que amplían lo que pueden hacer tus agentes.
+  </Card>
+
+  <Card title="Credenciales" color="#FE4F32" icon="key" href="/es/integrations/credentials">
+    Añade credenciales, concédelas a agentes y gestiona las solicitudes de credenciales desde el chat.
+  </Card>
+
+  <Card title="Navegadores" color="#FE4F32" icon="globe" href="/es/integrations/browsers">
+    Vincula un navegador para que los agentes usen pestañas en vivo y sitios en los que ya has iniciado sesión.
+  </Card>
+</CardGroup>
+
+## Cómo usan los agentes las integraciones
+
+Los agentes no tienen acceso ilimitado a todo. Tú decides:
+
+1. **Qué integraciones están disponibles**: activa una aplicación o una habilidad para todos los agentes, o vincúlala a un solo agente.
+2. **Qué credenciales se conceden**: por defecto no se concede nada. Tú eliges expresamente qué agentes pueden usar cada credencial.
+3. **Qué acciones se permiten**: en cada aplicación, puedes acotar la lista de herramientas que puede usar el agente.
+
+Los cambios se aplican de inmediato. Un agente en ejecución los recoge en su siguiente respuesta, así que las integraciones no necesitan un paso de publicación.
+
+## Comparativa rápida
+
+| Área | Qué es | Dónde se gestiona |
+| --- | --- | --- |
+| Aplicaciones | Servicios externos (Gmail, Slack, etc.) | Página **Integraciones**, o en cada agente en **Configurar** |
+| Habilidades | Capacidades reutilizables y lógica personalizada | Página **Habilidades**, o en cada agente en **Configurar** |
+| Credenciales | Claves de API y tokens cifrados | **Configuración > Credenciales** |
+| Navegadores | Pestañas del navegador en vivo para que las usen los agentes | **Configuración > Navegadores** |

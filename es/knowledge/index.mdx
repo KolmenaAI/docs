@@ -1,0 +1,71 @@
+---
+title: "Descripción del conocimiento: da contexto a tus agentes con documentos"
+sidebarTitle: "Descripción del conocimiento"
+description: "Descubre cómo funciona el conocimiento en Kolmena. Sube documentos, organiza carpetas y controla qué agentes, enjambres y Maya pueden acceder a tus archivos para dar respuestas más acertadas."
+---
+
+El conocimiento en Kolmena es la biblioteca de documentos, enlaces y textos que proporcionas para que tus agentes (y Maya) puedan responder preguntas, seguir instrucciones y tomar decisiones con contexto real. Lo gestionas todo desde la página **Conocimiento**, donde puedes subir archivos, pegar texto, añadir enlaces web, organizar carpetas y elegir exactamente quién tiene acceso.
+
+<iframe className="w-full aspect-video rounded-xl my-6" src="https://www.youtube.com/embed/LCEAay0MjiY" title="Knowledge: Full Walkthrough" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+
+## Qué puedes añadir al conocimiento
+
+Kolmena acepta varios tipos de recursos para que puedas aportar el contexto que necesitan tus agentes:
+
+| Tipo | Para qué usarlo |
+| --- | --- |
+| **Archivos** | Documentos, archivos de código, imágenes, audio y vídeo. Arrástralos y suéltalos o búscalos para subirlos. |
+| **Texto** | Pega texto libre directamente cuando no tengas un archivo a mano. |
+| **Enlace** | Añade hasta 20 URL a la vez. Cada página se descarga y se guarda como Markdown con búsqueda. |
+
+<Note>
+  Hay un límite de tamaño por archivo. Si un archivo es demasiado grande, divídelo en archivos más pequeños y vuelve a subirlo.
+</Note>
+
+## La página Conocimiento y las bibliotecas
+
+Cuando abres **Conocimiento** desde la barra lateral, trabajas dentro del ámbito de una biblioteca. Puedes cambiar de biblioteca para gestionar el contenido de distintos contextos:
+
+- **Conocimiento del agente o del enjambre**: recursos vinculados directamente a un solo agente o enjambre.
+- **Conocimiento compartido**: una biblioteca central que puedes compartir con cualquiera de tus agentes y enjambres.
+- **Archivo**: un espacio para los documentos que has retirado del uso activo. Puedes restaurar los elementos archivados o eliminarlos para siempre.
+
+Usa el selector de ámbito de la página Conocimiento para moverte entre estas bibliotecas.
+
+## Organizar con carpetas
+
+Mantén tu conocimiento ordenado creando carpetas. Puedes ponerles nombre, mover documentos entre ellas y archivar o eliminar elementos en bloque. Las carpetas ayudan a los agentes a encontrar antes el contexto adecuado, sobre todo cuando tu biblioteca crece.
+
+## Cómo obtienen acceso los agentes
+
+Por defecto no se concede nada. Tú controlas el acceso por documento o para toda tu biblioteca de conocimiento compartido:
+
+- **Por documento**: abre la configuración de acceso de un documento y elige qué agentes y enjambres pueden usarlo.
+- **Conocimiento compartido**: concede acceso a todos los agentes y enjambres a la vez desde la configuración de la biblioteca.
+
+<Warning>
+  La opción "Todos los agentes" nunca incluye a Maya. Si quieres que Maya use un documento, concédele acceso de forma explícita.
+</Warning>
+
+Los agentes y enjambres con acceso pueden recurrir a tu conocimiento durante las conversaciones, las ejecuciones de tareas y la realización de trabajos. Puedes ver cuánto conocimiento se procesa y se consulta en la página de [uso y registros](/es/account/usage-and-logs).
+
+## Procesamiento y estado
+
+Después de subir o añadir un recurso, Kolmena lo procesa automáticamente para que los agentes puedan buscarlo y consultarlo. Durante el procesamiento, puedes ver estados como:
+
+- **En espera**: esperando en la cola de procesamiento.
+- **Procesando**: el documento se está preparando para la búsqueda.
+- **Listo**: el documento está disponible para tus agentes.
+- **Error**: algo salió mal (por ejemplo, el archivo está dañado, es demasiado grande o no contiene texto legible). Puedes volver a intentar manualmente los documentos con error.
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="Añade documentos" color="#FE4F32" icon="file-plus" href="/es/knowledge/add-documents">
+    Sube archivos, pega texto o añade enlaces web a tu biblioteca de conocimiento.
+  </Card>
+
+  <Card title="Crea un agente" color="#FE4F32" icon="plus" href="/es/agents/create-an-agent">
+    Crea un agente personalizado y dale acceso al conocimiento que necesita.
+  </Card>
+</CardGroup>
