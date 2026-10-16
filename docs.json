@@ -127,7 +127,9 @@
                 "pages": [
                   "es/maya/index",
                   "es/maya/chat-with-maya",
-                  "es/maya/interaction-requests"
+                  "es/maya/interaction-requests",
+                  "es/maya/memory",
+                  "es/maya/outputs-and-deliverables"
                 ]
               },
               {
@@ -190,7 +192,9 @@
                 "pages": [
                   "pt/maya/index",
                   "pt/maya/chat-with-maya",
-                  "pt/maya/interaction-requests"
+                  "pt/maya/interaction-requests",
+                  "pt/maya/memory",
+                  "pt/maya/outputs-and-deliverables"
                 ]
               },
               {

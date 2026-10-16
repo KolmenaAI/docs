@@ -1,0 +1,88 @@
+---
+title: "Controle o que a Maya recorda sobre si"
+sidebarTitle: "Memória"
+description: "Gira a memória de longo prazo do Kolmena para a Maya e os seus agentes. Configure as definições de memória, veja o que é recordado e edite ou elimine memórias individuais."
+---
+
+O Kolmena cria uma memória de longo prazo a partir das suas conversas para que a Maya e os seus agentes mantenham o contexto entre chats. É você que controla se a memória está ativa, a quem se aplica e como é partilhada. Também pode ver, editar ou eliminar tudo o que foi recordado.
+
+## Definições de memória
+
+Abra **Settings** e selecione o separador **Memory** para configurar a forma como o Kolmena recorda.
+
+<Steps>
+  <Step title="Ative ou desative a memória">
+    Escolha se o Kolmena cria ou não uma memória de longo prazo. Com a memória desativada, os agentes usam apenas o contexto da conversa atual.
+  </Step>
+  <Step title="Escolha quem recorda">
+    Selecione **Maya only** se quiser que a memória ajude a sua assistente pessoal, mas não os outros agentes. Selecione **All agents** para que todos os agentes da sua colmeia usem o contexto partilhado.
+  </Step>
+  <Step title="Escolha um modelo de processamento">
+    Escolha o modelo de IA que lê as suas conversas para decidir o que vale a pena recordar. Um modelo mais potente extrai detalhes mais precisos e custa mais por mensagem. Mudar de modelo só afeta as memórias novas; as existentes ficam como estão.
+  </Step>
+  <Step title="Defina a visibilidade">
+    Escolha **Shared brain** para que todos os agentes usem o mesmo conjunto de memórias. Escolha **Private per agent** para que as memórias novas de cada agente fiquem separadas. Nota: mudar para privado não recupera as memórias que já foram partilhadas entre agentes.
+  </Step>
+</Steps>
+
+## Ver as suas memórias
+
+Na página de definições de memória, desloque-se até à secção **Memories**. Vai ver uma tabela pesquisável com tudo o que o Kolmena aprendeu sobre si.
+
+| Coluna | O que mostra |
+| --- | --- |
+| **Memory** | Um breve resumo do facto ou da experiência. |
+| **Type** | Se é um **Fact** ou uma **Experience**. |
+| **Source** | De onde veio: chat, Telegram, jobs, swarm, API ou guardado por um agente. |
+| **Agent** | Que agente o aprendeu, ou **Shared** se estiver no cérebro partilhado. |
+| **Date learned** | Quando a memória foi criada. |
+| **Provenance** | Se é partilhada entre agentes, privada de um agente ou limitada a uma única conversa. |
+
+Use a caixa de pesquisa para encontrar memórias específicas por palavra-chave.
+
+## Editar uma memória
+
+Se o Kolmena recordou algo de forma incorreta, pode corrigi-lo.
+
+<Steps>
+  <Step title="Encontre a memória">
+    Pesquise ou desloque-se até à memória que quer alterar.
+  </Step>
+  <Step title="Clique em Edit memory">
+    Clique na ação de editar da linha.
+  </Step>
+  <Step title="Corrija-a">
+    Escreva o que o Kolmena deve recordar em vez disso e guarde.
+  </Step>
+</Steps>
+
+## Eliminar uma memória
+
+Pode eliminar memórias individuais ou apagar tudo de uma só vez.
+
+- **Eliminar uma memória**: clique na ação de eliminar de uma linha.
+- **Apagar toda a memória**: procure a opção para esquecer todas as memórias. Isto remove tudo do Hindsight e não pode ser anulado.
+
+<Warning>
+  Eliminar memórias é permanente. Se apagar toda a memória, os agentes começam do zero e poderá ter de voltar a explicar as suas preferências ou o seu contexto.
+</Warning>
+
+## Pergunte ao seu cérebro
+
+Nas definições de memória, use o painel **What Kolmena understands about me** para fazer perguntas em linguagem natural sobre o que está guardado. Por exemplo, pergunte "Em que projetos estou a trabalhar?" ou "Que ferramentas prefiro?". O Kolmena pesquisa a sua memória e responde com base no que sabe.
+
+<Note>
+  Se o painel do perfil estiver vazio, significa que o Kolmena ainda não aprendeu o suficiente. Continue a conversar e ele vai sendo preenchido com o tempo.
+</Note>
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Conversar com a Maya" color="#FE4F32" icon="message-dots" href="/pt/maya/chat-with-maya">
+    As conversas são a principal fonte de memórias.
+  </Card>
+
+  <Card title="Outputs" color="#FE4F32" icon="files" href="/pt/maya/outputs-and-deliverables">
+    Veja o que os seus agentes produzem a partir desse contexto.
+  </Card>
+</CardGroup>
