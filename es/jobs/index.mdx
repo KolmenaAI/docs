@@ -1,0 +1,95 @@
+---
+title: "Descripción de las tareas: automatiza trabajos recurrentes y puntuales"
+sidebarTitle: "Descripción de tareas"
+description: "Descubre cómo las tareas permiten que los agentes y Maya ejecuten trabajos programados, cómo supervisar estados e historial de ejecuciones, y cómo enviar resultados a chats, Telegram, Discord o webhooks."
+---
+
+Las tareas son trabajos programados que un agente o Maya ejecuta por ti, una sola vez o con un intervalo repetido. Puedes usarlas para generar informes diarios, revisar fuentes de datos, enviar recordatorios o lanzar acciones en aplicaciones conectadas. Las tareas siguen funcionando aunque no estés conectado, y se mantienen en todas las versiones publicadas de un agente.
+
+Puedes ver todas tus tareas en la [página Tareas](https://app.kolmena.ai/jobs). Para configurar las tareas de un agente concreto, abre el agente, ve a **Configurar** y selecciona **Tareas**.
+
+## Tipos de tareas y disparadores
+
+Una tarea empieza a partir de una programación o de un evento de una aplicación.
+
+| Tipo de disparador | Qué inicia la tarea | Ejemplos |
+| --- | --- | --- |
+| Programación | Una hora o un intervalo fijos | Una vez, cada hora, diaria, semanal, mensual o un intervalo personalizado |
+| Evento de integración | Un evento de una aplicación conectada | Una fila nueva en una hoja de cálculo, el envío de un formulario o un webhook |
+
+En las tareas programadas puedes definir una fecha de inicio, una hora de fin opcional y días excluidos. Las tareas por evento de integración empiezan cuando la aplicación conectada lanza su disparador. Describes la tarea en lenguaje natural, igual que un mensaje de chat, y el agente la lleva a cabo.
+
+## Estados y filtros
+
+Cada tarea aparece con un estado para que veas de un vistazo cómo está.
+
+<CardGroup cols={2}>
+  <Card title="Activa" color="#FE4F32" icon="play">
+    La tarea está activada y se ejecutará a su próxima hora programada o cuando se lance su disparador.
+  </Card>
+
+  <Card title="En pausa" color="#FE4F32" icon="pause">
+    La tarea está desactivada y no se ejecutará hasta que la vuelvas a activar.
+  </Card>
+
+  <Card title="Requiere atención" color="#FE4F32" icon="triangle-exclamation">
+    La tarea ha fallado cinco ejecuciones seguidas, o su destino ya no es válido. Corrige la causa y después reanúdala.
+  </Card>
+
+  <Card title="Completada" color="#FE4F32" icon="circle-check">
+    Aquí aparecen las tareas de una sola vez que ya se han ejecutado.
+  </Card>
+</CardGroup>
+
+En la página Tareas, usa el filtro de estado para elegir qué tareas ver: **Activos**, **En pausa**, **Requieren atención**, **Completados** o **Todos**.
+
+## Historial de ejecuciones y transcripciones
+
+Cada tarea guarda un historial de ejecuciones. Selecciona una tarea para abrir su panel de detalles y ver las ejecuciones recientes, sus marcas de tiempo y sus resultados. En cualquier ejecución, puedes abrir la transcripción para leer los mensajes exactos que produjo el agente. Esto es útil para depurar, auditar resultados o confirmar que una tarea terminó como esperabas.
+
+## Destinos de entrega
+
+Cuando una tarea termina, puedes enviar sus resultados a uno o varios destinos. Si no eliges ningún destino, la tarea se ejecuta igualmente y sus resultados se guardan en el historial de ejecuciones.
+
+Los destinos disponibles incluyen:
+
+- Un chat de la aplicación web de Kolmena, incluidos los chats de enjambres
+- Una conversación de Telegram
+- Un canal de Discord
+- Una URL de webhook
+
+<Note>
+  Si se elimina un chat de destino o se desvincula una aplicación conectada, la tarea mostrará **Requiere atención**. Edita la tarea y elige un destino válido para reanudarla.
+</Note>
+
+## Límites y comportamiento
+
+<Accordion title="Límites de las tareas">
+  - **25 tareas abiertas** por usuario (activas o en pausa)
+  - **Una ejecución a la vez** por tarea. Si una ejecución sigue en curso cuando debería empezar la siguiente, la nueva se omite.
+  - **El intervalo mínimo** es de 15 minutos.
+  - **Cinco fallos consecutivos** pausan la tarea automáticamente. Reanúdala después de corregir la causa.
+  - Las tareas se mantienen en todas las versiones publicadas de un agente. No necesitas volver a crearlas cuando publicas una versión nueva.
+</Accordion>
+
+## Errores habituales y qué hacer
+
+| Error | Causa | Qué hacer |
+| --- | --- | --- |
+| El destino ya no es válido | Se eliminó el chat o se desvinculó la aplicación | Edita la tarea y elige un destino nuevo |
+| El agente no respondió a tiempo | El agente estaba detenido o sobrecargado | Inicia el agente y vuelve a intentarlo en unos minutos |
+| La ejecución alcanzó su límite de uso | La tarea consumió su presupuesto antes de terminar | Revisa tu plan y tu uso en [Planes y facturación](/es/account/plans-and-billing) |
+| La ejecución anterior aún estaba en curso | El intervalo de la tarea es más corto que su duración | Alarga el intervalo o simplifica la tarea |
+| La ejecución perdió su ventana | El programador no pudo iniciar la ejecución en la hora siguiente a la programada | Reanuda la tarea y comprueba si hubo interrupciones del servicio |
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="Crea una tarea" color="#FE4F32" icon="plus" href="/es/jobs/create-a-job">
+    Sigue paso a paso cómo crear una tarea programada o activada por un evento.
+  </Card>
+
+  <Card title="Configura tu agente" color="#FE4F32" icon="user-robot" href="/es/agents/versions-and-publishing">
+    Aprende cómo funciona la publicación y por qué las tareas se mantienen entre versiones.
+  </Card>
+</CardGroup>

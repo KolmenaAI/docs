@@ -141,13 +141,17 @@
                   "es/agents/versions-and-publishing",
                   "es/agents/messaging-channels",
                   "es/swarms/index",
-                  "es/swarms/create-a-swarm"
+                  "es/swarms/create-a-swarm",
+                  "es/swarms/swarm-chat-and-feed"
                 ]
               },
               {
                 "group": "Automatización y conocimiento",
                 "icon": "clock",
-                "pages": []
+                "pages": [
+                  "es/jobs/index",
+                  "es/jobs/create-a-job"
+                ]
               },
               {
                 "group": "Integraciones",
@@ -213,13 +217,17 @@
                   "pt/agents/versions-and-publishing",
                   "pt/agents/messaging-channels",
                   "pt/swarms/index",
-                  "pt/swarms/create-a-swarm"
+                  "pt/swarms/create-a-swarm",
+                  "pt/swarms/swarm-chat-and-feed"
                 ]
               },
               {
                 "group": "Automação e conhecimento",
                 "icon": "clock",
-                "pages": []
+                "pages": [
+                  "pt/jobs/index",
+                  "pt/jobs/create-a-job"
+                ]
               },
               {
                 "group": "Integrações",

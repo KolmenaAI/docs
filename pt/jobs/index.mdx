@@ -1,0 +1,95 @@
+---
+title: "Visão geral dos jobs: automatizar tarefas recorrentes e pontuais"
+sidebarTitle: "Visão geral dos jobs"
+description: "Saiba como os jobs permitem que os agentes e a Maya executem tarefas agendadas, como acompanhar estados e o histórico de execuções e como enviar resultados para chats, Telegram, Discord ou webhooks."
+---
+
+Os jobs são tarefas agendadas que um agente ou a Maya executa por si, uma única vez ou num intervalo recorrente. Pode usá-los para gerar relatórios diários, verificar fontes de dados, enviar lembretes ou desencadear ações em aplicações ligadas. Os jobs continuam a funcionar mesmo quando não está online e mantêm-se em todas as versões publicadas de um agente.
+
+Pode ver todos os seus jobs na [página Jobs](https://app.kolmena.ai/jobs). Para configurar os jobs de um agente específico, abra o agente, aceda a **Configure** e selecione **Jobs**.
+
+## Tipos de jobs e acionadores
+
+Um job começa a partir de um agendamento ou de um evento de uma aplicação.
+
+| Tipo de acionador | O que inicia o job | Exemplos |
+| --- | --- | --- |
+| Agendamento (Schedule) | Uma hora ou um intervalo fixos | Uma vez, de hora a hora, diário, semanal, mensal ou um intervalo personalizado |
+| Evento de integração | Um evento de uma aplicação ligada | Uma nova linha numa folha de cálculo, o envio de um formulário ou um webhook |
+
+Nos jobs agendados, pode definir uma data de início, uma hora de fim opcional e dias excluídos. Os jobs por evento de integração começam quando a aplicação ligada dispara o respetivo acionador. Descreve a tarefa em linguagem simples, como numa mensagem de chat, e o agente executa-a.
+
+## Estados e filtros
+
+Cada job aparece com um estado para que possa ver rapidamente como está.
+
+<CardGroup cols={2}>
+  <Card title="Active" color="#FE4F32" icon="play">
+    O job está ativado e vai ser executado à próxima hora agendada ou quando o acionador disparar.
+  </Card>
+
+  <Card title="Paused" color="#FE4F32" icon="pause">
+    O job está desativado e não é executado até o voltar a ativar.
+  </Card>
+
+  <Card title="Needs attention" color="#FE4F32" icon="triangle-exclamation">
+    O job falhou cinco execuções seguidas ou o destino já não é válido. Corrija a causa e, depois, retome-o.
+  </Card>
+
+  <Card title="Completed" color="#FE4F32" icon="circle-check">
+    Aqui aparecem os jobs de execução única que já foram executados.
+  </Card>
+</CardGroup>
+
+Na página Jobs, use o filtro de estado para mostrar apenas os jobs **Active**, **Paused**, **Needs attention**, **Completed** ou **All**.
+
+## Histórico de execuções e transcrições
+
+Cada job guarda um histórico de execuções. Selecione um job para abrir o painel de detalhes e ver as execuções recentes, as respetivas horas e os resultados. Em qualquer execução, pode abrir a transcrição para ler as mensagens exatas que o agente produziu. Isto é útil para depurar, auditar resultados ou confirmar que uma tarefa terminou como esperado.
+
+## Destinos de entrega
+
+Quando um job termina, pode enviar os resultados para um ou mais destinos. Se não escolher um destino, o job é executado na mesma e os resultados ficam guardados no histórico de execuções.
+
+Os destinos disponíveis incluem:
+
+- Um chat na aplicação web do Kolmena, incluindo chats de swarms
+- Uma conversa no Telegram
+- Um canal do Discord
+- Um URL de webhook
+
+<Note>
+  Se um chat de destino for eliminado ou uma aplicação ligada for desassociada, o job mostra **Needs attention**. Edite o job e escolha um destino válido para o retomar.
+</Note>
+
+## Limites e comportamento
+
+<Accordion title="Limites dos jobs">
+  - **25 jobs abertos** por utilizador (ativos ou em pausa)
+  - **Uma execução de cada vez** por job. Se uma execução ainda estiver em curso quando a seguinte devia começar, a nova execução é ignorada.
+  - **O intervalo mínimo** é de 15 minutos.
+  - **Cinco falhas consecutivas** colocam o job em pausa automaticamente. Retome-o depois de corrigir a causa.
+  - Os jobs mantêm-se em todas as versões publicadas de um agente. Não precisa de os voltar a criar quando publica uma nova versão.
+</Accordion>
+
+## Erros comuns e o que fazer
+
+| Erro | Causa | O que fazer |
+| --- | --- | --- |
+| O destino já não é válido | O chat foi eliminado ou a aplicação foi desassociada | Edite o job e escolha um novo destino |
+| O agente não respondeu a tempo | O agente estava parado ou sobrecarregado | Inicie o agente e tente novamente dentro de alguns minutos |
+| A execução atingiu o limite de utilização | O job consumiu o orçamento antes de terminar | Verifique o seu plano e a utilização em [Planos e faturação](/pt/account/plans-and-billing) |
+| A execução anterior ainda estava em curso | O intervalo do job é mais curto do que a duração da tarefa | Aumente o intervalo ou simplifique a tarefa |
+| A execução falhou a janela | O agendador não conseguiu iniciar a execução até uma hora depois da hora agendada | Retome o job e verifique se houve falhas do serviço |
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Criar um job" color="#FE4F32" icon="plus" href="/pt/jobs/create-a-job">
+    Siga passo a passo a criação de um job agendado ou acionado por um evento.
+  </Card>
+
+  <Card title="Configurar o seu agente" color="#FE4F32" icon="user-robot" href="/pt/agents/versions-and-publishing">
+    Saiba como funciona a publicação e por que razão os jobs se mantêm entre versões.
+  </Card>
+</CardGroup>
