@@ -193,7 +193,9 @@
               {
                 "group": "Ayuda",
                 "icon": "life-ring",
-                "pages": []
+                "pages": [
+                  "es/help/faq"
+                ]
               }
             ]
           }
@@ -286,7 +288,9 @@
               {
                 "group": "Ajuda",
                 "icon": "life-ring",
-                "pages": []
+                "pages": [
+                  "pt/help/faq"
+                ]
               }
             ]
           }
