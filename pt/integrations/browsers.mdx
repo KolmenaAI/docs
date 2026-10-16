@@ -1,0 +1,92 @@
+---
+title: "Emparelhar um browser para os agentes acederem à web"
+sidebarTitle: "Browsers"
+description: "Instale a extensão de browser do Kolmena, emparelhe o seu browser e entregue separadores em direto para que os seus agentes possam trabalhar em sites onde já tem sessão iniciada."
+---
+
+A integração com o browser permite que os seus agentes interajam com páginas web em direto onde já tem sessão iniciada. Instala a extensão de browser do Kolmena, emparelha o browser e entrega separadores específicos quando um agente precisa deles. Nada é executado até entregar explicitamente um separador, e pode recuperá-lo a qualquer momento.
+
+## Instalar a extensão
+
+<Steps>
+  <Step title="Obtenha a extensão">
+    Abra **Settings > Browsers** no Kolmena. Se a extensão não estiver instalada, clique em **Get the extension** para abrir a respetiva página na Chrome Web Store.
+  </Step>
+  <Step title="Instale no Chrome, Edge ou Brave">
+    Adicione a extensão do Kolmena ao seu browser. Funciona em browsers baseados em Chromium, incluindo Chrome, Edge e Brave.
+  </Step>
+  <Step title="Recarregue a página de definições">
+    Volte a **Settings > Browsers** e recarregue a página para que o Kolmena detete a extensão.
+  </Step>
+</Steps>
+
+## Emparelhar o browser
+
+<Steps>
+  <Step title="Clique em Pair this browser">
+    Na página **Your browsers**, clique em **Pair this browser**. O Kolmena gera um token seguro e entrega-o diretamente à extensão.
+  </Step>
+  <Step title="Confirme o emparelhamento">
+    A extensão aceita o token e estabelece uma ligação segura. O seu browser aparece agora na lista com a plataforma e o nome do browser (por exemplo, "Mac — Chrome").
+  </Step>
+</Steps>
+
+Pode emparelhar mais do que um browser ou dispositivo. Cada um aparece como uma entrada separada na lista.
+
+## Entregar um separador
+
+Quando um agente precisa de trabalhar num site onde tem sessão iniciada:
+
+1. Abra um novo separador e aceda ao site.
+2. Inicie sessão, se ainda não o tiver feito.
+3. Clique no ícone da extensão do Kolmena na barra de ferramentas.
+4. Escolha **Give this tab to my agent**.
+5. Volte ao Kolmena e peça ao agente que continue.
+
+A lista de browsers em **Settings > Browsers** mostra o separador que está entregue nesse momento. Enquanto o agente trabalha, o Chrome mostra um aviso nesse separador.
+
+## Desemparelhar um browser
+
+Para remover um browser emparelhado:
+
+1. Aceda a **Settings > Browsers**.
+2. Encontre o browser na lista.
+3. Clique em **Unpair**.
+
+O token é revogado de imediato. A extensão deixa de poder entregar separadores, e qualquer sessão ativa termina na tentativa de ligação seguinte.
+
+## Estados do browser
+
+| Estado | O que significa |
+| --- | --- |
+| Tab ready | Foi entregue um separador e o agente pode usá-lo. |
+| Online, no tab handed over | O browser está emparelhado, mas não há nenhum separador entregue. |
+| Offline | O browser está fechado ou a extensão não está ativa. Abra o browser para o recuperar. |
+
+## Resolução de problemas
+
+- **O emparelhamento falhou**: confirme que a extensão está instalada e ativada. Recarregue a página de definições e tente novamente.
+- **Extensão não detetada**: se estiver a usar uma build local ou de teste, poderá precisar da versão mais recente da extensão, que permite ligações a localhost.
+- **Pop-up bloqueado**: algumas ligações abrem um pop-up do fornecedor. Permita pop-ups para o Kolmena, se lhe for pedido.
+
+## Notas de segurança
+
+- O token é entregue diretamente do Kolmena à extensão através de um canal seguro. Nunca passa pelo armazenamento local nem pela área de transferência.
+- Os agentes só podem aceder aos separadores que entrega explicitamente. Não podem abrir novos separadores nem navegar por conta própria.
+- Pode desemparelhar o browser a qualquer momento para revogar o acesso de imediato.
+
+## Próximos passos
+
+<CardGroup cols={3}>
+  <Card title="Ligar aplicações" color="#FE4F32" icon="plug" href="/pt/integrations/connect-apps">
+    Ligue aplicações para integrações através de API.
+  </Card>
+
+  <Card title="Credenciais" color="#FE4F32" icon="key" href="/pt/integrations/credentials">
+    Adicione as credenciais de que os agentes precisam para iniciar sessão.
+  </Card>
+
+  <Card title="Skills" color="#FE4F32" icon="wand-magic-sparkles" href="/pt/integrations/skills">
+    Instale skills que trabalham com dados da web.
+  </Card>
+</CardGroup>

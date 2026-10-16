@@ -162,7 +162,8 @@
                   "es/integrations/index",
                   "es/integrations/connect-apps",
                   "es/integrations/skills",
-                  "es/integrations/credentials"
+                  "es/integrations/credentials",
+                  "es/integrations/browsers"
                 ]
               }
             ]
@@ -245,7 +246,8 @@
                   "pt/integrations/index",
                   "pt/integrations/connect-apps",
                   "pt/integrations/skills",
-                  "pt/integrations/credentials"
+                  "pt/integrations/credentials",
+                  "pt/integrations/browsers"
                 ]
               }
             ]
