@@ -1,0 +1,71 @@
+---
+title: "Visão geral do conhecimento: dar contexto aos agentes com documentos"
+sidebarTitle: "Visão geral do conhecimento"
+description: "Saiba como funciona o conhecimento (Knowledge) no Kolmena. Carregue documentos, organize pastas e controle que agentes, swarms e a Maya podem aceder aos seus ficheiros para dar respostas mais acertadas."
+---
+
+O conhecimento (Knowledge) no Kolmena é a biblioteca de documentos, ligações e texto que fornece para que os seus agentes (e a Maya) possam responder a perguntas, seguir instruções e tomar decisões com contexto real. Gere tudo na página **Knowledge**, onde pode carregar ficheiros, colar texto, adicionar ligações web, organizar pastas e escolher exatamente quem tem acesso.
+
+<iframe className="w-full aspect-video rounded-xl my-6" src="https://www.youtube.com/embed/LCEAay0MjiY" title="Knowledge: Full Walkthrough" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+
+## O que pode adicionar ao conhecimento
+
+O Kolmena aceita vários tipos de recursos para que possa trazer o contexto de que os seus agentes precisam:
+
+| Tipo | Para que serve |
+| --- | --- |
+| **Files** | Documentos, ficheiros de código, imagens, áudio e vídeo. Arraste e largue ou procure os ficheiros para os carregar. |
+| **Text** | Cole texto livre diretamente quando não tiver um ficheiro à mão. |
+| **Link** | Adicione até 20 URLs de cada vez. Cada página é obtida e guardada como Markdown pesquisável. |
+
+<Note>
+  Existe um limite de tamanho por ficheiro. Se um ficheiro for demasiado grande, divida-o em ficheiros mais pequenos e carregue-os novamente.
+</Note>
+
+## A página Knowledge e as bibliotecas
+
+Quando abre **Knowledge** a partir da barra lateral, trabalha dentro do âmbito de uma biblioteca. Pode alternar entre bibliotecas para gerir conteúdos de diferentes contextos:
+
+- **Conhecimento do agente ou do swarm**: recursos associados diretamente a um único agente ou swarm.
+- **Shared Knowledge**: uma biblioteca central que pode partilhar com qualquer um dos seus agentes e swarms.
+- **Archive**: um espaço para os documentos que retirou de uso ativo. Pode restaurar os itens arquivados ou eliminá-los definitivamente.
+
+Use o seletor de âmbito na página Knowledge para alternar entre estas bibliotecas.
+
+## Organizar com pastas
+
+Mantenha o seu conhecimento arrumado criando pastas. Pode dar nomes às pastas, mover documentos entre elas e arquivar ou eliminar itens em bloco. As pastas ajudam os agentes a encontrar mais depressa o contexto certo, sobretudo quando a biblioteca cresce.
+
+## Como os agentes obtêm acesso
+
+Por predefinição, nada é concedido. É você que controla o acesso por documento ou para toda a biblioteca Shared Knowledge:
+
+- **Por documento**: abra as definições de acesso de um documento e escolha que agentes e swarms o podem usar.
+- **Shared Knowledge**: conceda acesso a todos os agentes e swarms de uma só vez nas definições da biblioteca.
+
+<Warning>
+  A opção "All agents" nunca inclui a Maya. Se quiser que a Maya use um documento, conceda-lhe acesso explicitamente.
+</Warning>
+
+Os agentes e swarms com acesso podem recorrer ao seu conhecimento durante as conversas, as execuções de jobs e a realização de tarefas. Pode ver quanto conhecimento está a ser processado e consultado na página de [utilização e registos](/pt/account/usage-and-logs).
+
+## Processamento e estado
+
+Depois de carregar ou adicionar um recurso, o Kolmena processa-o automaticamente para que os agentes o possam pesquisar e consultar. Durante o processamento, pode ver estados como:
+
+- **Waiting**: à espera na fila de processamento.
+- **Processing**: o documento está a ser preparado para pesquisa.
+- **Pronto**: o documento está disponível para os seus agentes.
+- **Falhado**: algo correu mal (por exemplo, o ficheiro está danificado, é demasiado grande ou não contém texto legível). Pode voltar a tentar manualmente os documentos que falharam.
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Adicionar documentos" color="#FE4F32" icon="file-plus" href="/pt/knowledge/add-documents">
+    Carregue ficheiros, cole texto ou adicione ligações web à sua biblioteca de conhecimento.
+  </Card>
+
+  <Card title="Criar um agente" color="#FE4F32" icon="plus" href="/pt/agents/create-an-agent">
+    Crie um agente personalizado e dê-lhe acesso ao conhecimento de que precisa.
+  </Card>
+</CardGroup>

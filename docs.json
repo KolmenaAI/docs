@@ -150,7 +150,9 @@
                 "icon": "clock",
                 "pages": [
                   "es/jobs/index",
-                  "es/jobs/create-a-job"
+                  "es/jobs/create-a-job",
+                  "es/knowledge/index",
+                  "es/knowledge/add-documents"
                 ]
               },
               {
@@ -226,7 +228,9 @@
                 "icon": "clock",
                 "pages": [
                   "pt/jobs/index",
-                  "pt/jobs/create-a-job"
+                  "pt/jobs/create-a-job",
+                  "pt/knowledge/index",
+                  "pt/knowledge/add-documents"
                 ]
               },
               {

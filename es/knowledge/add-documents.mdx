@@ -1,0 +1,100 @@
+---
+title: "Añade documentos al conocimiento"
+sidebarTitle: "Añade documentos"
+description: "Sube archivos, pega texto o añade enlaces web a la biblioteca de conocimiento de un agente o enjambre. Organiza los elementos en carpetas y controla qué agentes pueden acceder a ellos."
+---
+
+El conocimiento da a tus agentes y enjambres el contexto que necesitan para responder preguntas, seguir instrucciones y tomar mejores decisiones. Puedes subir archivos, pegar texto sin formato o añadir enlaces web, y después organizarlo todo en carpetas y elegir qué agentes y enjambres pueden usar cada recurso.
+
+## Subir archivos
+
+<Steps>
+  <Step title="Abre la pestaña Conocimiento">
+    Ve a un agente o enjambre y selecciona **Conocimiento** en la navegación superior.
+  </Step>
+  <Step title="Añade archivos">
+    Haz clic en **Archivos** y arrastra los archivos a la zona para soltar o haz clic para buscarlos. También puedes soltar archivos directamente en la página Conocimiento.
+  </Step>
+  <Step title="Espera a que se procesen">
+    Cada archivo se convierte automáticamente en texto con búsqueda. Durante el procesamiento, el estado muestra **En espera** o **Procesando**. Cuando está listo, el agente puede consultar el contenido durante las conversaciones y las tareas.
+  </Step>
+</Steps>
+
+<Note>
+  Los tipos compatibles incluyen documentos, imágenes, audio y vídeo. La interfaz muestra un límite de tamaño por archivo. Si un archivo es demasiado grande, divídelo en archivos más pequeños y vuelve a subirlo.
+</Note>
+
+## Añadir texto o enlaces web
+
+Si tienes texto que no está en un archivo, o quieres hacer referencia a una página web pública, usa las otras opciones para añadir:
+
+- **Texto**: haz clic en **Texto**, escribe un nombre para el recurso, pega el contenido y confirma.
+- **Enlace**: haz clic en **Enlace**, pega una o varias URL (una por línea o separadas por comas, hasta 20 a la vez) y confirma. Cada página se descarga y se guarda como Markdown con búsqueda.
+
+## Organizar con carpetas
+
+Mantén tu biblioteca ordenada creando carpetas y moviendo elementos a ellas.
+
+<Steps>
+  <Step title="Crea una carpeta">
+    Haz clic en **Nueva carpeta**, escribe un nombre y elige una carpeta principal si quieres anidarla.
+  </Step>
+  <Step title="Mueve elementos">
+    Selecciona uno o varios archivos o carpetas, haz clic en **Mover a** y elige la carpeta de destino. También puedes arrastrar y soltar elementos en el árbol.
+  </Step>
+  <Step title="Renombra o elimina carpetas">
+    Abre el menú de una carpeta y elige **Renombrar** para cambiarle el nombre. Para eliminarla, elige **Eliminar carpeta**. Si la carpeta no está vacía, mueve primero su contenido o usa **Forzar eliminación** para borrar todo lo que contiene.
+  </Step>
+</Steps>
+
+## Dar acceso a agentes y enjambres
+
+Por defecto, nada se comparte automáticamente. Tú controlas qué agentes y enjambres pueden leer cada recurso de conocimiento.
+
+<Steps>
+  <Step title="Abre la configuración de acceso">
+    En un elemento de conocimiento, haz clic en la etiqueta de acceso (puede mostrar **Todos** o un número). Se abre la ventana **Acceso a**, seguida del nombre del elemento.
+  </Step>
+  <Step title="Elige quién puede usarlo">
+    Activa el acceso para agentes y enjambres concretos, o selecciona **Todos los agentes y enjambres** para compartirlo con todos. La opción **Todos los agentes** nunca incluye a Maya.
+  </Step>
+  <Step title="Guarda">
+    Haz clic para confirmar. Verás la confirmación **Acceso actualizado**.
+  </Step>
+</Steps>
+
+## Eliminar o archivar documentos
+
+Para quitar un archivo, abre su menú y elige **Eliminar**. El elemento pasa al **Archivo**, donde más adelante puedes elegir **Restaurar** para recuperarlo o **Eliminar para siempre** para borrarlo. Para vaciar todo el archivo, usa **Eliminar todo**.
+
+<Warning>
+  Eliminar una carpeta o un documento lo borra de forma permanente. Si eliminas un agente, también se eliminan los archivos de conocimiento vinculados a él.
+</Warning>
+
+## Solucionar errores de procesamiento
+
+Si un documento no se procesa, revisa el mensaje de error y prueba la solución recomendada:
+
+| Error | Qué hacer |
+| --- | --- |
+| Tipo de archivo no compatible | Convierte el archivo a PDF, DOCX o texto sin formato y vuelve a subirlo. |
+| Archivo demasiado grande | Divide el documento en archivos más pequeños. |
+| No se encontró texto legible | Si el archivo es un escaneo, asegúrate de que el texto se lee bien y vuelve a intentarlo. |
+| Tiempo de extracción agotado | Prueba a dividir el archivo, quitar hojas pesadas o subirlo como CSV. |
+| Error genérico | Haz clic en **Reintentar** en el documento, o vuelve a subirlo si el reintento falla. |
+
+## Próximos pasos
+
+<CardGroup cols={3}>
+  <Card title="Crea un agente" color="#FE4F32" icon="plus" href="/es/agents/create-an-agent">
+    Crea un agente que use tu conocimiento.
+  </Card>
+
+  <Card title="Crea un enjambre" color="#FE4F32" icon="users" href="/es/swarms/create-a-swarm">
+    Da un contexto compartido a un equipo de agentes.
+  </Card>
+
+  <Card title="Conecta aplicaciones" color="#FE4F32" icon="plug" href="/es/integrations/connect-apps">
+    Conecta los servicios con los que trabajan tus agentes.
+  </Card>
+</CardGroup>
