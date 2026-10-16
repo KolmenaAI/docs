@@ -174,7 +174,10 @@
               {
                 "group": "Mercado",
                 "icon": "store",
-                "pages": []
+                "pages": [
+                  "es/marketplace/index",
+                  "es/marketplace/install-a-listing"
+                ]
               },
               {
                 "group": "Cuenta y facturación",
@@ -258,7 +261,10 @@
               {
                 "group": "Marketplace",
                 "icon": "store",
-                "pages": []
+                "pages": [
+                  "pt/marketplace/index",
+                  "pt/marketplace/install-a-listing"
+                ]
               },
               {
                 "group": "Conta e faturação",
