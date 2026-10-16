@@ -116,7 +116,9 @@
                 "group": "Primeros pasos",
                 "icon": "rocket",
                 "pages": [
-                  "es/quickstart"
+                  "es/index",
+                  "es/quickstart",
+                  "es/getting-started/core-concepts"
                 ]
               },
               {
@@ -173,6 +175,7 @@
                 "group": "Primeiros passos",
                 "icon": "rocket",
                 "pages": [
+                  "pt/index",
                   "pt/quickstart"
                 ]
               },
