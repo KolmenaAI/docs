@@ -1,0 +1,65 @@
+---
+title: "Versões, rascunhos e publicação de agentes"
+sidebarTitle: "Versões e publicação"
+description: "Perceba como funcionam as versões dos agentes no Kolmena: editar rascunhos, publicar alterações, restaurar versões anteriores e como os jobs se mantêm entre atualizações."
+---
+
+O Kolmena usa um sistema de versões em cada agente personalizado para que possa editar em segurança e reverter, se for necessário. Cada agente tem uma versão publicada em produção, um rascunho de trabalho para as edições e um arquivo das versões publicadas anteriormente.
+
+## Como funcionam as versões
+
+Quando abre o separador **Configure** de um agente, está sempre a editar o **rascunho** (draft). O rascunho é uma cópia de trabalho da versão em produção. As alterações são guardadas automaticamente à medida que escreve, mas não afetam o agente em execução até publicar.
+
+| Tipo de versão | O que é |
+| --- | --- |
+| Live | A versão publicada atualmente, usada pelo agente em execução |
+| Draft | Alterações não publicadas que está a editar |
+| Archived | Versões publicadas anteriormente, guardadas no histórico |
+
+## Publicar alterações
+
+Quando estiver pronto para aplicar as suas edições:
+
+<Steps>
+  <Step title="Reveja o rascunho">
+    Abra **Configure** e verifique as alterações em Basics, Channels, Skills ou em qualquer outra secção.
+  </Step>
+  <Step title="Clique em Publish">
+    O texto do botão adapta-se à situação:
+
+    - **Publish to launch** num agente novo que nunca foi publicado
+    - **Publish & restart** num agente em execução (é reiniciado para aplicar as alterações)
+    - **Publish** num agente parado que já foi publicado antes
+  </Step>
+  <Step title="Confirme o resultado">
+    Depois de publicar, o rascunho passa a ser a nova versão em produção. Se o agente estava em execução, reinicia automaticamente para aplicar as alterações.
+  </Step>
+</Steps>
+
+## Descartar um rascunho
+
+Se mudar de ideias quanto às edições em curso, clique em **Discard**. Isto elimina o rascunho e repõe o editor na versão em produção. Não pode descartar o rascunho de um agente que nunca foi publicado, porque não tem uma versão em produção para onde voltar.
+
+## Restaurar uma versão anterior
+
+Abra a lista pendente **Version History** na barra lateral de Configure para ver todas as versões publicadas anteriormente. Cada linha mostra a data e a hora de publicação. Clique em qualquer linha para a ver e, depois, clique em **Restore** para a colocar novamente em produção.
+
+<Warning>
+  Restaurar uma versão arquivada descarta o rascunho atual. Se tiver alterações não publicadas, o Kolmena avisa-o antes de continuar.
+</Warning>
+
+## Os jobs mantêm-se entre versões
+
+Os [jobs](/pt/jobs/index) que agendou para um agente continuam a ser executados mesmo depois de publicar uma nova versão. Os jobs estão associados ao próprio agente e não a uma versão específica, pelo que atualizar as instruções ou as skills do agente não interrompe as tarefas recorrentes.
+
+## Próximos passos
+
+<CardGroup cols={2}>
+  <Card title="Criar um agente" color="#FE4F32" icon="plus" href="/pt/agents/create-an-agent">
+    Crie um novo agente e publique a sua primeira versão.
+  </Card>
+
+  <Card title="Canais de mensagens" color="#FE4F32" icon="comment" href="/pt/agents/messaging-channels">
+    Ligue o seu agente a plataformas externas.
+  </Card>
+</CardGroup>

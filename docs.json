@@ -137,7 +137,9 @@
                 "icon": "users",
                 "pages": [
                   "es/agents/index",
-                  "es/agents/create-an-agent"
+                  "es/agents/create-an-agent",
+                  "es/agents/versions-and-publishing",
+                  "es/agents/messaging-channels"
                 ]
               },
               {
@@ -205,7 +207,9 @@
                 "icon": "users",
                 "pages": [
                   "pt/agents/index",
-                  "pt/agents/create-an-agent"
+                  "pt/agents/create-an-agent",
+                  "pt/agents/versions-and-publishing",
+                  "pt/agents/messaging-channels"
                 ]
               },
               {

@@ -1,0 +1,65 @@
+---
+title: "Versiones, borradores y publicación de agentes"
+sidebarTitle: "Versiones y publicación"
+description: "Entiende cómo funcionan las versiones de los agentes en Kolmena: editar borradores, publicar cambios, restaurar versiones anteriores y cómo se mantienen las tareas entre actualizaciones."
+---
+
+Kolmena usa un sistema de versiones en cada agente personalizado para que puedas editar con seguridad y volver atrás si hace falta. Cada agente tiene una versión publicada en vivo, un borrador de trabajo para las ediciones y un archivo de versiones publicadas anteriormente.
+
+## Cómo funcionan las versiones
+
+Cuando abres la pestaña **Configurar** de un agente, siempre editas el **borrador**. El borrador es una copia de trabajo de la versión en vivo. Tus cambios se guardan automáticamente mientras escribes, pero no afectan al agente en ejecución hasta que publicas.
+
+| Tipo de versión | Qué es |
+| --- | --- |
+| En vivo | La versión publicada actualmente, la que usa el agente en ejecución |
+| Borrador | Cambios sin publicar que estás editando |
+| Archivada | Versiones publicadas anteriormente que se conservan en el historial |
+
+## Publicar cambios
+
+Cuando quieras aplicar tus ediciones:
+
+<Steps>
+  <Step title="Revisa tu borrador">
+    Abre **Configurar** y comprueba tus cambios en Básico, Canales, Habilidades o cualquier otra sección.
+  </Step>
+  <Step title="Haz clic en Publicar">
+    El texto del botón cambia según la situación:
+
+    - **Publicar para lanzar** en un agente nuevo que nunca se ha publicado
+    - **Publicar y reiniciar** en un agente en ejecución (se reinicia para aplicar los cambios)
+    - **Publicar** en un agente detenido que ya se publicó antes
+  </Step>
+  <Step title="Confirma el resultado">
+    Después de publicar, el borrador pasa a ser la nueva versión en vivo. Si el agente estaba en ejecución, se reinicia automáticamente para aplicar los cambios.
+  </Step>
+</Steps>
+
+## Descartar un borrador
+
+Si cambias de opinión sobre las ediciones en curso, haz clic en **Descartar**. Esto elimina el borrador y devuelve el editor a la versión en vivo. No puedes descartar el borrador de un agente que nunca se ha publicado, porque no tiene una versión en vivo a la que volver.
+
+## Restaurar una versión anterior
+
+Abre el desplegable **Historial de versiones** en la barra lateral de Configurar para ver todas las versiones publicadas anteriormente. Cada fila muestra su fecha y hora de publicación. Haz clic en cualquier fila para verla y después haz clic en **Restaurar** para que vuelva a estar en vivo.
+
+<Warning>
+  Restaurar una versión archivada descarta el borrador actual. Si tienes cambios sin publicar, Kolmena te avisa antes de continuar.
+</Warning>
+
+## Las tareas se mantienen entre versiones
+
+Las [tareas](/es/jobs/index) que hayas programado para un agente siguen ejecutándose aunque publiques una versión nueva. Las tareas están vinculadas al agente, no a una versión concreta, así que actualizar las instrucciones o las habilidades del agente no interrumpe las tareas recurrentes.
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="Crea un agente" color="#FE4F32" icon="plus" href="/es/agents/create-an-agent">
+    Crea un agente nuevo y publica tu primera versión.
+  </Card>
+
+  <Card title="Canales de mensajería" color="#FE4F32" icon="comment" href="/es/agents/messaging-channels">
+    Conecta tu agente a plataformas externas.
+  </Card>
+</CardGroup>

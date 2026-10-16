@@ -1,0 +1,87 @@
+---
+title: "Conecta agentes a Telegram, Discord y X/Twitter"
+sidebarTitle: "Canales de mensajería"
+description: "Permite que tus agentes personalizados hablen con personas en Telegram, Discord y X/Twitter. Aprende a conectar cada canal y qué credenciales necesitas."
+---
+
+Los canales de mensajería permiten que tus agentes personalizados se comuniquen fuera de Kolmena. Una vez conectado, un agente puede leer y responder mensajes directamente en Telegram, Discord o X/Twitter.
+
+Los canales se gestionan desde la pestaña **Configurar** de un agente, en **Canales**. Cada canal muestra su estado: **Conectado**, **Requiere configuración** o **No conectado**.
+
+## Telegram
+
+Conectar Telegram permite que tu agente responda en chats a través de un bot.
+
+<Steps>
+  <Step title="Abre la tarjeta del canal de Telegram">
+    En la sección Configurar > Canales de tu agente, busca Telegram y haz clic en **Conectar**.
+  </Step>
+  <Step title="Vincula tu cuenta de Telegram">
+    Kolmena te pide primero que vincules tu propia cuenta de Telegram. Así el agente te reconoce como su propietario. Haz clic en **Vincular cuenta de Telegram**, abre el enlace en Telegram y pulsa **Iniciar**.
+  </Step>
+  <Step title="Verifica la vinculación">
+    Vuelve a Kolmena y haz clic en **Ya toqué Iniciar** para confirmar la conexión.
+  </Step>
+  <Step title="Guarda la configuración del canal">
+    El token del bot y los chats permitidos se gestionan en la configuración del canal. Guarda para activar la conexión.
+  </Step>
+</Steps>
+
+<Note>
+  Si no vinculas tu cuenta de Telegram, el agente no responderá a nadie hasta que añadas manualmente los ID de chat a la lista de chats permitidos.
+</Note>
+
+## Discord
+
+Conectar Discord requiere un token de bot y dos pasos en el Discord Developer Portal.
+
+<Steps>
+  <Step title="Abre la tarjeta del canal de Discord">
+    En la sección Configurar > Canales de tu agente, busca Discord y haz clic en **Conectar**.
+  </Step>
+  <Step title="Introduce el token de tu bot">
+    Proporciona el token de la API de Discord de tu bot. Kolmena lo guarda de forma segura.
+  </Step>
+  <Step title="Activa los intents privilegiados en Discord">
+    En el Discord Developer Portal, ve a la configuración de tu bot y activa **Presence**, **Server Members** y **Message Content** en Privileged Gateway Intents. Sin ellos, Discord rechaza la conexión.
+  </Step>
+  <Step title="Invita al bot a un servidor">
+    Después de guardar el token, Kolmena te da un enlace de invitación. Haz clic en él para añadir el bot a un servidor de Discord. Hasta que lo hagas, el bot está en línea pero no ve ningún mensaje.
+  </Step>
+</Steps>
+
+<Warning>
+  Desconectar un bot de Discord en Kolmena elimina el token guardado, pero el bot sigue conectado a Discord hasta que el agente se reinicia.
+</Warning>
+
+## X/Twitter
+
+Conectar X/Twitter permite que tu agente publique o responda en la plataforma.
+
+<Steps>
+  <Step title="Abre la tarjeta del canal de X/Twitter">
+    En la sección Configurar > Canales de tu agente, busca X/Twitter y haz clic en **Conectar**.
+  </Step>
+  <Step title="Proporciona las credenciales de la API">
+    Introduce tu API key, API secret key, access token y access token secret de Twitter. Estas credenciales autentican al agente para actuar en tu cuenta.
+  </Step>
+  <Step title="Guarda y activa">
+    Guarda la configuración. El estado del canal cambia a Conectado en cuanto se validan las credenciales.
+  </Step>
+</Steps>
+
+## Gestionar los canales conectados
+
+En cualquier canal conectado, haz clic en **Configuración** en la tarjeta para actualizar las credenciales o las opciones. Haz clic en **Desconectar** para quitar el canal. En los canales vinculados (Telegram, Discord, X/Twitter), desconectar elimina las credenciales guardadas y el agente deja de recibir o enviar mensajes tras su siguiente reinicio.
+
+## Próximos pasos
+
+<CardGroup cols={2}>
+  <Card title="Crea un agente" color="#FE4F32" icon="plus" href="/es/agents/create-an-agent">
+    Crea un agente que puedas conectar a canales externos.
+  </Card>
+
+  <Card title="Integraciones" color="#FE4F32" icon="plug" href="/es/integrations/index">
+    Añade aplicaciones y servicios que den más capacidades a tu agente.
+  </Card>
+</CardGroup>
