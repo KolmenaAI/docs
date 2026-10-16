@@ -176,7 +176,8 @@
                 "icon": "rocket",
                 "pages": [
                   "pt/index",
-                  "pt/quickstart"
+                  "pt/quickstart",
+                  "pt/getting-started/core-concepts"
                 ]
               },
               {
