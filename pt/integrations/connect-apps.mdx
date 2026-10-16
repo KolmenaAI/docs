@@ -1,0 +1,97 @@
+---
+title: "Ligar aplicações aos agentes do Kolmena"
+sidebarTitle: "Ligar aplicações"
+description: "Explore o catálogo de integrações, ligue uma aplicação através de OAuth ou de uma chave de API, ative-a para os seus agentes e desligue-a quando já não precisar dela."
+---
+
+Ligar aplicações dá aos seus agentes acesso a serviços reais como Gmail, Slack, Notion, GitHub e muitos outros. Explora o catálogo, liga a sua conta e escolhe que agentes podem usar cada integração.
+
+<iframe className="w-full aspect-video rounded-xl my-6" src="https://www.youtube.com/embed/pzdY4ghJey4" title="Connecting Your Tools" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+
+## Explorar o catálogo
+
+Abra **Integrations** a partir da barra lateral. A página mostra dois separadores:
+
+- **All**: todas as integrações do catálogo, agrupadas por categoria.
+- **Enabled**: apenas as integrações que ativou para o seu espaço de trabalho.
+
+Use a barra de pesquisa para encontrar uma aplicação pelo nome ou descreva o que pretende fazer. Também pode filtrar por categoria.
+
+## Ligar uma aplicação
+
+A forma de ligar depende do tipo de autenticação da aplicação:
+
+<Steps>
+  <Step title="Encontre a aplicação">
+    Explore ou pesquise o catálogo e clique no cartão da integração para abrir os detalhes.
+  </Step>
+  <Step title="Ative-a">
+    Ative o interruptor para ativar a integração no seu espaço de trabalho. Se a aplicação precisar de uma credencial, a janela abre automaticamente o separador **Accounts**.
+  </Step>
+  <Step title="Autentique-se">
+    <Accordion title="OAuth (início de sessão no fornecedor)">
+      Clique em **Connect** e inicie sessão no fornecedor (por exemplo, a Google para o Gmail) na janela pop-up. O token é guardado em segurança e nunca volta a ser mostrado.
+    </Accordion>
+
+    <Accordion title="Chave de API ou token">
+      Cole a chave ou o token no formulário de credenciais. O valor é enviado em segurança e nunca fica guardado no chat.
+    </Accordion>
+
+    <Accordion title="Sem autenticação">
+      Algumas aplicações não precisam de início de sessão. A credencial do gateway é tratada automaticamente quando ativa a integração.
+    </Accordion>
+  </Step>
+  <Step title="Escolha que agentes a podem usar">
+    No separador **Agents** da janela, selecione os agentes aos quais quer dar acesso. Por predefinição, ativar uma integração para o espaço de trabalho disponibiliza-a a todos os agentes, exceto à Maya. Se quiser que a Maya a use, tem de lhe conceder acesso explicitamente.
+  </Step>
+  <Step title="Restrinja as ações">
+    No separador **Actions**, escolha as ferramentas que o agente pode usar. Pode repor o conjunto predefinido a qualquer momento com **Reset to Default**.
+  </Step>
+</Steps>
+
+## Ativar para a Maya ou para um único agente
+
+Em vez de ativar uma aplicação para todo o espaço de trabalho, pode associá-la apenas a um agente:
+
+1. Abra o agente e aceda a **Configure > Integrations**.
+2. Encontre a aplicação no catálogo e ative-a.
+3. Ligue a sua conta, se for necessário.
+4. Ajuste as ações permitidas no separador **Actions**.
+
+Associar a aplicação a um agente substitui a predefinição do espaço de trabalho para esse agente.
+
+## Desligar uma aplicação
+
+Para remover uma integração:
+
+1. Abra o cartão da integração a partir do separador **Enabled** ou da página **Integrations** do agente.
+2. Desative o interruptor.
+3. Se também quiser revogar a credencial guardada, abra o separador **Accounts** e clique em **Disconnect**.
+
+<Warning>
+  Desligar remove a credencial guardada. Pode voltar a ligar a qualquer momento, mas terá de iniciar sessão ou colar a chave novamente.
+</Warning>
+
+## Estados da ligação
+
+| Estado | O que significa |
+| --- | --- |
+| Connected | A aplicação está pronta a usar. |
+| Needs reconnecting | A credencial existe, mas foi revogada pelo fornecedor. Desligue e volte a ligar para resolver. |
+| Not connected | Não há nenhuma credencial guardada. Ligue para ativar a aplicação. |
+
+## Próximos passos
+
+<CardGroup cols={3}>
+  <Card title="Skills" color="#FE4F32" icon="wand-magic-sparkles" href="/pt/integrations/skills">
+    Gira as skills que os seus agentes podem usar.
+  </Card>
+
+  <Card title="Credenciais" color="#FE4F32" icon="key" href="/pt/integrations/credentials">
+    Adicione e conceda credenciais.
+  </Card>
+
+  <Card title="Browsers" color="#FE4F32" icon="globe" href="/pt/integrations/browsers">
+    Emparelhe um browser para aceder à web em direto.
+  </Card>
+</CardGroup>

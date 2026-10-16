@@ -1,0 +1,51 @@
+---
+title: "Visão geral das integrações: aplicações, skills, credenciais e browsers"
+sidebarTitle: "Visão geral das integrações"
+description: "Saiba como o Kolmena liga os seus agentes a aplicações, skills, credenciais e browsers para que possam agir em seu nome com dados reais."
+---
+
+O Kolmena permite que os seus agentes trabalhem com serviços do mundo real através de integrações. É você que controla aquilo a que cada agente pode aceder, em que contas inicia sessão e que ações pode realizar.
+
+A plataforma agrupa estas capacidades em quatro áreas:
+
+- **Aplicações (servidores MCP)**: serviços externos como Gmail, Slack, Notion, GitHub e muitos outros. Os agentes usam-nos através de um catálogo de integrações que ativa para todo o espaço de trabalho ou para cada agente.
+- **Skills**: capacidades reutilizáveis que pode instalar, escrever ou carregar. As skills alargam o que um agente sabe fazer, desde extrair dados de páginas web até lógica de negócio personalizada.
+- **Credenciais**: chaves de API e tokens que os seus agentes usam para iniciar sessão em serviços. São guardadas encriptadas e nunca voltam a ser mostradas depois de as guardar.
+- **Browsers**: uma extensão de browser emparelhada que permite aos agentes trabalhar em páginas web em direto nas quais já tem sessão iniciada.
+
+<CardGroup cols={2}>
+  <Card title="Ligar aplicações" color="#FE4F32" icon="plug" href="/pt/integrations/connect-apps">
+    Explore o catálogo, ligue uma aplicação com OAuth ou uma chave de API e ative-a para a Maya ou para qualquer agente.
+  </Card>
+
+  <Card title="Skills" color="#FE4F32" icon="wrench" href="/pt/integrations/skills">
+    Explore, instale e gira skills que alargam o que os seus agentes podem fazer.
+  </Card>
+
+  <Card title="Credenciais" color="#FE4F32" icon="key" href="/pt/integrations/credentials">
+    Adicione credenciais, conceda-as a agentes e trate dos pedidos de credenciais a partir do chat.
+  </Card>
+
+  <Card title="Browsers" color="#FE4F32" icon="globe" href="/pt/integrations/browsers">
+    Emparelhe um browser para que os agentes possam usar separadores em direto e sites onde já tem sessão iniciada.
+  </Card>
+</CardGroup>
+
+## Como os agentes usam as integrações
+
+Os agentes não têm acesso ilimitado a tudo. É você que decide:
+
+1. **Que integrações estão disponíveis**: ative uma aplicação ou skill para todos os agentes, ou associe-a apenas a um agente.
+2. **Que credenciais são concedidas**: por predefinição, nada é concedido. Escolhe explicitamente que agentes podem usar cada credencial.
+3. **Que ações são permitidas**: em cada aplicação, pode restringir a lista de ferramentas que o agente pode usar.
+
+As alterações aplicam-se de imediato. Um agente em execução recebe-as na resposta seguinte, pelo que as integrações não precisam de um passo de publicação.
+
+## Comparação rápida
+
+| Área | O que é | Onde se gere |
+| --- | --- | --- |
+| Aplicações | Serviços externos (Gmail, Slack, etc.) | Página **Integrations**, ou em cada agente em **Configure** |
+| Skills | Capacidades reutilizáveis e lógica personalizada | Página **Skills**, ou em cada agente em **Configure** |
+| Credenciais | Chaves de API e tokens encriptados | **Settings > Credentials** |
+| Browsers | Separadores do browser em direto para uso dos agentes | **Settings > Browsers** |

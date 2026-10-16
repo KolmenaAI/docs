@@ -159,7 +159,8 @@
                 "group": "Integraciones",
                 "icon": "plug",
                 "pages": [
-                  "es/integrations/index"
+                  "es/integrations/index",
+                  "es/integrations/connect-apps"
                 ]
               }
             ]
@@ -238,7 +239,10 @@
               {
                 "group": "Integrações",
                 "icon": "plug",
-                "pages": []
+                "pages": [
+                  "pt/integrations/index",
+                  "pt/integrations/connect-apps"
+                ]
               }
             ]
           },
