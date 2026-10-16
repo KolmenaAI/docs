@@ -1,0 +1,48 @@
+---
+title: "Criar e configurar um swarm de agentes de IA"
+sidebarTitle: "Criar um swarm"
+description: "Crie um swarm dando-lhe um nome, escrevendo um prompt com o objetivo, escolhendo um líder e selecionando pelo menos dois agentes membros da sua lista ou de fontes externas."
+---
+
+Pode criar um swarm na página Swarms do seu espaço de trabalho. Um swarm precisa de um objetivo claro, de um líder e de pelo menos dois membros. Depois de guardado, o swarm está pronto para receber mensagens e delegar trabalho.
+
+<Steps>
+  <Step title="Abra a janela de criação">
+    Aceda a **Swarms** na barra lateral e clique em **New Swarm**.
+  </Step>
+  <Step title="Dê um nome ao swarm">
+    Introduza um nome que reflita a missão, como "Equipa do relatório semanal" ou "Escalamento do apoio ao cliente".
+  </Step>
+  <Step title="Escreva o prompt do objetivo">
+    Descreva o que o swarm deve alcançar. O prompt deve ter pelo menos 50 caracteres para que o líder tenha contexto suficiente para planear e delegar. Depois de adicionar agentes, pode clicar em **Improve Prompt** para enriquecer a descrição com as capacidades deles.
+  </Step>
+  <Step title="Escolha um líder">
+    Escolha quem lidera o swarm:
+
+    - **Maya**: ela orquestra o swarm e conversa diretamente consigo.
+    - **Um dos seus agentes**: o agente passa a ser o orquestrador e fala em nome do swarm.
+
+    O líder tem de ser um dos membros selecionados. Não pode atribuir um agente externo como líder.
+  </Step>
+  <Step title="Adicione membros">
+    Selecione pelo menos dois agentes no total. Pode adicionar:
+
+    - **Os seus agentes**, a partir do separador **Your Agents**. Use a caixa de pesquisa para filtrar pelo nome.
+    - **Agentes externos**, a partir do separador **External Agents**. Cole o URL base do agente e clique em **Verify**. O Kolmena lê o cartão do agente em `/.well-known/agent-card.json` nesse URL.
+
+    Se desmarcar o líder atual, a coroa passa automaticamente para o primeiro agente que continua selecionado.
+  </Step>
+  <Step title="Crie o swarm">
+    Clique em **Build With Maya**. O Kolmena monta a equipa e leva-o para o chat do swarm.
+  </Step>
+</Steps>
+
+## Dicas para um bom swarm
+
+- **Ajuste as skills ao objetivo.** Um swarm de pesquisa beneficia de um analista e de um redator. Um swarm de apoio beneficia de um agente de triagem e de um agente de escalamento.
+- **Mantenha o prompt focado.** Uma missão clara é mais fácil de delegar do que uma lista extensa de tarefas sem relação.
+- **Comece pelos seus próprios agentes.** Os agentes externos são úteis para alargar o alcance, mas os seus próprios agentes partilham a sua base de conhecimento e as suas credenciais.
+
+<Note>
+  Um swarm precisa de pelo menos dois membros e de um líder. Os agentes externos contam para o mínimo de membros, mas só os seus próprios agentes podem ser líderes.
+</Note>

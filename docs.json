@@ -139,7 +139,9 @@
                   "es/agents/index",
                   "es/agents/create-an-agent",
                   "es/agents/versions-and-publishing",
-                  "es/agents/messaging-channels"
+                  "es/agents/messaging-channels",
+                  "es/swarms/index",
+                  "es/swarms/create-a-swarm"
                 ]
               },
               {
@@ -209,7 +211,9 @@
                   "pt/agents/index",
                   "pt/agents/create-an-agent",
                   "pt/agents/versions-and-publishing",
-                  "pt/agents/messaging-channels"
+                  "pt/agents/messaging-channels",
+                  "pt/swarms/index",
+                  "pt/swarms/create-a-swarm"
                 ]
               },
               {
